@@ -146,3 +146,8 @@ class RequirementsTracer():
     def trace_requirements(self):
         for i in range(2):
             self.generate_trace_matrix(self.pre_processing_configs[i], variation=i)
+
+
+if __name__ == '__main__':
+    requirements_tracer = RequirementsTracer()
+    requirements_tracer.trace_requirements()
