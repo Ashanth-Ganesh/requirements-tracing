@@ -5,9 +5,11 @@ from nltk.stem import WordNetLemmatizer, PorterStemmer
 from nltk.tokenize import word_tokenize
 
 nltk.download("punkt")
+nltk.download("punkt_tab")
 nltk.download("stopwords")
 nltk.download("wordnet")
 nltk.download("averaged_perceptron_tagger")
+nltk.download("averaged_perceptron_tagger_eng")  # Add this line
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
@@ -23,7 +25,7 @@ class PreProcessor():
     def load_requirements(self):
         nfrs = []
         frs = []
-        PATH = '/requirements-3nfr-60fr.txt'
+        PATH = 'Functional_Requirements_Fun.txt'
 
         with open(PATH, "r", encoding="utf-8") as f:
             for line in f:
@@ -32,7 +34,8 @@ class PreProcessor():
                     nfrs.append(line)
                 elif line.startswith("FR"):
                     frs.append(line)
-
+        
+        print(f"Loaded {len(nfrs)} NFRs and {len(frs)} FRs")  # Add this debug line
         return nfrs, frs
     
     def get_wordnet_pos(self, treebank_tag):
@@ -95,8 +98,8 @@ class PreProcessor():
     def pre_process(self, pre_prcessing_config: dict):
         nfrs, frs = self.load_requirements()
 
-        nfr_texts = [self.pre_process_requirement(nfr, **pre_prcessing_config) for nfr in nfrs]
-        fr_texts  = [self.pre_process_requirement(fr, **pre_prcessing_config) for fr in frs]
+        nfr_texts = [self.preprocess_requirement(nfr, **pre_prcessing_config) for nfr in nfrs]
+        fr_texts  = [self.preprocess_requirement(fr, **pre_prcessing_config) for fr in frs]
 
         return nfr_texts, fr_texts
     
@@ -129,7 +132,9 @@ class RequirementsTracer():
         with open(output_path, "w", encoding="utf-8") as f:
             for fr, row in zip(frs, trace_matrix):
                 fr_id = fr.split(":")[0]
-                f.write(f"{fr_id},{row[0]},{row[1]},{row[2]}\n")
+                # Write FR id followed by all columns in the trace row
+                row_vals = ",".join(map(str, row.tolist()))
+                f.write(f"{fr_id},{row_vals}\n")
 
     def generate_trace_matrix(self, pre_processing_config, variation):
         nfr_texts, fr_texts = self.pre_processor.pre_process(pre_processing_config)
@@ -144,7 +149,7 @@ class RequirementsTracer():
 
 
     def trace_requirements(self):
-        for i in range(2):
+        for i in range(3):
             self.generate_trace_matrix(self.pre_processing_configs[i], variation=i)
 
 

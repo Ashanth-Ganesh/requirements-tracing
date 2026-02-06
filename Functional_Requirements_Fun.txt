@@ -1,0 +1,125 @@
+NFR1 (Availability): The system shall support large-scale events, including town halls with up to 50,000 attendees.
+
+NFR2 (Usability): The system shall provide customizable user experiences including notification size, keyboard shortcuts, window resizing, and customizable layouts.
+
+NFR3 (Security & Privacy): The system shall restrict access to sensitive features such as meeting recaps, Copilot insights, private group joins, and screen capture prevention based on user role and license.
+
+FR1: The system shall provide a unified chat and channels experience.
+
+FR2: The system shall allow users to organize chats and channels into sections.
+
+FR3: The system shall allow users to add emoji icons to chat and channel section names.
+
+FR4: The system shall support threaded conversations in channels.
+
+FR5: The system shall allow users to follow threads in channels.
+
+FR6: The system shall provide Copilot-generated summaries of threads.
+
+FR7: The system shall allow users to take private notes in 1:1 and group chats.
+
+FR8: The system shall allow chat notes to include images and @mentions.
+
+FR9: The system shall allow users to forward messages with links to the original chat or channel.
+
+FR10: The system shall display previews of messages in notifications.
+
+FR11: The system shall display shared files and links in a Shared tab.
+
+FR12: The system shall allow users to search shared files by keyword.
+
+FR13: The system shall allow users to filter search results to show messages with attachments only.
+
+FR14: The system shall allow users to share files from chats, channels, and the Shared tab.
+
+FR15: The system shall maintain file permissions when files are shared.
+
+FR16: The system shall allow users to view Copilot-generated summaries of shared files.
+
+FR17: The system shall allow users to quickly jump to the original chat where a file was shared.
+
+FR18: The system shall allow users to customize the size of notifications.
+
+FR19: The system shall allow users to choose where notifications appear on the screen.
+
+FR20: The system shall allow users to pin the Teams window on top of other windows.
+
+FR21: The system shall allow users to open chats, calendars, and activities in pop-out windows.
+
+FR22: The system shall provide jump list access to chats and meetings from the taskbar or menu bar.
+
+FR23: The system shall allow users to join meetings from desktop, mobile, and phone dial-in.
+
+FR24: The system shall allow users to share their screen or specific windows.
+
+FR25: The system shall use the native macOS screen-sharing picker when enabled.
+
+FR26: The system shall provide real-time microphone volume indicators during meetings.
+
+FR27: The system shall allow meeting organizers to start countdown timers.
+
+FR28: The system shall allow users to raise hands during meetings and town halls.
+
+FR29: The system shall allow presenters to share slide control with other presenters.
+
+FR30: The system shall allow users to open calls in a small window.
+
+FR31: The system shall provide live captions during meetings.
+
+FR32: The system shall support live transcription in meetings.
+
+FR33: The system shall limit caption history when transcription is turned off.
+
+FR34: The system shall support Real-Time Text (RTT) in meetings and calls.
+
+FR35: The system shall support automatic spoken language detection when Interpreter is enabled.
+
+FR36: The system shall display an Interpreter “Preparing” status during initialization.
+
+FR37: The system shall support sign language mode with enhanced signer visibility.
+
+FR38: The system shall support town halls and webinars.
+
+FR39: The system shall support DVR capabilities in town halls.
+
+FR40: The system shall allow organizers to preview town halls as attendees.
+
+FR41: The system shall allow organizers to control what content attendees see.
+
+FR42: The system shall provide presenter analytics for town halls.
+
+FR43: The system shall allow private chat between organizers and presenters in webinars.
+
+FR44: The system shall allow organizers to return to the green room after ending events.
+
+FR45: The system shall support immersive 3D events.
+
+FR46: The system shall allow immersive events to be joined using VR headsets.
+
+FR47: The system shall allow users to access Copilot Chat in Teams.
+
+FR48: The system shall allow Copilot to summarize meetings and calls.
+
+FR49: The system shall allow Copilot to generate customizable meeting recap summaries.
+
+FR50: The system shall allow users to listen to audio-based meeting recaps.
+
+FR51: The system shall allow Copilot to summarize chats, threads, and files.
+
+FR52: The system shall allow Copilot usage in calls without recording or transcription.
+
+FR53: The system shall support Facilitator as a meeting AI agent.
+
+FR54: The system shall allow the Facilitator to recognize agendas in chat.
+
+FR55: The system shall allow the Facilitator to track meeting progress.
+
+FR56: The system shall require owner approval when joining private groups by code.
+
+FR57: The system shall detect and warn users about malicious files and URLs.
+
+FR58: The system shall allow users to flag incorrectly identified malicious links.
+
+FR59: The system shall allow organizers to prevent screen capture during meetings.
+
+FR60: The system shall restrict premium features based on Teams Premium and Copilot licenses.
