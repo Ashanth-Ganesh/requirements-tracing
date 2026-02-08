@@ -9,10 +9,11 @@ nltk.download("punkt_tab")
 nltk.download("stopwords")
 nltk.download("wordnet")
 nltk.download("averaged_perceptron_tagger")
-nltk.download("averaged_perceptron_tagger_eng")  # Add this line
+nltk.download("averaged_perceptron_tagger_eng")
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+import numpy as np
 
 class PreProcessor():
 
@@ -21,7 +22,6 @@ class PreProcessor():
         self.lemmatizer = WordNetLemmatizer()
         self.stemmer = PorterStemmer()
     
-
     def load_requirements(self):
         nfrs = []
         frs = []
@@ -35,7 +35,7 @@ class PreProcessor():
                 elif line.startswith("FR"):
                     frs.append(line)
         
-        print(f"Loaded {len(nfrs)} NFRs and {len(frs)} FRs")  # Add this debug line
+        print(f"Loaded {len(nfrs)} NFRs and {len(frs)} FRs")
         return nfrs, frs
     
     def get_wordnet_pos(self, treebank_tag):
@@ -49,8 +49,6 @@ class PreProcessor():
             return wordnet.ADV
         else:
             return wordnet.NOUN
-
-
 
     def preprocess_requirement(
         self,
@@ -94,7 +92,6 @@ class PreProcessor():
 
         return " ".join(tokens)
 
-
     def pre_process(self, pre_prcessing_config: dict):
         nfrs, frs = self.load_requirements()
 
@@ -123,7 +120,7 @@ class RequirementsTracer():
         nfr_vectors = tfidf_matrix[:len(nfr_texts)]
         fr_vectors  = tfidf_matrix[len(nfr_texts):]
 
-        return nfr_vectors, fr_vectors
+        return nfr_vectors, fr_vectors, vectorizer
     
     def print_trace(self, trace_matrix, variation: int):
         nfrs, frs = self.pre_processor.load_requirements()
@@ -132,26 +129,112 @@ class RequirementsTracer():
         with open(output_path, "w", encoding="utf-8") as f:
             for fr, row in zip(frs, trace_matrix):
                 fr_id = fr.split(":")[0]
-                # Write FR id followed by all columns in the trace row
                 row_vals = ",".join(map(str, row.tolist()))
                 f.write(f"{fr_id},{row_vals}\n")
 
     def generate_trace_matrix(self, pre_processing_config, variation):
+        print("\n" + "="*80)
+        print(f"VARIANT {variation + 1}")
+        print("="*80)
+        
+        # Step 1: Get config details
+        config_desc = []
+        if pre_processing_config['tokenize']:
+            config_desc.append("Tokenization")
+        if pre_processing_config['remove_stopwords']:
+            config_desc.append("Stop-word removal")
+        if pre_processing_config['use_pos']:
+            config_desc.append("POS tagging")
+        if pre_processing_config['lemmatize']:
+            config_desc.append("Lemmatization")
+        if pre_processing_config['stem']:
+            config_desc.append("Stemming")
+        
+        print(f"\nConfiguration: {', '.join(config_desc)}")
+        print("-"*80)
+        
+        # Step 2: Pre-processing
+        print("\n### STEP 1: PRE-PROCESSING ###")
+        nfrs, frs = self.pre_processor.load_requirements()
         nfr_texts, fr_texts = self.pre_processor.pre_process(pre_processing_config)
-
-        nfr_vectors, fr_vectors = self.vectorizer(nfr_texts, fr_texts)
-
+        
+        print(f"\nShowing first 3 examples:")
+        for i in range(min(3, len(nfrs))):
+            print(f"\nOriginal NFR: {nfrs[i]}")
+            print(f"Processed NFR: {nfr_texts[i]}")
+        
+        for i in range(min(3, len(frs))):
+            print(f"\nOriginal FR: {frs[i]}")
+            print(f"Processed FR: {fr_texts[i]}")
+        
+        # Step 3: TF-IDF Vectorization
+        print("\n### STEP 2: TF-IDF VECTORIZATION ###")
+        nfr_vectors, fr_vectors, vectorizer = self.vectorizer(nfr_texts, fr_texts)
+        
+        print(f"\nVocabulary size: {len(vectorizer.vocabulary_)}")
+        print(f"NFR vectors shape: {nfr_vectors.shape}")
+        print(f"FR vectors shape: {fr_vectors.shape}")
+        
+        # Show top TF-IDF terms for first FR
+        feature_names = vectorizer.get_feature_names_out()
+        first_fr_vector = fr_vectors[0].toarray()[0]
+        top_indices = first_fr_vector.argsort()[-10:][::-1]
+        print(f"\nTop 10 TF-IDF terms for {frs[0].split(':')[0]}:")
+        for idx in top_indices:
+            if first_fr_vector[idx] > 0:
+                print(f"  {feature_names[idx]}: {first_fr_vector[idx]:.4f}")
+        
+        # Step 4: Cosine Similarity
+        print("\n### STEP 3: COSINE SIMILARITY CALCULATION ###")
         similarity_matrix = cosine_similarity(fr_vectors, nfr_vectors)
-
+        
+        print(f"\nSimilarity matrix shape: {similarity_matrix.shape}")
+        print(f"(rows=FRs: {len(frs)}, columns=NFRs: {len(nfrs)})")
+        
+        # Step 5: Show top similarities for each FR
+        print("\n### STEP 4: TOP SIMILARITIES (SORTED) ###")
+        print(f"\nTop 5 NFR matches for first 3 FRs:")
+        
+        for i in range(min(3, len(frs))):
+            fr_id = frs[i].split(":")[0]
+            similarities = similarity_matrix[i]
+            
+            # Get top 5 indices
+            top_5_indices = similarities.argsort()[-5:][::-1]
+            
+            print(f"\n{fr_id}:")
+            for idx in top_5_indices:
+                nfr_id = nfrs[idx].split(":")[0]
+                score = similarities[idx]
+                print(f"  {nfr_id}: {score:.4f} {'[TRACED]' if score >= self.THRESHOLD else ''}")
+        
+        # Step 6: Apply threshold
+        print(f"\n### STEP 5: APPLYING THRESHOLD (>= {self.THRESHOLD}) ###")
         trace_matrix = (similarity_matrix >= self.THRESHOLD).astype(int)
-
+        
+        total_traces = np.sum(trace_matrix)
+        print(f"\nTotal trace links found: {total_traces}")
+        print(f"Average traces per FR: {total_traces / len(frs):.2f}")
+        
+        # Show trace statistics
+        traces_per_fr = np.sum(trace_matrix, axis=1)
+        print(f"FRs with 0 traces: {np.sum(traces_per_fr == 0)}")
+        print(f"FRs with 1+ traces: {np.sum(traces_per_fr > 0)}")
+        print(f"Max traces for single FR: {np.max(traces_per_fr)}")
+        
+        # Step 7: Save results
         self.print_trace(trace_matrix, variation)
-
+        print(f"\nTrace matrix saved to: trace_matrix_{variation + 1}.txt")
+        
+        print("\n" + "="*80 + "\n")
 
     def trace_requirements(self):
         for i in range(3):
             self.generate_trace_matrix(self.pre_processing_configs[i], variation=i)
-
+        
+        print("\n" + "#"*80)
+        print("ALL VARIANTS COMPLETED")
+        print("#"*80)
 
 if __name__ == '__main__':
     requirements_tracer = RequirementsTracer()
