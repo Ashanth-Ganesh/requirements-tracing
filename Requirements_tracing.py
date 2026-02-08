@@ -158,12 +158,12 @@ class RequirementsTracer():
         nfrs, frs = self.pre_processor.load_requirements()
         nfr_texts, fr_texts = self.pre_processor.pre_process(pre_processing_config)
         
-        print(f"\nShowing first 3 examples:")
-        for i in range(min(3, len(nfrs))):
+        print(f"\nShowing:")
+        for i in range(len(nfrs)):
             print(f"\nOriginal NFR: {nfrs[i]}")
             print(f"Processed NFR: {nfr_texts[i]}")
         
-        for i in range(min(3, len(frs))):
+        for i in range(len(frs)):
             print(f"\nOriginal FR: {frs[i]}")
             print(f"Processed FR: {fr_texts[i]}")
         
