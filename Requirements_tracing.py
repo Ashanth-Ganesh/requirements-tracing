@@ -25,7 +25,7 @@ class PreProcessor():
     def load_requirements(self):
         nfrs = []
         frs = []
-        PATH = 'requirements-3nfr-60fr.txt'
+        PATH = 'Functional_Requirements_Fun.txt'
 
         with open(PATH, "r", encoding="utf-8") as f:
             for line in f:
