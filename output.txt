@@ -1,0 +1,3546 @@
+
+================================================================================
+VARIANT 1
+================================================================================
+
+Configuration: Tokenization, Stop-word removal, POS tagging, Lemmatization
+--------------------------------------------------------------------------------
+
+### STEP 1: PRE-PROCESSING ###
+Loaded 3 NFRs and 60 FRs
+Loaded 3 NFRs and 60 FRs
+
+--- ALL 3 NFRs (Original vs Processed) ---
+
+[1] Original NFR: NFR1 (Operational): The system shall interface with the Choice Parts System. This provides the feed of recycled parts data.
+    Processed NFR: operational system shall interface choice part system provide feed recycle part data
+
+[2] Original NFR: NFR2 (Usability): Users shall feel satisfied using the system. 85% of all users will be satisfied with the system.
+    Processed NFR: usability user shall feel satisfied use system user satisfy system
+
+[3] Original NFR: NFR3 (Security): Only adjusters can request recycled parts audit reports. No users without an adjuster role shall request recycled parts audits.
+    Processed NFR: security adjuster request recycle part audit report user without adjuster role shall request recycled part audit
+
+--- ALL 60 FRs (Original vs Processed) ---
+
+[1] Original FR: FR1: The user shall search for the preferred repair facility using vehicle location and radius in miles.
+    Processed FR: user shall search preferred repair facility use vehicle location radius mile
+
+[2] Original FR: FR2: The vehicle location shall include street address city state and zip-code.
+    Processed FR: vehicle location shall include street address city state
+
+[3] Original FR: FR3: The search radius shall be between 1 and 30 miles.
+    Processed FR: search radius shall mile
+
+[4] Original FR: FR4: The system shall locate the preferred repair facility with the highest ratings for the input criteria.
+    Processed FR: system shall locate preferred repair facility high rating input criterion
+
+[5] Original FR: FR5: The adjuster shall enter the preferred repair facility on the estimate assignment.
+    Processed FR: adjuster shall enter preferred repair facility estimate assignment
+
+[6] Original FR: FR6: The adjuster shall be able to override the preferred repair facility on the estimate assignment.
+    Processed FR: adjuster shall able override preferred repair facility estimate assignment
+
+[7] Original FR: FR7: The preferred repair facility shall be returned to the user.
+    Processed FR: preferred repair facility shall return user
+
+[8] Original FR: FR8: The system shall return a list of repair facilities within the radius if the preferred repair facility cannot be determined.
+    Processed FR: system shall return list repair facility within radius preferred repair facility determine
+
+[9] Original FR: FR9: The estimator shall search for available recycled parts using damaged vehicle parts information.
+    Processed FR: estimator shall search available recycled part use damage vehicle part information
+
+[10] Original FR: FR10: The estimator shall search for available recycled parts using a list of preferred parts suppliers.
+    Processed FR: estimator shall search available recycled part use list preferred part supplier
+
+[11] Original FR: FR11: The system shall search for available recycled parts for the supplied vehicle parts and suppliers.
+    Processed FR: system shall search available recycled part supply vehicle part supplier
+
+[12] Original FR: FR12: The estimator shall search by zipcode with a radius of 30 miles if no parts are found for the preferred parts suppliers.
+    Processed FR: estimator shall search zipcode radius mile part find preferred part supplier
+
+[13] Original FR: FR13: The system shall retain the available recycled parts and suppliers returned from the search.
+    Processed FR: system shall retain available recycle part supplier return search
+
+[14] Original FR: FR14: The available recycled parts information and their suppliers shall be returned to the user.
+    Processed FR: available recycle part information supplier shall return user
+
+[15] Original FR: FR15: The estimator shall apply selected recycled parts to the collision estimate.
+    Processed FR: estimator shall apply select recycled part collision estimate
+
+[16] Original FR: FR16: The estimator shall not apply recycled parts to the collision estimate if no available parts are returned.
+    Processed FR: estimator shall apply recycled part collision estimate available part return
+
+[17] Original FR: FR17: The adjuster shall review the collision estimate.
+    Processed FR: adjuster shall review collision estimate
+
+[18] Original FR: FR18: The adjuster shall request a recycled parts audit of the collision estimate.
+    Processed FR: adjuster shall request recycled part audit collision estimate
+
+[19] Original FR: FR19: The audit report shall include the total number of recycled parts used in the estimate.
+    Processed FR: audit report shall include total number recycle part use estimate
+
+[20] Original FR: FR20: The audit report shall include the number of available recycled parts from the original search results.
+    Processed FR: audit report shall include number available recycled part original search result
+
+[21] Original FR: FR21: The audit report shall include the percentage of available recycled parts used in the estimate.
+    Processed FR: audit report shall include percentage available recycled part use estimate
+
+[22] Original FR: FR22: The audit report shall include the total score of the audit which sums the individual line items.
+    Processed FR: audit report shall include total score audit sum individual line item
+
+[23] Original FR: FR23: The audit report shall be displayed to the user.
+    Processed FR: audit report shall display user
+
+[24] Original FR: FR24: The audit report shall be available to other adjusters at later points in time.
+    Processed FR: audit report shall available adjuster later point time
+
+[25] Original FR: FR25: The user shall select to view the preferred repair facility ratings.
+    Processed FR: user shall select view preferred repair facility rating
+
+[26] Original FR: FR26: The system will display a blank set of ratings if there are not ratings yet defined.
+    Processed FR: system display blank set rating rating yet define
+
+[27] Original FR: FR27: The user shall enter new ratings based on the audit report.
+    Processed FR: user shall enter new rating base audit report
+
+[28] Original FR: FR28: The ratings shall be from a scale of 1-10.
+    Processed FR: rating shall scale
+
+[29] Original FR: FR29: The user shall select to save the preferred repair facility ratings.
+    Processed FR: user shall select save prefer repair facility rating
+
+[30] Original FR: FR30: The preferred repair facility ratings shall be saved by the system.
+    Processed FR: preferred repair facility rating shall save system
+
+[31] Original FR: FR31: The vehicle data shall include vehicle year make and model.
+    Processed FR: vehicle data shall include vehicle year make model
+
+[32] Original FR: FR32: The system shall resolve the zipcode for the street address city and state if zipcode is unknown.
+    Processed FR: system shall resolve zipcode street address city state zipcode unknown
+
+[33] Original FR: FR33: The recycled parts search results provided to the estimator shall be retrieved by the system.
+    Processed FR: recycled part search result provide estimator shall retrieve system
+
+[34] Original FR: FR34: The system shall generate an audit report based on the available recycled parts and the collision estimate.
+    Processed FR: system shall generate audit report base available recycled part collision estimate
+
+[35] Original FR: FR35: The current repair facility ratings shall be displayed to the user.
+    Processed FR: current repair facility rating shall display user
+
+[36] Original FR: FR36: The ratings shall include categories for attempted use of recycled parts and actual use of recycled parts.
+    Processed FR: rating shall include category attempt use recycled part actual use recycle part
+
+[37] Original FR: FR37: The system shall record repair facility visiting schedule entries.
+    Processed FR: system shall record repair facility visit schedule entry
+
+[38] Original FR: FR38: The system will notify users of their repair facility visiting schedules.
+    Processed FR: system notify user repair facility visiting schedule
+
+[39] Original FR: FR39: The system shall have the ability to send repair facility visiting schedule reminders to users.
+    Processed FR: system shall ability send repair facility visit schedule reminder user
+
+[40] Original FR: FR40: The system shall send the repair facility contact information to schedule creators.
+    Processed FR: system shall send repair facility contact information schedule creator
+
+[41] Original FR: FR41: The system will record repair facility visiting schedule acknowledgments.
+    Processed FR: system record repair facility visit schedule acknowledgment
+
+[42] Original FR: FR42: The system shall store new conference rooms.
+    Processed FR: system shall store new conference room
+
+[43] Original FR: FR43: The system shall update existing conference rooms.
+    Processed FR: system shall update exist conference room
+
+[44] Original FR: FR44: The system will be able to delete conference rooms.
+    Processed FR: system able delete conference room
+
+[45] Original FR: FR45: The system shall be able to store new recycled parts.
+    Processed FR: system shall able store new recycle part
+
+[46] Original FR: FR46: The system will update existing recycled parts.
+    Processed FR: system update exist recycled part
+
+[47] Original FR: FR47: The system shall be able to delete recycled parts.
+    Processed FR: system shall able delete recycle part
+
+[48] Original FR: FR48: Each time a conference room is reserved the conference room schedule shall be updated to reflect the time and date of the reservation.
+    Processed FR: time conference room reserve conference room schedule shall update reflect time date reservation
+
+[49] Original FR: FR49: The system shall display a map of the repair facility building showing conference room locations.
+    Processed FR: system shall display map repair facility build show conference room location
+
+[50] Original FR: FR50: The system shall record updated repair facility visiting schedule agendas.
+    Processed FR: system shall record update repair facility visit schedule agenda
+
+[51] Original FR: FR51: The system shall send a repair facility visiting schedule confirmation to the schedule creators.
+    Processed FR: system shall send repair facility visit schedule confirmation schedule creator
+
+[52] Original FR: FR52: The system shall record the transportation status of parts reserved.
+    Processed FR: system shall record transportation status part reserve
+
+[53] Original FR: FR53: The system shall record different schedule types.
+    Processed FR: system shall record different schedule type
+
+[54] Original FR: FR54: The system shall record all the recycled parts that has been reserved.
+    Processed FR: system shall record recycle part reserve
+
+[55] Original FR: FR55: The system shall notify repair facility of recycled parts transport requests.
+    Processed FR: system shall notify repair facility recycle part transport request
+
+[56] Original FR: FR56: The system will allow privileged users to view repair facility visiting schedules in multiple reporting views.
+    Processed FR: system allow privileged user view repair facility visiting schedule multiple report view
+
+[57] Original FR: FR57: The system shall be able to send repair facility visiting schedule notifications via different kinds of end-user specified methods.
+    Processed FR: system shall able send repair facility visit schedule notification via different kind specify method
+
+[58] Original FR: FR58: The system shall have a customizable Look and Feel.
+    Processed FR: system shall customizable look feel
+
+[59] Original FR: FR59: The system shall have an intuitive user interface.
+    Processed FR: system shall intuitive user interface
+
+[60] Original FR: FR60: The display shall have two regions: left of the display is graphical right of the display is a data table.
+    Processed FR: display shall two region leave display graphical right display data table
+
+### STEP 2: TF-IDF VECTORIZATION ###
+
+Vocabulary size: 148
+NFR vectors shape: (3, 148)
+FR vectors shape: (60, 148)
+
+--- Top 10 TF-IDF terms for ALL 60 FRs ---
+
+FR1:
+  location: 0.3903
+  mile: 0.3903
+  radius: 0.3672
+  vehicle: 0.3483
+  use: 0.3186
+  search: 0.2955
+  preferred: 0.2856
+  user: 0.2536
+  repair: 0.2139
+  facility: 0.2139
+
+FR2:
+  address: 0.4016
+  city: 0.4016
+  state: 0.4016
+  street: 0.4016
+  location: 0.3732
+  vehicle: 0.3331
+  include: 0.3046
+  shall: 0.1087
+
+FR3:
+  mile: 0.6271
+  radius: 0.5900
+  search: 0.4748
+  shall: 0.1826
+
+FR4:
+  locate: 0.4298
+  input: 0.4298
+  high: 0.4298
+  criterion: 0.4298
+  rating: 0.2749
+  preferred: 0.2657
+  facility: 0.1990
+  repair: 0.1990
+  system: 0.1571
+  shall: 0.1057
+
+FR5:
+  enter: 0.4894
+  assignment: 0.4894
+  adjuster: 0.3873
+  estimate: 0.3443
+  preferred: 0.3328
+  repair: 0.2492
+  facility: 0.2492
+  shall: 0.1324
+
+FR6:
+  override: 0.4883
+  assignment: 0.4440
+  able: 0.3682
+  adjuster: 0.3513
+  estimate: 0.3123
+  preferred: 0.3019
+  facility: 0.2261
+  repair: 0.2261
+  shall: 0.1201
+
+FR7:
+  return: 0.5714
+  preferred: 0.4685
+  user: 0.4159
+  repair: 0.3509
+  facility: 0.3509
+  shall: 0.1864
+
+FR8:
+  within: 0.3978
+  determine: 0.3978
+  repair: 0.3684
+  facility: 0.3684
+  list: 0.3617
+  radius: 0.3162
+  return: 0.3000
+  preferred: 0.2460
+  system: 0.1454
+  shall: 0.0979
+
+FR9:
+  damage: 0.4372
+  part: 0.3878
+  information: 0.3693
+  vehicle: 0.3296
+  estimator: 0.3145
+  use: 0.3015
+  search: 0.2796
+  available: 0.2703
+  recycled: 0.2467
+  shall: 0.1075
+
+FR10:
+  list: 0.4182
+  part: 0.4080
+  supplier: 0.3468
+  estimator: 0.3309
+  use: 0.3171
+  search: 0.2942
+  available: 0.2843
+  preferred: 0.2843
+  recycled: 0.2595
+  shall: 0.1131
+
+FR11:
+  supply: 0.4863
+  part: 0.4314
+  vehicle: 0.3667
+  supplier: 0.3667
+  search: 0.3111
+  available: 0.3007
+  recycled: 0.2744
+  system: 0.1778
+  shall: 0.1196
+
+FR12:
+  find: 0.4118
+  zipcode: 0.3744
+  part: 0.3653
+  mile: 0.3479
+  radius: 0.3273
+  supplier: 0.3105
+  estimator: 0.2963
+  search: 0.2634
+  preferred: 0.2546
+  shall: 0.1013
+
+FR13:
+  retain: 0.5198
+  supplier: 0.3919
+  return: 0.3919
+  search: 0.3324
+  available: 0.3214
+  recycle: 0.3214
+  part: 0.2306
+  system: 0.1900
+  shall: 0.1278
+
+FR14:
+  information: 0.4742
+  supplier: 0.4232
+  return: 0.4232
+  recycle: 0.3471
+  available: 0.3471
+  user: 0.3081
+  part: 0.2490
+  shall: 0.1381
+
+FR15:
+  apply: 0.4785
+  select: 0.4446
+  collision: 0.3968
+  estimator: 0.3786
+  estimate: 0.3366
+  recycled: 0.2969
+  part: 0.2334
+  shall: 0.1294
+
+FR16:
+  apply: 0.4316
+  part: 0.4211
+  return: 0.3579
+  collision: 0.3579
+  estimator: 0.3415
+  estimate: 0.3036
+  available: 0.2935
+  recycled: 0.2678
+  shall: 0.1168
+
+FR17:
+  review: 0.6255
+  collision: 0.4716
+  adjuster: 0.4500
+  estimate: 0.4001
+  shall: 0.1539
+
+FR18:
+  request: 0.4747
+  collision: 0.4237
+  adjuster: 0.4043
+  estimate: 0.3594
+  audit: 0.3474
+  recycled: 0.3171
+  part: 0.2493
+  shall: 0.1382
+
+FR19:
+  total: 0.4326
+  number: 0.4326
+  include: 0.3281
+  use: 0.3281
+  estimate: 0.3043
+  report: 0.2942
+  audit: 0.2942
+  recycle: 0.2942
+  part: 0.2110
+  shall: 0.1170
+
+FR20:
+  original: 0.4360
+  result: 0.3964
+  number: 0.3964
+  include: 0.3007
+  search: 0.2789
+  available: 0.2696
+  report: 0.2696
+  audit: 0.2696
+  recycled: 0.2460
+  part: 0.1934
+
+FR21:
+  percentage: 0.4949
+  use: 0.3413
+  include: 0.3413
+  estimate: 0.3166
+  report: 0.3060
+  audit: 0.3060
+  available: 0.3060
+  recycled: 0.2793
+  part: 0.2195
+  shall: 0.1217
+
+FR22:
+  audit: 0.4299
+  score: 0.3477
+  sum: 0.3477
+  line: 0.3477
+  individual: 0.3477
+  item: 0.3477
+  total: 0.3161
+  include: 0.2397
+  report: 0.2149
+  shall: 0.0855
+
+FR23:
+  display: 0.5792
+  report: 0.4749
+  audit: 0.4749
+  user: 0.4216
+  shall: 0.1889
+
+FR24:
+  later: 0.4687
+  point: 0.4687
+  time: 0.4262
+  adjuster: 0.3372
+  available: 0.2898
+  report: 0.2898
+  audit: 0.2898
+  shall: 0.1153
+
+FR25:
+  view: 0.5146
+  select: 0.4781
+  rating: 0.3620
+  preferred: 0.3499
+  user: 0.3106
+  repair: 0.2621
+  facility: 0.2621
+  shall: 0.1392
+
+FR26:
+  rating: 0.5081
+  yet: 0.3972
+  set: 0.3972
+  define: 0.3972
+  blank: 0.3972
+  display: 0.2995
+  system: 0.1452
+
+FR27:
+  enter: 0.4603
+  base: 0.4603
+  new: 0.4277
+  rating: 0.3238
+  audit: 0.3130
+  report: 0.3130
+  user: 0.2778
+  shall: 0.1245
+
+FR28:
+  scale: 0.8249
+  rating: 0.5276
+  shall: 0.2029
+
+FR29:
+  prefer: 0.5171
+  save: 0.4701
+  select: 0.4368
+  rating: 0.3307
+  user: 0.2838
+  repair: 0.2394
+  facility: 0.2394
+  shall: 0.1272
+
+FR30:
+  save: 0.6074
+  rating: 0.4273
+  preferred: 0.4130
+  repair: 0.3093
+  facility: 0.3093
+  system: 0.2442
+  shall: 0.1643
+
+FR31:
+  vehicle: 0.5904
+  year: 0.3915
+  make: 0.3915
+  model: 0.3915
+  data: 0.3308
+  include: 0.2700
+  shall: 0.0963
+
+FR32:
+  zipcode: 0.6127
+  unknown: 0.3370
+  resolve: 0.3370
+  street: 0.3064
+  address: 0.3064
+  state: 0.3064
+  city: 0.3064
+  system: 0.1232
+  shall: 0.0829
+
+FR33:
+  retrieve: 0.4828
+  result: 0.4390
+  provide: 0.4390
+  estimator: 0.3474
+  search: 0.3088
+  recycled: 0.2724
+  part: 0.2142
+  system: 0.1765
+  shall: 0.1188
+
+FR34:
+  generate: 0.4632
+  base: 0.4212
+  collision: 0.3493
+  estimate: 0.2963
+  audit: 0.2864
+  available: 0.2864
+  report: 0.2864
+  recycled: 0.2614
+  part: 0.2055
+  system: 0.1693
+
+FR35:
+  current: 0.6010
+  display: 0.4532
+  rating: 0.3844
+  user: 0.3299
+  repair: 0.2783
+  facility: 0.2783
+  shall: 0.1478
+
+FR36:
+  use: 0.5092
+  attempt: 0.3692
+  category: 0.3692
+  actual: 0.3692
+  part: 0.3276
+  include: 0.2546
+  rating: 0.2362
+  recycle: 0.2283
+  recycled: 0.2083
+  shall: 0.0908
+
+FR37:
+  entry: 0.5757
+  visit: 0.4142
+  record: 0.4142
+  schedule: 0.3447
+  repair: 0.2666
+  facility: 0.2666
+  system: 0.2105
+  shall: 0.1416
+
+FR38:
+  visiting: 0.5362
+  notify: 0.5362
+  schedule: 0.3531
+  user: 0.3236
+  facility: 0.2731
+  repair: 0.2731
+  system: 0.2156
+
+FR39:
+  ability: 0.4750
+  reminder: 0.4750
+  send: 0.3775
+  visit: 0.3418
+  schedule: 0.2844
+  user: 0.2607
+  repair: 0.2199
+  facility: 0.2199
+  system: 0.1736
+  shall: 0.1168
+
+FR40:
+  contact: 0.4907
+  creator: 0.4461
+  information: 0.4145
+  send: 0.3900
+  schedule: 0.2938
+  facility: 0.2272
+  repair: 0.2272
+  system: 0.1794
+  shall: 0.1207
+
+FR41:
+  acknowledgment: 0.5816
+  visit: 0.4184
+  record: 0.4184
+  schedule: 0.3483
+  repair: 0.2693
+  facility: 0.2693
+  system: 0.2126
+
+FR42:
+  store: 0.5366
+  new: 0.4985
+  conference: 0.4450
+  room: 0.4450
+  system: 0.2157
+  shall: 0.1452
+
+FR43:
+  exist: 0.5444
+  update: 0.4759
+  room: 0.4514
+  conference: 0.4514
+  system: 0.2189
+  shall: 0.1473
+
+FR44:
+  delete: 0.5569
+  able: 0.4618
+  room: 0.4618
+  conference: 0.4618
+  system: 0.2239
+
+FR45:
+  store: 0.5356
+  new: 0.4976
+  able: 0.4441
+  recycle: 0.3642
+  part: 0.2613
+  system: 0.2153
+  shall: 0.1449
+
+FR46:
+  exist: 0.6263
+  update: 0.5475
+  recycled: 0.3887
+  part: 0.3056
+  system: 0.2518
+
+FR47:
+  delete: 0.6175
+  able: 0.5120
+  recycle: 0.4199
+  part: 0.3012
+  system: 0.2483
+  shall: 0.1670
+
+FR48:
+  time: 0.5119
+  room: 0.4245
+  conference: 0.4245
+  reflect: 0.2815
+  reservation: 0.2815
+  date: 0.2815
+  reserve: 0.2378
+  update: 0.2237
+  schedule: 0.1686
+  shall: 0.0692
+
+FR49:
+  map: 0.4068
+  build: 0.4068
+  show: 0.4068
+  location: 0.3437
+  room: 0.3067
+  conference: 0.3067
+  display: 0.3067
+  repair: 0.1884
+  facility: 0.1884
+  system: 0.1487
+
+FR50:
+  agenda: 0.5235
+  update: 0.4161
+  record: 0.3767
+  visit: 0.3767
+  schedule: 0.3135
+  repair: 0.2424
+  facility: 0.2424
+  system: 0.1914
+  shall: 0.1288
+
+FR51:
+  schedule: 0.5338
+  confirmation: 0.4457
+  creator: 0.4053
+  send: 0.3543
+  visit: 0.3207
+  repair: 0.2064
+  facility: 0.2064
+  system: 0.1629
+  shall: 0.1096
+
+FR52:
+  transportation: 0.5254
+  status: 0.5254
+  reserve: 0.4439
+  record: 0.3780
+  part: 0.2331
+  system: 0.1921
+  shall: 0.1292
+
+FR53:
+  type: 0.5875
+  different: 0.5342
+  record: 0.4227
+  schedule: 0.3518
+  system: 0.2148
+  shall: 0.1445
+
+FR54:
+  reserve: 0.5967
+  record: 0.5082
+  recycle: 0.4367
+  part: 0.3133
+  system: 0.2582
+  shall: 0.1737
+
+FR55:
+  transport: 0.5169
+  notify: 0.4700
+  request: 0.4367
+  recycle: 0.3196
+  repair: 0.2394
+  facility: 0.2394
+  part: 0.2293
+  system: 0.1890
+  shall: 0.1271
+
+FR56:
+  view: 0.6152
+  allow: 0.3383
+  privileged: 0.3383
+  multiple: 0.3383
+  visiting: 0.3076
+  report: 0.2092
+  schedule: 0.2026
+  user: 0.1857
+  repair: 0.1566
+  facility: 0.1566
+
+FR57:
+  via: 0.3425
+  method: 0.3425
+  notification: 0.3425
+  specify: 0.3425
+  kind: 0.3425
+  different: 0.3114
+  send: 0.2722
+  able: 0.2582
+  visit: 0.2464
+  schedule: 0.2051
+
+FR58:
+  look: 0.5754
+  customizable: 0.5754
+  feel: 0.5231
+  system: 0.2103
+  shall: 0.1415
+
+FR59:
+  intuitive: 0.6563
+  interface: 0.5967
+  user: 0.3602
+  system: 0.2399
+  shall: 0.1614
+
+FR60:
+  display: 0.6560
+  two: 0.2900
+  table: 0.2900
+  region: 0.2900
+  right: 0.2900
+  leave: 0.2900
+  graphical: 0.2900
+  data: 0.2450
+  shall: 0.0713
+
+### STEP 3: COSINE SIMILARITY CALCULATION ###
+
+Similarity matrix shape: (60, 3)
+(rows=FRs: 60, columns=NFRs: 3)
+
+### STEP 4: TOP SIMILARITIES (SORTED) FOR ALL FRs ###
+
+FR1:
+  NFR2 (Usability): 0.2129 [TRACED]
+  NFR3 (Security): 0.0489 
+  NFR1 (Operational): 0.0105 
+
+FR2:
+  NFR2 (Usability): 0.0108 
+  NFR1 (Operational): 0.0100 
+  NFR3 (Security): 0.0078 
+
+FR3:
+  NFR2 (Usability): 0.0182 
+  NFR1 (Operational): 0.0168 
+  NFR3 (Security): 0.0131 
+
+FR4:
+  NFR2 (Usability): 0.0570 
+  NFR1 (Operational): 0.0528 
+  NFR3 (Security): 0.0076 
+
+FR5:
+  NFR3 (Security): 0.1725 
+  NFR2 (Usability): 0.0132 
+  NFR1 (Operational): 0.0122 
+
+FR6:
+  NFR3 (Security): 0.1565 
+  NFR2 (Usability): 0.0120 
+  NFR1 (Operational): 0.0111 
+
+FR7:
+  NFR2 (Usability): 0.2034 [TRACED]
+  NFR3 (Security): 0.0802 
+  NFR1 (Operational): 0.0172 
+
+FR8:
+  NFR2 (Usability): 0.0528 
+  NFR1 (Operational): 0.0488 
+  NFR3 (Security): 0.0070 
+
+FR9:
+  NFR3 (Security): 0.1491 
+  NFR1 (Operational): 0.1387 
+  NFR2 (Usability): 0.0949 
+
+FR10:
+  NFR3 (Security): 0.1569 
+  NFR1 (Operational): 0.1460 
+  NFR2 (Usability): 0.0998 
+
+FR11:
+  NFR1 (Operational): 0.2030 [TRACED]
+  NFR3 (Security): 0.1659 
+  NFR2 (Usability): 0.0645 
+
+FR12:
+  NFR1 (Operational): 0.1307 
+  NFR3 (Security): 0.1021 
+  NFR2 (Usability): 0.0101 
+
+FR13:
+  NFR1 (Operational): 0.2148 [TRACED]
+  NFR3 (Security): 0.1271 
+  NFR2 (Usability): 0.0690 
+
+FR14:
+  NFR3 (Security): 0.1868 
+  NFR1 (Operational): 0.1758 
+  NFR2 (Usability): 0.1506 
+
+FR15:
+  NFR3 (Security): 0.1189 
+  NFR1 (Operational): 0.0895 
+  NFR2 (Usability): 0.0129 
+
+FR16:
+  NFR3 (Security): 0.1619 
+  NFR1 (Operational): 0.1506 
+  NFR2 (Usability): 0.0116 
+
+FR17:
+  NFR3 (Security): 0.2005 [TRACED]
+  NFR2 (Usability): 0.0153 
+  NFR1 (Operational): 0.0142 
+
+FR18:
+  NFR3 (Security): 0.6575 [TRACED]
+  NFR1 (Operational): 0.0955 
+  NFR2 (Usability): 0.0138 
+
+FR19:
+  NFR3 (Security): 0.2760 [TRACED]
+  NFR1 (Operational): 0.1490 
+  NFR2 (Usability): 0.1032 
+
+FR20:
+  NFR3 (Security): 0.2448 [TRACED]
+  NFR1 (Operational): 0.0741 
+  NFR2 (Usability): 0.0107 
+
+FR21:
+  NFR3 (Security): 0.2779 [TRACED]
+  NFR2 (Usability): 0.1074 
+  NFR1 (Operational): 0.0841 
+
+FR22:
+  NFR3 (Security): 0.2005 [TRACED]
+  NFR2 (Usability): 0.0085 
+  NFR1 (Operational): 0.0079 
+
+FR23:
+  NFR3 (Security): 0.3390 [TRACED]
+  NFR2 (Usability): 0.2061 [TRACED]
+  NFR1 (Operational): 0.0174 
+
+FR24:
+  NFR3 (Security): 0.3075 [TRACED]
+  NFR2 (Usability): 0.0115 
+  NFR1 (Operational): 0.0106 
+
+FR25:
+  NFR2 (Usability): 0.1519 
+  NFR3 (Security): 0.0599 
+  NFR1 (Operational): 0.0128 
+
+FR26:
+  NFR2 (Usability): 0.0430 
+  NFR1 (Operational): 0.0398 
+  NFR3 (Security): 0.0000 
+
+FR27:
+  NFR3 (Security): 0.2234 [TRACED]
+  NFR2 (Usability): 0.1358 
+  NFR1 (Operational): 0.0115 
+
+FR28:
+  NFR2 (Usability): 0.0202 
+  NFR1 (Operational): 0.0187 
+  NFR3 (Security): 0.0146 
+
+FR29:
+  NFR2 (Usability): 0.1388 
+  NFR3 (Security): 0.0547 
+  NFR1 (Operational): 0.0117 
+
+FR30:
+  NFR2 (Usability): 0.0886 
+  NFR1 (Operational): 0.0820 
+  NFR3 (Security): 0.0118 
+
+FR31:
+  NFR1 (Operational): 0.1135 
+  NFR2 (Usability): 0.0096 
+  NFR3 (Security): 0.0069 
+
+FR32:
+  NFR2 (Usability): 0.0447 
+  NFR1 (Operational): 0.0414 
+  NFR3 (Security): 0.0060 
+
+FR33:
+  NFR1 (Operational): 0.2799 [TRACED]
+  NFR3 (Security): 0.1091 
+  NFR2 (Usability): 0.0641 
+
+FR34:
+  NFR3 (Security): 0.2601 [TRACED]
+  NFR1 (Operational): 0.1251 
+  NFR2 (Usability): 0.0615 
+
+FR35:
+  NFR2 (Usability): 0.1613 
+  NFR3 (Security): 0.0636 
+  NFR1 (Operational): 0.0136 
+
+FR36:
+  NFR1 (Operational): 0.1700 
+  NFR3 (Security): 0.1672 
+  NFR2 (Usability): 0.1512 
+
+FR37:
+  NFR2 (Usability): 0.0764 
+  NFR1 (Operational): 0.0707 
+  NFR3 (Security): 0.0102 
+
+FR38:
+  NFR2 (Usability): 0.2076 [TRACED]
+  NFR1 (Operational): 0.0590 
+  NFR3 (Security): 0.0520 
+
+FR39:
+  NFR2 (Usability): 0.1789 
+  NFR1 (Operational): 0.0583 
+  NFR3 (Security): 0.0503 
+
+FR40:
+  NFR2 (Usability): 0.0651 
+  NFR1 (Operational): 0.0602 
+  NFR3 (Security): 0.0087 
+
+FR41:
+  NFR2 (Usability): 0.0629 
+  NFR1 (Operational): 0.0582 
+  NFR3 (Security): 0.0000 
+
+FR42:
+  NFR2 (Usability): 0.0783 
+  NFR1 (Operational): 0.0724 
+  NFR3 (Security): 0.0104 
+
+FR43:
+  NFR2 (Usability): 0.0794 
+  NFR1 (Operational): 0.0735 
+  NFR3 (Security): 0.0106 
+
+FR44:
+  NFR2 (Usability): 0.0663 
+  NFR1 (Operational): 0.0613 
+  NFR3 (Security): 0.0000 
+
+FR45:
+  NFR1 (Operational): 0.2434 [TRACED]
+  NFR3 (Security): 0.1441 
+  NFR2 (Usability): 0.0782 
+
+FR46:
+  NFR1 (Operational): 0.1705 
+  NFR3 (Security): 0.1435 
+  NFR2 (Usability): 0.0745 
+
+FR47:
+  NFR1 (Operational): 0.2806 [TRACED]
+  NFR3 (Security): 0.1661 
+  NFR2 (Usability): 0.0901 
+
+FR48:
+  NFR2 (Usability): 0.0069 
+  NFR1 (Operational): 0.0064 
+  NFR3 (Security): 0.0050 
+
+FR49:
+  NFR2 (Usability): 0.0540 
+  NFR1 (Operational): 0.0499 
+  NFR3 (Security): 0.0072 
+
+FR50:
+  NFR2 (Usability): 0.0695 
+  NFR1 (Operational): 0.0643 
+  NFR3 (Security): 0.0093 
+
+FR51:
+  NFR2 (Usability): 0.0591 
+  NFR1 (Operational): 0.0547 
+  NFR3 (Security): 0.0079 
+
+FR52:
+  NFR1 (Operational): 0.1419 
+  NFR3 (Security): 0.0698 
+  NFR2 (Usability): 0.0697 
+
+FR53:
+  NFR2 (Usability): 0.0780 
+  NFR1 (Operational): 0.0721 
+  NFR3 (Security): 0.0104 
+
+FR54:
+  NFR1 (Operational): 0.2919 [TRACED]
+  NFR3 (Security): 0.1728 
+  NFR2 (Usability): 0.0937 
+
+FR55:
+  NFR3 (Security): 0.3423 [TRACED]
+  NFR1 (Operational): 0.2136 [TRACED]
+  NFR2 (Usability): 0.0686 
+
+FR56:
+  NFR2 (Usability): 0.1191 
+  NFR3 (Security): 0.0676 
+  NFR1 (Operational): 0.0339 
+
+FR57:
+  NFR2 (Usability): 0.0454 
+  NFR1 (Operational): 0.0420 
+  NFR3 (Security): 0.0061 
+
+FR58:
+  NFR2 (Usability): 0.2689 [TRACED]
+  NFR1 (Operational): 0.0706 
+  NFR3 (Security): 0.0102 
+
+FR59:
+  NFR1 (Operational): 0.2837 [TRACED]
+  NFR2 (Usability): 0.2471 [TRACED]
+  NFR3 (Security): 0.0694 
+
+FR60:
+  NFR1 (Operational): 0.0841 
+  NFR2 (Usability): 0.0071 
+  NFR3 (Security): 0.0051 
+
+### STEP 5: APPLYING THRESHOLD (>= 0.2) ###
+
+Total trace links found: 25
+Average traces per FR: 0.42
+FRs with 0 traces: 38
+FRs with 1+ traces: 22
+Max traces for single FR: 2
+
+--- FRs with Trace Links ---
+FR1: NFR2 (Usability) (similarity: 0.2129)
+FR7: NFR2 (Usability) (similarity: 0.2034)
+FR11: NFR1 (Operational) (similarity: 0.2030)
+FR13: NFR1 (Operational) (similarity: 0.2148)
+FR17: NFR3 (Security) (similarity: 0.2005)
+FR18: NFR3 (Security) (similarity: 0.6575)
+FR19: NFR3 (Security) (similarity: 0.2760)
+FR20: NFR3 (Security) (similarity: 0.2448)
+FR21: NFR3 (Security) (similarity: 0.2779)
+FR22: NFR3 (Security) (similarity: 0.2005)
+FR23: NFR2 (Usability), NFR3 (Security) (similarity: 0.2061, 0.3390)
+FR24: NFR3 (Security) (similarity: 0.3075)
+FR27: NFR3 (Security) (similarity: 0.2234)
+FR33: NFR1 (Operational) (similarity: 0.2799)
+FR34: NFR3 (Security) (similarity: 0.2601)
+FR38: NFR2 (Usability) (similarity: 0.2076)
+FR45: NFR1 (Operational) (similarity: 0.2434)
+FR47: NFR1 (Operational) (similarity: 0.2806)
+FR54: NFR1 (Operational) (similarity: 0.2919)
+FR55: NFR1 (Operational), NFR3 (Security) (similarity: 0.2136, 0.3423)
+FR58: NFR2 (Usability) (similarity: 0.2689)
+FR59: NFR1 (Operational), NFR2 (Usability) (similarity: 0.2837, 0.2471)
+Loaded 3 NFRs and 60 FRs
+
+Trace matrix saved to: trace_matrix_1.txt
+
+================================================================================
+
+
+================================================================================
+VARIANT 2
+================================================================================
+
+Configuration: Tokenization, Stop-word removal, POS tagging, Stemming
+--------------------------------------------------------------------------------
+
+### STEP 1: PRE-PROCESSING ###
+Loaded 3 NFRs and 60 FRs
+Loaded 3 NFRs and 60 FRs
+
+--- ALL 3 NFRs (Original vs Processed) ---
+
+[1] Original NFR: NFR1 (Operational): The system shall interface with the Choice Parts System. This provides the feed of recycled parts data.
+    Processed NFR: oper system shall interfac choic part system provid feed recycl part data
+
+[2] Original NFR: NFR2 (Usability): Users shall feel satisfied using the system. 85% of all users will be satisfied with the system.
+    Processed NFR: usabl user shall feel satisfi use system user satisfi system
+
+[3] Original NFR: NFR3 (Security): Only adjusters can request recycled parts audit reports. No users without an adjuster role shall request recycled parts audits.
+    Processed NFR: secur adjust request recycl part audit report user without adjust role shall request recycl part audit
+
+--- ALL 60 FRs (Original vs Processed) ---
+
+[1] Original FR: FR1: The user shall search for the preferred repair facility using vehicle location and radius in miles.
+    Processed FR: user shall search prefer repair facil use vehicl locat radiu mile
+
+[2] Original FR: FR2: The vehicle location shall include street address city state and zip-code.
+    Processed FR: vehicl locat shall includ street address citi state
+
+[3] Original FR: FR3: The search radius shall be between 1 and 30 miles.
+    Processed FR: search radiu shall mile
+
+[4] Original FR: FR4: The system shall locate the preferred repair facility with the highest ratings for the input criteria.
+    Processed FR: system shall locat prefer repair facil highest rate input criteria
+
+[5] Original FR: FR5: The adjuster shall enter the preferred repair facility on the estimate assignment.
+    Processed FR: adjust shall enter prefer repair facil estim assign
+
+[6] Original FR: FR6: The adjuster shall be able to override the preferred repair facility on the estimate assignment.
+    Processed FR: adjust shall abl overrid prefer repair facil estim assign
+
+[7] Original FR: FR7: The preferred repair facility shall be returned to the user.
+    Processed FR: prefer repair facil shall return user
+
+[8] Original FR: FR8: The system shall return a list of repair facilities within the radius if the preferred repair facility cannot be determined.
+    Processed FR: system shall return list repair facil within radiu prefer repair facil determin
+
+[9] Original FR: FR9: The estimator shall search for available recycled parts using damaged vehicle parts information.
+    Processed FR: estim shall search avail recycl part use damag vehicl part inform
+
+[10] Original FR: FR10: The estimator shall search for available recycled parts using a list of preferred parts suppliers.
+    Processed FR: estim shall search avail recycl part use list prefer part supplier
+
+[11] Original FR: FR11: The system shall search for available recycled parts for the supplied vehicle parts and suppliers.
+    Processed FR: system shall search avail recycl part suppli vehicl part supplier
+
+[12] Original FR: FR12: The estimator shall search by zipcode with a radius of 30 miles if no parts are found for the preferred parts suppliers.
+    Processed FR: estim shall search zipcod radiu mile part found prefer part supplier
+
+[13] Original FR: FR13: The system shall retain the available recycled parts and suppliers returned from the search.
+    Processed FR: system shall retain avail recycl part supplier return search
+
+[14] Original FR: FR14: The available recycled parts information and their suppliers shall be returned to the user.
+    Processed FR: avail recycl part inform supplier shall return user
+
+[15] Original FR: FR15: The estimator shall apply selected recycled parts to the collision estimate.
+    Processed FR: estim shall appli select recycl part collis estim
+
+[16] Original FR: FR16: The estimator shall not apply recycled parts to the collision estimate if no available parts are returned.
+    Processed FR: estim shall appli recycl part collis estim avail part return
+
+[17] Original FR: FR17: The adjuster shall review the collision estimate.
+    Processed FR: adjust shall review collis estim
+
+[18] Original FR: FR18: The adjuster shall request a recycled parts audit of the collision estimate.
+    Processed FR: adjust shall request recycl part audit collis estim
+
+[19] Original FR: FR19: The audit report shall include the total number of recycled parts used in the estimate.
+    Processed FR: audit report shall includ total number recycl part use estim
+
+[20] Original FR: FR20: The audit report shall include the number of available recycled parts from the original search results.
+    Processed FR: audit report shall includ number avail recycl part origin search result
+
+[21] Original FR: FR21: The audit report shall include the percentage of available recycled parts used in the estimate.
+    Processed FR: audit report shall includ percentag avail recycl part use estim
+
+[22] Original FR: FR22: The audit report shall include the total score of the audit which sums the individual line items.
+    Processed FR: audit report shall includ total score audit sum individu line item
+
+[23] Original FR: FR23: The audit report shall be displayed to the user.
+    Processed FR: audit report shall display user
+
+[24] Original FR: FR24: The audit report shall be available to other adjusters at later points in time.
+    Processed FR: audit report shall avail adjust later point time
+
+[25] Original FR: FR25: The user shall select to view the preferred repair facility ratings.
+    Processed FR: user shall select view prefer repair facil rate
+
+[26] Original FR: FR26: The system will display a blank set of ratings if there are not ratings yet defined.
+    Processed FR: system display blank set rate rate yet defin
+
+[27] Original FR: FR27: The user shall enter new ratings based on the audit report.
+    Processed FR: user shall enter new rate base audit report
+
+[28] Original FR: FR28: The ratings shall be from a scale of 1-10.
+    Processed FR: rate shall scale
+
+[29] Original FR: FR29: The user shall select to save the preferred repair facility ratings.
+    Processed FR: user shall select save prefer repair facil rate
+
+[30] Original FR: FR30: The preferred repair facility ratings shall be saved by the system.
+    Processed FR: prefer repair facil rate shall save system
+
+[31] Original FR: FR31: The vehicle data shall include vehicle year make and model.
+    Processed FR: vehicl data shall includ vehicl year make model
+
+[32] Original FR: FR32: The system shall resolve the zipcode for the street address city and state if zipcode is unknown.
+    Processed FR: system shall resolv zipcod street address citi state zipcod unknown
+
+[33] Original FR: FR33: The recycled parts search results provided to the estimator shall be retrieved by the system.
+    Processed FR: recycl part search result provid estim shall retriev system
+
+[34] Original FR: FR34: The system shall generate an audit report based on the available recycled parts and the collision estimate.
+    Processed FR: system shall gener audit report base avail recycl part collis estim
+
+[35] Original FR: FR35: The current repair facility ratings shall be displayed to the user.
+    Processed FR: current repair facil rate shall display user
+
+[36] Original FR: FR36: The ratings shall include categories for attempted use of recycled parts and actual use of recycled parts.
+    Processed FR: rate shall includ categori attempt use recycl part actual use recycl part
+
+[37] Original FR: FR37: The system shall record repair facility visiting schedule entries.
+    Processed FR: system shall record repair facil visit schedul entri
+
+[38] Original FR: FR38: The system will notify users of their repair facility visiting schedules.
+    Processed FR: system notifi user repair facil visit schedul
+
+[39] Original FR: FR39: The system shall have the ability to send repair facility visiting schedule reminders to users.
+    Processed FR: system shall abil send repair facil visit schedul remind user
+
+[40] Original FR: FR40: The system shall send the repair facility contact information to schedule creators.
+    Processed FR: system shall send repair facil contact inform schedul creator
+
+[41] Original FR: FR41: The system will record repair facility visiting schedule acknowledgments.
+    Processed FR: system record repair facil visit schedul acknowledg
+
+[42] Original FR: FR42: The system shall store new conference rooms.
+    Processed FR: system shall store new confer room
+
+[43] Original FR: FR43: The system shall update existing conference rooms.
+    Processed FR: system shall updat exist confer room
+
+[44] Original FR: FR44: The system will be able to delete conference rooms.
+    Processed FR: system abl delet confer room
+
+[45] Original FR: FR45: The system shall be able to store new recycled parts.
+    Processed FR: system shall abl store new recycl part
+
+[46] Original FR: FR46: The system will update existing recycled parts.
+    Processed FR: system updat exist recycl part
+
+[47] Original FR: FR47: The system shall be able to delete recycled parts.
+    Processed FR: system shall abl delet recycl part
+
+[48] Original FR: FR48: Each time a conference room is reserved the conference room schedule shall be updated to reflect the time and date of the reservation.
+    Processed FR: time confer room reserv confer room schedul shall updat reflect time date reserv
+
+[49] Original FR: FR49: The system shall display a map of the repair facility building showing conference room locations.
+    Processed FR: system shall display map repair facil build show confer room locat
+
+[50] Original FR: FR50: The system shall record updated repair facility visiting schedule agendas.
+    Processed FR: system shall record updat repair facil visit schedul agenda
+
+[51] Original FR: FR51: The system shall send a repair facility visiting schedule confirmation to the schedule creators.
+    Processed FR: system shall send repair facil visit schedul confirm schedul creator
+
+[52] Original FR: FR52: The system shall record the transportation status of parts reserved.
+    Processed FR: system shall record transport statu part reserv
+
+[53] Original FR: FR53: The system shall record different schedule types.
+    Processed FR: system shall record differ schedul type
+
+[54] Original FR: FR54: The system shall record all the recycled parts that has been reserved.
+    Processed FR: system shall record recycl part reserv
+
+[55] Original FR: FR55: The system shall notify repair facility of recycled parts transport requests.
+    Processed FR: system shall notifi repair facil recycl part transport request
+
+[56] Original FR: FR56: The system will allow privileged users to view repair facility visiting schedules in multiple reporting views.
+    Processed FR: system allow privileg user view repair facil visit schedul multipl report view
+
+[57] Original FR: FR57: The system shall be able to send repair facility visiting schedule notifications via different kinds of end-user specified methods.
+    Processed FR: system shall abl send repair facil visit schedul notif via differ kind specifi method
+
+[58] Original FR: FR58: The system shall have a customizable Look and Feel.
+    Processed FR: system shall customiz look feel
+
+[59] Original FR: FR59: The system shall have an intuitive user interface.
+    Processed FR: system shall intuit user interfac
+
+[60] Original FR: FR60: The display shall have two regions: left of the display is graphical right of the display is a data table.
+    Processed FR: display shall two region left display graphic right display data tabl
+
+### STEP 2: TF-IDF VECTORIZATION ###
+
+Vocabulary size: 140
+NFR vectors shape: (3, 140)
+FR vectors shape: (60, 140)
+
+--- Top 10 TF-IDF terms for ALL 60 FRs ---
+
+FR1:
+  mile: 0.3948
+  radiu: 0.3714
+  locat: 0.3714
+  vehicl: 0.3523
+  use: 0.3222
+  search: 0.2989
+  prefer: 0.2798
+  user: 0.2565
+  facil: 0.2164
+  repair: 0.2164
+
+FR2:
+  address: 0.4049
+  citi: 0.4049
+  state: 0.4049
+  street: 0.4049
+  locat: 0.3539
+  vehicl: 0.3358
+  includ: 0.3071
+  shall: 0.1095
+
+FR3:
+  mile: 0.6271
+  radiu: 0.5900
+  search: 0.4748
+  shall: 0.1826
+
+FR4:
+  criteria: 0.4462
+  input: 0.4462
+  highest: 0.4462
+  locat: 0.3547
+  rate: 0.2854
+  prefer: 0.2672
+  facil: 0.2066
+  repair: 0.2066
+  system: 0.1631
+  shall: 0.1098
+
+FR5:
+  enter: 0.4977
+  assign: 0.4977
+  adjust: 0.3938
+  prefer: 0.3278
+  estim: 0.3089
+  repair: 0.2535
+  facil: 0.2535
+  shall: 0.1346
+
+FR6:
+  overrid: 0.4951
+  assign: 0.4502
+  abl: 0.3733
+  adjust: 0.3562
+  prefer: 0.2965
+  estim: 0.2794
+  facil: 0.2293
+  repair: 0.2293
+  shall: 0.1218
+
+FR7:
+  return: 0.5753
+  prefer: 0.4569
+  user: 0.4188
+  repair: 0.3533
+  facil: 0.3533
+  shall: 0.1877
+
+FR8:
+  within: 0.3986
+  determin: 0.3986
+  repair: 0.3691
+  facil: 0.3691
+  list: 0.3624
+  radiu: 0.3168
+  return: 0.3005
+  prefer: 0.2387
+  system: 0.1457
+  shall: 0.0980
+
+FR9:
+  damag: 0.4504
+  part: 0.3996
+  inform: 0.3805
+  vehicl: 0.3396
+  use: 0.3106
+  search: 0.2881
+  avail: 0.2785
+  estim: 0.2541
+  recycl: 0.2086
+  shall: 0.1108
+
+FR10:
+  list: 0.4334
+  part: 0.4229
+  supplier: 0.3594
+  use: 0.3287
+  search: 0.3049
+  avail: 0.2947
+  prefer: 0.2854
+  estim: 0.2690
+  recycl: 0.2207
+  shall: 0.1173
+
+FR11:
+  suppli: 0.4924
+  part: 0.4368
+  vehicl: 0.3713
+  supplier: 0.3713
+  search: 0.3150
+  avail: 0.3045
+  recycl: 0.2280
+  system: 0.1800
+  shall: 0.1211
+
+FR12:
+  found: 0.4198
+  zipcod: 0.3817
+  part: 0.3724
+  mile: 0.3546
+  radiu: 0.3337
+  supplier: 0.3165
+  search: 0.2685
+  prefer: 0.2514
+  estim: 0.2369
+  shall: 0.1033
+
+FR13:
+  retain: 0.5320
+  supplier: 0.4011
+  return: 0.4011
+  search: 0.3403
+  avail: 0.3289
+  recycl: 0.2463
+  part: 0.2360
+  system: 0.1945
+  shall: 0.1308
+
+FR14:
+  inform: 0.4873
+  supplier: 0.4349
+  return: 0.4349
+  avail: 0.3566
+  user: 0.3166
+  recycl: 0.2671
+  part: 0.2558
+  shall: 0.1419
+
+FR15:
+  estim: 0.5748
+  appli: 0.4631
+  select: 0.4303
+  collis: 0.3841
+  recycl: 0.2359
+  part: 0.2259
+  shall: 0.1253
+
+FR16:
+  estim: 0.5216
+  appli: 0.4202
+  part: 0.4100
+  return: 0.3485
+  collis: 0.3485
+  avail: 0.2857
+  recycl: 0.2140
+  shall: 0.1137
+
+FR17:
+  review: 0.6369
+  collis: 0.4802
+  adjust: 0.4583
+  estim: 0.3594
+  shall: 0.1567
+
+FR18:
+  request: 0.4900
+  collis: 0.4374
+  adjust: 0.4173
+  audit: 0.3586
+  estim: 0.3273
+  recycl: 0.2686
+  part: 0.2573
+  shall: 0.1427
+
+FR19:
+  number: 0.4458
+  total: 0.4458
+  use: 0.3381
+  includ: 0.3381
+  report: 0.3032
+  audit: 0.3032
+  estim: 0.2767
+  recycl: 0.2271
+  part: 0.2175
+  shall: 0.1206
+
+FR20:
+  origin: 0.4404
+  result: 0.4004
+  number: 0.4004
+  includ: 0.3037
+  search: 0.2817
+  avail: 0.2723
+  report: 0.2723
+  audit: 0.2723
+  recycl: 0.2039
+  part: 0.1953
+
+FR21:
+  percentag: 0.5072
+  use: 0.3497
+  includ: 0.3497
+  audit: 0.3136
+  report: 0.3136
+  avail: 0.3136
+  estim: 0.2862
+  recycl: 0.2348
+  part: 0.2250
+  shall: 0.1247
+
+FR22:
+  audit: 0.4299
+  score: 0.3477
+  sum: 0.3477
+  line: 0.3477
+  individu: 0.3477
+  item: 0.3477
+  total: 0.3161
+  includ: 0.2397
+  report: 0.2149
+  shall: 0.0855
+
+FR23:
+  display: 0.5792
+  report: 0.4749
+  audit: 0.4749
+  user: 0.4216
+  shall: 0.1889
+
+FR24:
+  later: 0.4687
+  point: 0.4687
+  time: 0.4262
+  adjust: 0.3372
+  avail: 0.2898
+  report: 0.2898
+  audit: 0.2898
+  shall: 0.1153
+
+FR25:
+  view: 0.5165
+  select: 0.4799
+  rate: 0.3634
+  prefer: 0.3402
+  user: 0.3118
+  repair: 0.2631
+  facil: 0.2631
+  shall: 0.1397
+
+FR26:
+  rate: 0.5081
+  yet: 0.3972
+  set: 0.3972
+  defin: 0.3972
+  blank: 0.3972
+  display: 0.2995
+  system: 0.1452
+
+FR27:
+  enter: 0.4603
+  base: 0.4603
+  new: 0.4277
+  rate: 0.3238
+  audit: 0.3130
+  report: 0.3130
+  user: 0.2778
+  shall: 0.1245
+
+FR28:
+  scale: 0.8249
+  rate: 0.5276
+  shall: 0.2029
+
+FR29:
+  save: 0.5165
+  select: 0.4799
+  rate: 0.3634
+  prefer: 0.3402
+  user: 0.3118
+  repair: 0.2631
+  facil: 0.2631
+  shall: 0.1397
+
+FR30:
+  save: 0.6106
+  rate: 0.4295
+  prefer: 0.4021
+  repair: 0.3110
+  facil: 0.3110
+  system: 0.2455
+  shall: 0.1652
+
+FR31:
+  vehicl: 0.5904
+  year: 0.3915
+  make: 0.3915
+  model: 0.3915
+  data: 0.3308
+  includ: 0.2700
+  shall: 0.0963
+
+FR32:
+  zipcod: 0.6127
+  unknown: 0.3370
+  resolv: 0.3370
+  street: 0.3064
+  state: 0.3064
+  citi: 0.3064
+  address: 0.3064
+  system: 0.1232
+  shall: 0.0829
+
+FR33:
+  retriev: 0.5009
+  result: 0.4554
+  provid: 0.4554
+  search: 0.3204
+  estim: 0.2826
+  recycl: 0.2319
+  part: 0.2222
+  system: 0.1831
+  shall: 0.1232
+
+FR34:
+  gener: 0.4732
+  base: 0.4303
+  collis: 0.3568
+  report: 0.2926
+  audit: 0.2926
+  avail: 0.2926
+  estim: 0.2670
+  recycl: 0.2191
+  part: 0.2099
+  system: 0.1730
+
+FR35:
+  current: 0.6010
+  display: 0.4532
+  rate: 0.3844
+  user: 0.3299
+  repair: 0.2783
+  facil: 0.2783
+  shall: 0.1478
+
+FR36:
+  use: 0.5039
+  attempt: 0.3653
+  categori: 0.3653
+  actual: 0.3653
+  recycl: 0.3383
+  part: 0.3241
+  includ: 0.2519
+  rate: 0.2337
+  shall: 0.0899
+
+FR37:
+  entri: 0.5833
+  record: 0.4197
+  visit: 0.3869
+  schedul: 0.3493
+  repair: 0.2701
+  facil: 0.2701
+  system: 0.2132
+  shall: 0.1435
+
+FR38:
+  notifi: 0.5763
+  visit: 0.4204
+  schedul: 0.3796
+  user: 0.3479
+  facil: 0.2935
+  repair: 0.2935
+  system: 0.2317
+
+FR39:
+  abil: 0.4792
+  remind: 0.4792
+  send: 0.3809
+  visit: 0.3178
+  schedul: 0.2870
+  user: 0.2630
+  repair: 0.2219
+  facil: 0.2219
+  system: 0.1752
+  shall: 0.1179
+
+FR40:
+  contact: 0.4907
+  creator: 0.4461
+  inform: 0.4145
+  send: 0.3900
+  schedul: 0.2938
+  facil: 0.2272
+  repair: 0.2272
+  system: 0.1794
+  shall: 0.1207
+
+FR41:
+  acknowledg: 0.5894
+  record: 0.4241
+  visit: 0.3909
+  schedul: 0.3529
+  repair: 0.2729
+  facil: 0.2729
+  system: 0.2155
+
+FR42:
+  store: 0.5366
+  new: 0.4985
+  confer: 0.4450
+  room: 0.4450
+  system: 0.2157
+  shall: 0.1452
+
+FR43:
+  exist: 0.5444
+  updat: 0.4759
+  room: 0.4514
+  confer: 0.4514
+  system: 0.2189
+  shall: 0.1473
+
+FR44:
+  delet: 0.5569
+  abl: 0.4618
+  room: 0.4618
+  confer: 0.4618
+  system: 0.2239
+
+FR45:
+  store: 0.5519
+  new: 0.5128
+  abl: 0.4577
+  recycl: 0.2811
+  part: 0.2692
+  system: 0.2219
+  shall: 0.1493
+
+FR46:
+  exist: 0.6424
+  updat: 0.5616
+  recycl: 0.3272
+  part: 0.3134
+  system: 0.2583
+
+FR47:
+  delet: 0.6428
+  abl: 0.5331
+  recycl: 0.3274
+  part: 0.3136
+  system: 0.2585
+  shall: 0.1739
+
+FR48:
+  time: 0.4902
+  reserv: 0.4555
+  confer: 0.4065
+  room: 0.4065
+  reflect: 0.2696
+  date: 0.2696
+  updat: 0.2143
+  schedul: 0.1614
+  shall: 0.0663
+
+FR49:
+  map: 0.4096
+  build: 0.4096
+  show: 0.4096
+  locat: 0.3256
+  room: 0.3088
+  confer: 0.3088
+  display: 0.3088
+  repair: 0.1897
+  facil: 0.1897
+  system: 0.1497
+
+FR50:
+  agenda: 0.5292
+  updat: 0.4206
+  record: 0.3807
+  visit: 0.3510
+  schedul: 0.3169
+  facil: 0.2450
+  repair: 0.2450
+  system: 0.1935
+  shall: 0.1302
+
+FR51:
+  schedul: 0.5380
+  confirm: 0.4492
+  creator: 0.4084
+  send: 0.3571
+  visit: 0.2979
+  repair: 0.2080
+  facil: 0.2080
+  system: 0.1642
+  shall: 0.1105
+
+FR52:
+  statu: 0.5385
+  transport: 0.4896
+  reserv: 0.4549
+  record: 0.3874
+  part: 0.2388
+  system: 0.1968
+  shall: 0.1324
+
+FR53:
+  type: 0.5875
+  differ: 0.5342
+  record: 0.4227
+  schedul: 0.3518
+  system: 0.2148
+  shall: 0.1445
+
+FR54:
+  reserv: 0.6234
+  record: 0.5309
+  recycl: 0.3417
+  part: 0.3273
+  system: 0.2697
+  shall: 0.1815
+
+FR55:
+  notifi: 0.4930
+  transport: 0.4930
+  request: 0.4581
+  recycl: 0.2511
+  facil: 0.2511
+  repair: 0.2511
+  part: 0.2405
+  system: 0.1982
+  shall: 0.1334
+
+FR56:
+  view: 0.6293
+  allow: 0.3460
+  multipl: 0.3460
+  privileg: 0.3460
+  visit: 0.2295
+  report: 0.2139
+  schedul: 0.2072
+  user: 0.1899
+  repair: 0.1602
+  facil: 0.1602
+
+FR57:
+  via: 0.3440
+  kind: 0.3440
+  notif: 0.3440
+  specifi: 0.3440
+  method: 0.3440
+  differ: 0.3128
+  send: 0.2735
+  abl: 0.2594
+  visit: 0.2282
+  schedul: 0.2060
+
+FR58:
+  look: 0.5754
+  customiz: 0.5754
+  feel: 0.5231
+  system: 0.2103
+  shall: 0.1415
+
+FR59:
+  intuit: 0.6563
+  interfac: 0.5967
+  user: 0.3602
+  system: 0.2399
+  shall: 0.1614
+
+FR60:
+  display: 0.6560
+  tabl: 0.2900
+  two: 0.2900
+  right: 0.2900
+  graphic: 0.2900
+  region: 0.2900
+  left: 0.2900
+  data: 0.2450
+  shall: 0.0713
+
+### STEP 3: COSINE SIMILARITY CALCULATION ###
+
+Similarity matrix shape: (60, 3)
+(rows=FRs: 60, columns=NFRs: 3)
+
+### STEP 4: TOP SIMILARITIES (SORTED) FOR ALL FRs ###
+
+FR1:
+  NFR2 (Usability): 0.1869 
+  NFR3 (Security): 0.0491 
+  NFR1 (Operational): 0.0107 
+
+FR2:
+  NFR1 (Operational): 0.0102 
+  NFR2 (Usability): 0.0095 
+  NFR3 (Security): 0.0078 
+
+FR3:
+  NFR1 (Operational): 0.0170 
+  NFR2 (Usability): 0.0158 
+  NFR3 (Security): 0.0130 
+
+FR4:
+  NFR1 (Operational): 0.0554 
+  NFR2 (Usability): 0.0514 
+  NFR3 (Security): 0.0078 
+
+FR5:
+  NFR3 (Security): 0.1743 
+  NFR1 (Operational): 0.0126 
+  NFR2 (Usability): 0.0116 
+
+FR6:
+  NFR3 (Security): 0.1577 
+  NFR1 (Operational): 0.0114 
+  NFR2 (Usability): 0.0105 
+
+FR7:
+  NFR2 (Usability): 0.1777 
+  NFR3 (Security): 0.0802 
+  NFR1 (Operational): 0.0175 
+
+FR8:
+  NFR1 (Operational): 0.0495 
+  NFR2 (Usability): 0.0459 
+  NFR3 (Security): 0.0070 
+
+FR9:
+  NFR1 (Operational): 0.1813 
+  NFR3 (Security): 0.1670 
+  NFR2 (Usability): 0.0848 
+
+FR10:
+  NFR1 (Operational): 0.1918 
+  NFR3 (Security): 0.1768 
+  NFR2 (Usability): 0.0898 
+
+FR11:
+  NFR1 (Operational): 0.2480 [TRACED]
+  NFR3 (Security): 0.1826 
+  NFR2 (Usability): 0.0567 
+
+FR12:
+  NFR1 (Operational): 0.1348 
+  NFR3 (Security): 0.1034 
+  NFR2 (Usability): 0.0089 
+
+FR13:
+  NFR1 (Operational): 0.1886 
+  NFR3 (Security): 0.1365 
+  NFR2 (Usability): 0.0613 
+
+FR14:
+  NFR3 (Security): 0.1984 
+  NFR1 (Operational): 0.1461 
+  NFR2 (Usability): 0.1343 
+
+FR15:
+  NFR3 (Security): 0.1307 
+  NFR1 (Operational): 0.1290 
+  NFR2 (Usability): 0.0108 
+
+FR16:
+  NFR1 (Operational): 0.1860 
+  NFR3 (Security): 0.1714 
+  NFR2 (Usability): 0.0098 
+
+FR17:
+  NFR3 (Security): 0.2028 [TRACED]
+  NFR1 (Operational): 0.0146 
+  NFR2 (Usability): 0.0135 
+
+FR18:
+  NFR3 (Security): 0.6927 [TRACED]
+  NFR1 (Operational): 0.1469 
+  NFR2 (Usability): 0.0123 
+
+FR19:
+  NFR3 (Security): 0.2892 [TRACED]
+  NFR1 (Operational): 0.1242 
+  NFR2 (Usability): 0.0923 
+
+FR20:
+  NFR3 (Security): 0.2597 [TRACED]
+  NFR1 (Operational): 0.1115 
+  NFR2 (Usability): 0.0094 
+
+FR21:
+  NFR3 (Security): 0.2991 [TRACED]
+  NFR1 (Operational): 0.1285 
+  NFR2 (Usability): 0.0955 
+
+FR22:
+  NFR3 (Security): 0.1992 
+  NFR1 (Operational): 0.0080 
+  NFR2 (Usability): 0.0074 
+
+FR23:
+  NFR3 (Security): 0.3367 [TRACED]
+  NFR2 (Usability): 0.1789 
+  NFR1 (Operational): 0.0176 
+
+FR24:
+  NFR3 (Security): 0.3054 [TRACED]
+  NFR1 (Operational): 0.0107 
+  NFR2 (Usability): 0.0100 
+
+FR25:
+  NFR2 (Usability): 0.1323 
+  NFR3 (Security): 0.0597 
+  NFR1 (Operational): 0.0130 
+
+FR26:
+  NFR1 (Operational): 0.0402 
+  NFR2 (Usability): 0.0373 
+  NFR3 (Security): 0.0000 
+
+FR27:
+  NFR3 (Security): 0.2219 [TRACED]
+  NFR2 (Usability): 0.1179 
+  NFR1 (Operational): 0.0116 
+
+FR28:
+  NFR1 (Operational): 0.0189 
+  NFR2 (Usability): 0.0175 
+  NFR3 (Security): 0.0145 
+
+FR29:
+  NFR2 (Usability): 0.1323 
+  NFR3 (Security): 0.0597 
+  NFR1 (Operational): 0.0130 
+
+FR30:
+  NFR1 (Operational): 0.0834 
+  NFR2 (Usability): 0.0773 
+  NFR3 (Security): 0.0118 
+
+FR31:
+  NFR1 (Operational): 0.1149 
+  NFR2 (Usability): 0.0083 
+  NFR3 (Security): 0.0069 
+
+FR32:
+  NFR1 (Operational): 0.0419 
+  NFR2 (Usability): 0.0388 
+  NFR3 (Security): 0.0059 
+
+FR33:
+  NFR1 (Operational): 0.3345 [TRACED]
+  NFR3 (Security): 0.1285 
+  NFR2 (Usability): 0.0577 
+
+FR34:
+  NFR3 (Security): 0.2791 [TRACED]
+  NFR1 (Operational): 0.1678 
+  NFR2 (Usability): 0.0545 
+
+FR35:
+  NFR2 (Usability): 0.1400 
+  NFR3 (Security): 0.0632 
+  NFR1 (Operational): 0.0138 
+
+FR36:
+  NFR3 (Security): 0.1810 
+  NFR1 (Operational): 0.1767 
+  NFR2 (Usability): 0.1298 
+
+FR37:
+  NFR1 (Operational): 0.0725 
+  NFR2 (Usability): 0.0672 
+  NFR3 (Security): 0.0103 
+
+FR38:
+  NFR2 (Usability): 0.1937 
+  NFR1 (Operational): 0.0642 
+  NFR3 (Security): 0.0555 
+
+FR39:
+  NFR2 (Usability): 0.1566 
+  NFR1 (Operational): 0.0595 
+  NFR3 (Security): 0.0504 
+
+FR40:
+  NFR1 (Operational): 0.0609 
+  NFR2 (Usability): 0.0565 
+  NFR3 (Security): 0.0086 
+
+FR41:
+  NFR1 (Operational): 0.0597 
+  NFR2 (Usability): 0.0553 
+  NFR3 (Security): 0.0000 
+
+FR42:
+  NFR1 (Operational): 0.0733 
+  NFR2 (Usability): 0.0680 
+  NFR3 (Security): 0.0104 
+
+FR43:
+  NFR1 (Operational): 0.0744 
+  NFR2 (Usability): 0.0689 
+  NFR3 (Security): 0.0105 
+
+FR44:
+  NFR1 (Operational): 0.0620 
+  NFR2 (Usability): 0.0575 
+  NFR3 (Security): 0.0000 
+
+FR45:
+  NFR1 (Operational): 0.2152 [TRACED]
+  NFR3 (Security): 0.1557 
+  NFR2 (Usability): 0.0699 
+
+FR46:
+  NFR1 (Operational): 0.2343 [TRACED]
+  NFR3 (Security): 0.1688 
+  NFR2 (Usability): 0.0663 
+
+FR47:
+  NFR1 (Operational): 0.2507 [TRACED]
+  NFR3 (Security): 0.1814 
+  NFR2 (Usability): 0.0814 
+
+FR48:
+  NFR1 (Operational): 0.0062 
+  NFR2 (Usability): 0.0057 
+  NFR3 (Security): 0.0047 
+
+FR49:
+  NFR1 (Operational): 0.0509 
+  NFR2 (Usability): 0.0472 
+  NFR3 (Security): 0.0072 
+
+FR50:
+  NFR1 (Operational): 0.0657 
+  NFR2 (Usability): 0.0609 
+  NFR3 (Security): 0.0093 
+
+FR51:
+  NFR1 (Operational): 0.0558 
+  NFR2 (Usability): 0.0517 
+  NFR3 (Security): 0.0079 
+
+FR52:
+  NFR1 (Operational): 0.1472 
+  NFR3 (Security): 0.0710 
+  NFR2 (Usability): 0.0620 
+
+FR53:
+  NFR1 (Operational): 0.0730 
+  NFR2 (Usability): 0.0677 
+  NFR3 (Security): 0.0103 
+
+FR54:
+  NFR1 (Operational): 0.2616 [TRACED]
+  NFR3 (Security): 0.1893 
+  NFR2 (Usability): 0.0850 
+
+FR55:
+  NFR3 (Security): 0.3640 [TRACED]
+  NFR1 (Operational): 0.1923 
+  NFR2 (Usability): 0.0624 
+
+FR56:
+  NFR2 (Usability): 0.1057 
+  NFR3 (Security): 0.0687 
+  NFR1 (Operational): 0.0350 
+
+FR57:
+  NFR1 (Operational): 0.0427 
+  NFR2 (Usability): 0.0396 
+  NFR3 (Security): 0.0060 
+
+FR58:
+  NFR2 (Usability): 0.2334 [TRACED]
+  NFR1 (Operational): 0.0715 
+  NFR3 (Security): 0.0101 
+
+FR59:
+  NFR1 (Operational): 0.2871 [TRACED]
+  NFR2 (Usability): 0.2145 [TRACED]
+  NFR3 (Security): 0.0690 
+
+FR60:
+  NFR1 (Operational): 0.0851 
+  NFR2 (Usability): 0.0062 
+  NFR3 (Security): 0.0051 
+
+### STEP 5: APPLYING THRESHOLD (>= 0.2) ###
+
+Total trace links found: 19
+Average traces per FR: 0.32
+FRs with 0 traces: 42
+FRs with 1+ traces: 18
+Max traces for single FR: 2
+
+--- FRs with Trace Links ---
+FR11: NFR1 (Operational) (similarity: 0.2480)
+FR17: NFR3 (Security) (similarity: 0.2028)
+FR18: NFR3 (Security) (similarity: 0.6927)
+FR19: NFR3 (Security) (similarity: 0.2892)
+FR20: NFR3 (Security) (similarity: 0.2597)
+FR21: NFR3 (Security) (similarity: 0.2991)
+FR23: NFR3 (Security) (similarity: 0.3367)
+FR24: NFR3 (Security) (similarity: 0.3054)
+FR27: NFR3 (Security) (similarity: 0.2219)
+FR33: NFR1 (Operational) (similarity: 0.3345)
+FR34: NFR3 (Security) (similarity: 0.2791)
+FR45: NFR1 (Operational) (similarity: 0.2152)
+FR46: NFR1 (Operational) (similarity: 0.2343)
+FR47: NFR1 (Operational) (similarity: 0.2507)
+FR54: NFR1 (Operational) (similarity: 0.2616)
+FR55: NFR3 (Security) (similarity: 0.3640)
+FR58: NFR2 (Usability) (similarity: 0.2334)
+FR59: NFR1 (Operational), NFR2 (Usability) (similarity: 0.2871, 0.2145)
+Loaded 3 NFRs and 60 FRs
+
+Trace matrix saved to: trace_matrix_2.txt
+
+================================================================================
+
+
+================================================================================
+VARIANT 3
+================================================================================
+
+Configuration: Tokenization, POS tagging, Stemming
+--------------------------------------------------------------------------------
+
+### STEP 1: PRE-PROCESSING ###
+Loaded 3 NFRs and 60 FRs
+Loaded 3 NFRs and 60 FRs
+
+--- ALL 3 NFRs (Original vs Processed) ---
+
+[1] Original NFR: NFR1 (Operational): The system shall interface with the Choice Parts System. This provides the feed of recycled parts data.
+    Processed NFR: oper the system shall interfac with the choic part system thi provid the feed of recycl part data
+
+[2] Original NFR: NFR2 (Usability): Users shall feel satisfied using the system. 85% of all users will be satisfied with the system.
+    Processed NFR: usabl user shall feel satisfi use the system of all user will be satisfi with the system
+
+[3] Original NFR: NFR3 (Security): Only adjusters can request recycled parts audit reports. No users without an adjuster role shall request recycled parts audits.
+    Processed NFR: secur onli adjust can request recycl part audit report no user without an adjust role shall request recycl part audit
+
+--- ALL 60 FRs (Original vs Processed) ---
+
+[1] Original FR: FR1: The user shall search for the preferred repair facility using vehicle location and radius in miles.
+    Processed FR: the user shall search for the prefer repair facil use vehicl locat and radiu in mile
+
+[2] Original FR: FR2: The vehicle location shall include street address city state and zip-code.
+    Processed FR: the vehicl locat shall includ street address citi state and
+
+[3] Original FR: FR3: The search radius shall be between 1 and 30 miles.
+    Processed FR: the search radiu shall be between and mile
+
+[4] Original FR: FR4: The system shall locate the preferred repair facility with the highest ratings for the input criteria.
+    Processed FR: the system shall locat the prefer repair facil with the highest rate for the input criteria
+
+[5] Original FR: FR5: The adjuster shall enter the preferred repair facility on the estimate assignment.
+    Processed FR: the adjust shall enter the prefer repair facil on the estim assign
+
+[6] Original FR: FR6: The adjuster shall be able to override the preferred repair facility on the estimate assignment.
+    Processed FR: the adjust shall be abl to overrid the prefer repair facil on the estim assign
+
+[7] Original FR: FR7: The preferred repair facility shall be returned to the user.
+    Processed FR: the prefer repair facil shall be return to the user
+
+[8] Original FR: FR8: The system shall return a list of repair facilities within the radius if the preferred repair facility cannot be determined.
+    Processed FR: the system shall return a list of repair facil within the radiu if the prefer repair facil can not be determin
+
+[9] Original FR: FR9: The estimator shall search for available recycled parts using damaged vehicle parts information.
+    Processed FR: the estim shall search for avail recycl part use damag vehicl part inform
+
+[10] Original FR: FR10: The estimator shall search for available recycled parts using a list of preferred parts suppliers.
+    Processed FR: the estim shall search for avail recycl part use a list of prefer part supplier
+
+[11] Original FR: FR11: The system shall search for available recycled parts for the supplied vehicle parts and suppliers.
+    Processed FR: the system shall search for avail recycl part for the suppli vehicl part and supplier
+
+[12] Original FR: FR12: The estimator shall search by zipcode with a radius of 30 miles if no parts are found for the preferred parts suppliers.
+    Processed FR: the estim shall search by zipcod with a radiu of mile if no part are found for the prefer part supplier
+
+[13] Original FR: FR13: The system shall retain the available recycled parts and suppliers returned from the search.
+    Processed FR: the system shall retain the avail recycl part and supplier return from the search
+
+[14] Original FR: FR14: The available recycled parts information and their suppliers shall be returned to the user.
+    Processed FR: the avail recycl part inform and their supplier shall be return to the user
+
+[15] Original FR: FR15: The estimator shall apply selected recycled parts to the collision estimate.
+    Processed FR: the estim shall appli select recycl part to the collis estim
+
+[16] Original FR: FR16: The estimator shall not apply recycled parts to the collision estimate if no available parts are returned.
+    Processed FR: the estim shall not appli recycl part to the collis estim if no avail part are return
+
+[17] Original FR: FR17: The adjuster shall review the collision estimate.
+    Processed FR: the adjust shall review the collis estim
+
+[18] Original FR: FR18: The adjuster shall request a recycled parts audit of the collision estimate.
+    Processed FR: the adjust shall request a recycl part audit of the collis estim
+
+[19] Original FR: FR19: The audit report shall include the total number of recycled parts used in the estimate.
+    Processed FR: the audit report shall includ the total number of recycl part use in the estim
+
+[20] Original FR: FR20: The audit report shall include the number of available recycled parts from the original search results.
+    Processed FR: the audit report shall includ the number of avail recycl part from the origin search result
+
+[21] Original FR: FR21: The audit report shall include the percentage of available recycled parts used in the estimate.
+    Processed FR: the audit report shall includ the percentag of avail recycl part use in the estim
+
+[22] Original FR: FR22: The audit report shall include the total score of the audit which sums the individual line items.
+    Processed FR: the audit report shall includ the total score of the audit which sum the individu line item
+
+[23] Original FR: FR23: The audit report shall be displayed to the user.
+    Processed FR: the audit report shall be display to the user
+
+[24] Original FR: FR24: The audit report shall be available to other adjusters at later points in time.
+    Processed FR: the audit report shall be avail to other adjust at later point in time
+
+[25] Original FR: FR25: The user shall select to view the preferred repair facility ratings.
+    Processed FR: the user shall select to view the prefer repair facil rate
+
+[26] Original FR: FR26: The system will display a blank set of ratings if there are not ratings yet defined.
+    Processed FR: the system will display a blank set of rate if there are not rate yet defin
+
+[27] Original FR: FR27: The user shall enter new ratings based on the audit report.
+    Processed FR: the user shall enter new rate base on the audit report
+
+[28] Original FR: FR28: The ratings shall be from a scale of 1-10.
+    Processed FR: the rate shall be from a scale of
+
+[29] Original FR: FR29: The user shall select to save the preferred repair facility ratings.
+    Processed FR: the user shall select to save the prefer repair facil rate
+
+[30] Original FR: FR30: The preferred repair facility ratings shall be saved by the system.
+    Processed FR: the prefer repair facil rate shall be save by the system
+
+[31] Original FR: FR31: The vehicle data shall include vehicle year make and model.
+    Processed FR: the vehicl data shall includ vehicl year make and model
+
+[32] Original FR: FR32: The system shall resolve the zipcode for the street address city and state if zipcode is unknown.
+    Processed FR: the system shall resolv the zipcod for the street address citi and state if zipcod is unknown
+
+[33] Original FR: FR33: The recycled parts search results provided to the estimator shall be retrieved by the system.
+    Processed FR: the recycl part search result provid to the estim shall be retriev by the system
+
+[34] Original FR: FR34: The system shall generate an audit report based on the available recycled parts and the collision estimate.
+    Processed FR: the system shall gener an audit report base on the avail recycl part and the collis estim
+
+[35] Original FR: FR35: The current repair facility ratings shall be displayed to the user.
+    Processed FR: the current repair facil rate shall be display to the user
+
+[36] Original FR: FR36: The ratings shall include categories for attempted use of recycled parts and actual use of recycled parts.
+    Processed FR: the rate shall includ categori for attempt use of recycl part and actual use of recycl part
+
+[37] Original FR: FR37: The system shall record repair facility visiting schedule entries.
+    Processed FR: the system shall record repair facil visit schedul entri
+
+[38] Original FR: FR38: The system will notify users of their repair facility visiting schedules.
+    Processed FR: the system will notifi user of their repair facil visit schedul
+
+[39] Original FR: FR39: The system shall have the ability to send repair facility visiting schedule reminders to users.
+    Processed FR: the system shall have the abil to send repair facil visit schedul remind to user
+
+[40] Original FR: FR40: The system shall send the repair facility contact information to schedule creators.
+    Processed FR: the system shall send the repair facil contact inform to schedul creator
+
+[41] Original FR: FR41: The system will record repair facility visiting schedule acknowledgments.
+    Processed FR: the system will record repair facil visit schedul acknowledg
+
+[42] Original FR: FR42: The system shall store new conference rooms.
+    Processed FR: the system shall store new confer room
+
+[43] Original FR: FR43: The system shall update existing conference rooms.
+    Processed FR: the system shall updat exist confer room
+
+[44] Original FR: FR44: The system will be able to delete conference rooms.
+    Processed FR: the system will be abl to delet confer room
+
+[45] Original FR: FR45: The system shall be able to store new recycled parts.
+    Processed FR: the system shall be abl to store new recycl part
+
+[46] Original FR: FR46: The system will update existing recycled parts.
+    Processed FR: the system will updat exist recycl part
+
+[47] Original FR: FR47: The system shall be able to delete recycled parts.
+    Processed FR: the system shall be abl to delet recycl part
+
+[48] Original FR: FR48: Each time a conference room is reserved the conference room schedule shall be updated to reflect the time and date of the reservation.
+    Processed FR: each time a confer room is reserv the confer room schedul shall be updat to reflect the time and date of the reserv
+
+[49] Original FR: FR49: The system shall display a map of the repair facility building showing conference room locations.
+    Processed FR: the system shall display a map of the repair facil build show confer room locat
+
+[50] Original FR: FR50: The system shall record updated repair facility visiting schedule agendas.
+    Processed FR: the system shall record updat repair facil visit schedul agenda
+
+[51] Original FR: FR51: The system shall send a repair facility visiting schedule confirmation to the schedule creators.
+    Processed FR: the system shall send a repair facil visit schedul confirm to the schedul creator
+
+[52] Original FR: FR52: The system shall record the transportation status of parts reserved.
+    Processed FR: the system shall record the transport statu of part reserv
+
+[53] Original FR: FR53: The system shall record different schedule types.
+    Processed FR: the system shall record differ schedul type
+
+[54] Original FR: FR54: The system shall record all the recycled parts that has been reserved.
+    Processed FR: the system shall record all the recycl part that ha been reserv
+
+[55] Original FR: FR55: The system shall notify repair facility of recycled parts transport requests.
+    Processed FR: the system shall notifi repair facil of recycl part transport request
+
+[56] Original FR: FR56: The system will allow privileged users to view repair facility visiting schedules in multiple reporting views.
+    Processed FR: the system will allow privileg user to view repair facil visit schedul in multipl report view
+
+[57] Original FR: FR57: The system shall be able to send repair facility visiting schedule notifications via different kinds of end-user specified methods.
+    Processed FR: the system shall be abl to send repair facil visit schedul notif via differ kind of specifi method
+
+[58] Original FR: FR58: The system shall have a customizable Look and Feel.
+    Processed FR: the system shall have a customiz look and feel
+
+[59] Original FR: FR59: The system shall have an intuitive user interface.
+    Processed FR: the system shall have an intuit user interfac
+
+[60] Original FR: FR60: The display shall have two regions: left of the display is graphical right of the display is a data table.
+    Processed FR: the display shall have two region left of the display is graphic right of the display is a data tabl
+
+### STEP 2: TF-IDF VECTORIZATION ###
+
+Vocabulary size: 173
+NFR vectors shape: (3, 173)
+FR vectors shape: (60, 173)
+
+--- Top 10 TF-IDF terms for ALL 60 FRs ---
+
+FR1:
+  mile: 0.3412
+  radiu: 0.3210
+  locat: 0.3210
+  in: 0.3045
+  vehicl: 0.3045
+  use: 0.2785
+  for: 0.2678
+  search: 0.2583
+  prefer: 0.2418
+  and: 0.2346
+
+FR2:
+  street: 0.3901
+  state: 0.3901
+  citi: 0.3901
+  address: 0.3901
+  locat: 0.3410
+  vehicl: 0.3235
+  includ: 0.2959
+  and: 0.2492
+  shall: 0.1055
+  the: 0.0976
+
+FR3:
+  between: 0.5374
+  mile: 0.4540
+  radiu: 0.4272
+  search: 0.3437
+  and: 0.3122
+  be: 0.2730
+  shall: 0.1322
+  the: 0.1222
+
+FR4:
+  input: 0.3801
+  highest: 0.3801
+  criteria: 0.3801
+  the: 0.3458
+  with: 0.3021
+  locat: 0.3021
+  for: 0.2521
+  rate: 0.2431
+  prefer: 0.2276
+  repair: 0.1760
+
+FR5:
+  assign: 0.4318
+  enter: 0.4318
+  on: 0.3774
+  adjust: 0.3417
+  the: 0.3240
+  prefer: 0.2843
+  estim: 0.2679
+  facil: 0.2199
+  repair: 0.2199
+  shall: 0.1168
+
+FR6:
+  overrid: 0.4204
+  assign: 0.3822
+  on: 0.3341
+  abl: 0.3170
+  adjust: 0.3025
+  the: 0.2869
+  prefer: 0.2517
+  estim: 0.2372
+  be: 0.2135
+  to: 0.1990
+
+FR7:
+  return: 0.4860
+  prefer: 0.3860
+  user: 0.3538
+  be: 0.3274
+  to: 0.3052
+  repair: 0.2985
+  facil: 0.2985
+  the: 0.2932
+  shall: 0.1586
+
+FR8:
+  within: 0.3270
+  determin: 0.3270
+  repair: 0.3028
+  facil: 0.3028
+  list: 0.2973
+  can: 0.2973
+  not: 0.2763
+  radiu: 0.2599
+  return: 0.2466
+  if: 0.2466
+
+FR9:
+  damag: 0.4295
+  part: 0.3810
+  inform: 0.3628
+  vehicl: 0.3238
+  use: 0.2962
+  for: 0.2848
+  search: 0.2747
+  avail: 0.2655
+  estim: 0.2424
+  recycl: 0.1989
+
+FR10:
+  list: 0.4020
+  part: 0.3922
+  supplier: 0.3333
+  use: 0.3049
+  for: 0.2932
+  search: 0.2828
+  avail: 0.2733
+  prefer: 0.2647
+  estim: 0.2495
+  of: 0.2093
+
+FR11:
+  for: 0.5232
+  suppli: 0.3944
+  part: 0.3499
+  supplier: 0.2974
+  vehicl: 0.2974
+  search: 0.2523
+  avail: 0.2439
+  and: 0.2291
+  recycl: 0.1826
+  the: 0.1794
+
+FR12:
+  found: 0.3180
+  zipcod: 0.2892
+  part: 0.2821
+  mile: 0.2687
+  no: 0.2687
+  are: 0.2687
+  by: 0.2687
+  with: 0.2528
+  radiu: 0.2528
+  if: 0.2398
+
+FR13:
+  retain: 0.4450
+  from: 0.3759
+  return: 0.3355
+  supplier: 0.3355
+  the: 0.3036
+  search: 0.2846
+  avail: 0.2751
+  and: 0.2585
+  recycl: 0.2060
+  part: 0.1974
+
+FR14:
+  their: 0.4125
+  inform: 0.3832
+  supplier: 0.3421
+  return: 0.3421
+  avail: 0.2805
+  and: 0.2635
+  user: 0.2490
+  be: 0.2304
+  to: 0.2148
+  recycl: 0.2101
+
+FR15:
+  estim: 0.5452
+  appli: 0.4392
+  select: 0.4081
+  collis: 0.3642
+  to: 0.2287
+  recycl: 0.2237
+  the: 0.2198
+  part: 0.2143
+  shall: 0.1188
+
+FR16:
+  estim: 0.4035
+  appli: 0.3251
+  part: 0.3172
+  no: 0.3021
+  not: 0.3021
+  are: 0.3021
+  if: 0.2696
+  return: 0.2696
+  collis: 0.2696
+  avail: 0.2211
+
+FR17:
+  review: 0.6118
+  collis: 0.4613
+  adjust: 0.4401
+  estim: 0.3452
+  the: 0.2783
+  shall: 0.1505
+
+FR18:
+  request: 0.4579
+  collis: 0.4087
+  adjust: 0.3900
+  audit: 0.3351
+  estim: 0.3059
+  of: 0.2567
+  recycl: 0.2510
+  the: 0.2466
+  part: 0.2404
+  shall: 0.1333
+
+FR19:
+  total: 0.3906
+  number: 0.3906
+  in: 0.3240
+  use: 0.2963
+  includ: 0.2963
+  the: 0.2932
+  report: 0.2656
+  audit: 0.2656
+  estim: 0.2424
+  of: 0.2034
+
+FR20:
+  origin: 0.3904
+  result: 0.3550
+  number: 0.3550
+  from: 0.3298
+  includ: 0.2692
+  the: 0.2664
+  search: 0.2497
+  avail: 0.2414
+  audit: 0.2414
+  report: 0.2414
+
+FR21:
+  percentag: 0.4408
+  in: 0.3324
+  includ: 0.3040
+  use: 0.3040
+  the: 0.3008
+  report: 0.2725
+  audit: 0.2725
+  avail: 0.2725
+  estim: 0.2487
+  of: 0.2087
+
+FR22:
+  audit: 0.3848
+  sum: 0.3112
+  individu: 0.3112
+  score: 0.3112
+  which: 0.3112
+  line: 0.3112
+  item: 0.3112
+  the: 0.2831
+  total: 0.2829
+  includ: 0.2146
+
+FR23:
+  display: 0.4883
+  report: 0.4004
+  audit: 0.4004
+  user: 0.3555
+  be: 0.3290
+  to: 0.3067
+  the: 0.2946
+  shall: 0.1593
+
+FR24:
+  point: 0.3615
+  at: 0.3615
+  later: 0.3615
+  other: 0.3615
+  time: 0.3286
+  in: 0.2725
+  adjust: 0.2601
+  report: 0.2235
+  audit: 0.2235
+  avail: 0.2235
+
+FR25:
+  view: 0.4840
+  select: 0.4497
+  rate: 0.3404
+  prefer: 0.3187
+  user: 0.2921
+  to: 0.2520
+  repair: 0.2465
+  facil: 0.2465
+  the: 0.2421
+  shall: 0.1309
+
+FR26:
+  rate: 0.4028
+  set: 0.3149
+  there: 0.3149
+  defin: 0.3149
+  yet: 0.3149
+  blank: 0.3149
+  not: 0.2660
+  are: 0.2660
+  if: 0.2374
+  display: 0.2374
+
+FR27:
+  base: 0.4176
+  enter: 0.4176
+  new: 0.3880
+  on: 0.3650
+  rate: 0.2938
+  audit: 0.2839
+  report: 0.2839
+  user: 0.2521
+  the: 0.2089
+  shall: 0.1130
+
+FR28:
+  scale: 0.6067
+  from: 0.5125
+  rate: 0.3880
+  be: 0.3082
+  of: 0.2872
+  shall: 0.1492
+  the: 0.1380
+
+FR29:
+  save: 0.4840
+  select: 0.4497
+  rate: 0.3404
+  prefer: 0.3187
+  user: 0.2921
+  to: 0.2520
+  repair: 0.2465
+  facil: 0.2465
+  the: 0.2421
+  shall: 0.1309
+
+FR30:
+  save: 0.4934
+  by: 0.4584
+  rate: 0.3471
+  prefer: 0.3249
+  be: 0.2757
+  facil: 0.2513
+  repair: 0.2513
+  the: 0.2469
+  system: 0.1984
+  shall: 0.1335
+
+FR31:
+  vehicl: 0.5735
+  year: 0.3803
+  make: 0.3803
+  model: 0.3803
+  data: 0.3213
+  includ: 0.2623
+  and: 0.2209
+  shall: 0.0936
+  the: 0.0865
+
+FR32:
+  zipcod: 0.5402
+  unknown: 0.2971
+  resolv: 0.2971
+  street: 0.2701
+  state: 0.2701
+  address: 0.2701
+  citi: 0.2701
+  is: 0.2509
+  if: 0.2240
+  the: 0.2027
+
+FR33:
+  retriev: 0.4208
+  result: 0.3826
+  provid: 0.3826
+  by: 0.3555
+  the: 0.2871
+  search: 0.2691
+  estim: 0.2374
+  be: 0.2138
+  to: 0.1992
+  recycl: 0.1948
+
+FR34:
+  gener: 0.3888
+  base: 0.3535
+  an: 0.3285
+  on: 0.3091
+  collis: 0.2932
+  the: 0.2653
+  avail: 0.2404
+  report: 0.2404
+  audit: 0.2404
+  and: 0.2259
+
+FR35:
+  current: 0.5378
+  display: 0.4055
+  rate: 0.3440
+  user: 0.2952
+  be: 0.2732
+  to: 0.2546
+  facil: 0.2490
+  repair: 0.2490
+  the: 0.2447
+  shall: 0.1323
+
+FR36:
+  use: 0.4543
+  categori: 0.3294
+  attempt: 0.3294
+  actual: 0.3294
+  of: 0.3119
+  recycl: 0.3050
+  part: 0.2922
+  includ: 0.2271
+  for: 0.2184
+  rate: 0.2107
+
+FR37:
+  entri: 0.5782
+  record: 0.4160
+  visit: 0.3835
+  schedul: 0.3462
+  repair: 0.2678
+  facil: 0.2678
+  system: 0.2114
+  shall: 0.1422
+  the: 0.1315
+
+FR38:
+  their: 0.4509
+  notifi: 0.4509
+  will: 0.3419
+  visit: 0.3289
+  schedul: 0.2969
+  user: 0.2721
+  of: 0.2348
+  repair: 0.2296
+  facil: 0.2296
+  system: 0.1813
+
+FR39:
+  remind: 0.4052
+  abil: 0.4052
+  to: 0.3837
+  send: 0.3221
+  have: 0.3221
+  visit: 0.2687
+  schedul: 0.2426
+  user: 0.2224
+  repair: 0.1876
+  facil: 0.1876
+
+FR40:
+  contact: 0.4670
+  creator: 0.4246
+  inform: 0.3945
+  send: 0.3712
+  schedul: 0.2796
+  to: 0.2211
+  repair: 0.2163
+  facil: 0.2163
+  the: 0.2125
+  system: 0.1707
+
+FR41:
+  acknowledg: 0.5419
+  record: 0.3899
+  will: 0.3737
+  visit: 0.3594
+  schedul: 0.3245
+  repair: 0.2509
+  facil: 0.2509
+  system: 0.1981
+  the: 0.1233
+
+FR42:
+  store: 0.5318
+  new: 0.4941
+  room: 0.4410
+  confer: 0.4410
+  system: 0.2138
+  shall: 0.1439
+  the: 0.1330
+
+FR43:
+  exist: 0.5394
+  updat: 0.4715
+  room: 0.4473
+  confer: 0.4473
+  system: 0.2169
+  shall: 0.1459
+  the: 0.1349
+
+FR44:
+  delet: 0.4743
+  abl: 0.3933
+  confer: 0.3933
+  room: 0.3933
+  will: 0.3597
+  be: 0.2650
+  to: 0.2470
+  system: 0.1907
+  the: 0.1186
+
+FR45:
+  store: 0.5045
+  new: 0.4687
+  abl: 0.4184
+  be: 0.2819
+  to: 0.2627
+  recycl: 0.2569
+  part: 0.2461
+  system: 0.2028
+  shall: 0.1365
+  the: 0.1262
+
+FR46:
+  exist: 0.5716
+  updat: 0.4997
+  will: 0.4335
+  recycl: 0.2911
+  part: 0.2788
+  system: 0.2298
+  the: 0.1430
+
+FR47:
+  delet: 0.5711
+  abl: 0.4736
+  be: 0.3191
+  to: 0.2974
+  recycl: 0.2909
+  part: 0.2786
+  system: 0.2296
+  shall: 0.1545
+  the: 0.1429
+
+FR48:
+  time: 0.4412
+  reserv: 0.4100
+  room: 0.3659
+  confer: 0.3659
+  reflect: 0.2427
+  each: 0.2427
+  date: 0.2427
+  is: 0.2050
+  updat: 0.1929
+  the: 0.1656
+
+FR49:
+  show: 0.3956
+  build: 0.3956
+  map: 0.3956
+  locat: 0.3144
+  room: 0.2982
+  confer: 0.2982
+  display: 0.2982
+  of: 0.1873
+  repair: 0.1832
+  facil: 0.1832
+
+FR50:
+  agenda: 0.5254
+  updat: 0.4176
+  record: 0.3780
+  visit: 0.3485
+  schedul: 0.3146
+  repair: 0.2433
+  facil: 0.2433
+  system: 0.1921
+  shall: 0.1292
+  the: 0.1195
+
+FR51:
+  schedul: 0.5160
+  confirm: 0.4309
+  creator: 0.3918
+  send: 0.3425
+  visit: 0.2858
+  to: 0.2040
+  repair: 0.1995
+  facil: 0.1995
+  the: 0.1960
+  system: 0.1575
+
+FR52:
+  statu: 0.5077
+  transport: 0.4616
+  reserv: 0.4289
+  record: 0.3653
+  of: 0.2404
+  the: 0.2309
+  part: 0.2252
+  system: 0.1856
+  shall: 0.1249
+
+FR53:
+  type: 0.5824
+  differ: 0.5295
+  record: 0.4190
+  schedul: 0.3487
+  system: 0.2129
+  shall: 0.1432
+  the: 0.1325
+
+FR54:
+  that: 0.4127
+  ha: 0.4127
+  been: 0.4127
+  all: 0.3753
+  reserv: 0.3487
+  record: 0.2970
+  recycl: 0.1911
+  the: 0.1878
+  part: 0.1831
+  system: 0.1509
+
+FR55:
+  transport: 0.4741
+  notifi: 0.4741
+  request: 0.4406
+  of: 0.2469
+  repair: 0.2415
+  facil: 0.2415
+  recycl: 0.2415
+  part: 0.2313
+  system: 0.1906
+  shall: 0.1283
+
+FR56:
+  view: 0.5847
+  multipl: 0.3216
+  allow: 0.3216
+  privileg: 0.3216
+  in: 0.2425
+  will: 0.2217
+  visit: 0.2133
+  report: 0.1988
+  schedul: 0.1925
+  user: 0.1765
+
+FR57:
+  via: 0.3296
+  specifi: 0.3296
+  method: 0.3296
+  kind: 0.3296
+  notif: 0.3296
+  differ: 0.2997
+  send: 0.2620
+  abl: 0.2485
+  visit: 0.2186
+  schedul: 0.1973
+
+FR58:
+  look: 0.4974
+  customiz: 0.4974
+  feel: 0.4523
+  have: 0.3954
+  and: 0.2889
+  system: 0.1818
+  shall: 0.1223
+  the: 0.1131
+
+FR59:
+  intuit: 0.5185
+  interfac: 0.4715
+  an: 0.4381
+  have: 0.4121
+  user: 0.2846
+  system: 0.1896
+  shall: 0.1275
+  the: 0.1179
+
+FR60:
+  display: 0.5529
+  is: 0.4130
+  left: 0.2444
+  tabl: 0.2444
+  two: 0.2444
+  right: 0.2444
+  graphic: 0.2444
+  region: 0.2444
+  of: 0.2314
+  data: 0.2065
+
+### STEP 3: COSINE SIMILARITY CALCULATION ###
+
+Similarity matrix shape: (60, 3)
+(rows=FRs: 60, columns=NFRs: 3)
+
+### STEP 4: TOP SIMILARITIES (SORTED) FOR ALL FRs ###
+
+FR1:
+  NFR2 (Usability): 0.1659 
+  NFR1 (Operational): 0.0492 
+  NFR3 (Security): 0.0376 
+
+FR2:
+  NFR1 (Operational): 0.0304 
+  NFR2 (Usability): 0.0215 
+  NFR3 (Security): 0.0067 
+
+FR3:
+  NFR2 (Usability): 0.0693 
+  NFR1 (Operational): 0.0380 
+  NFR3 (Security): 0.0084 
+
+FR4:
+  NFR1 (Operational): 0.1971 
+  NFR2 (Usability): 0.1594 
+  NFR3 (Security): 0.0059 
+
+FR5:
+  NFR3 (Security): 0.1339 
+  NFR1 (Operational): 0.0820 
+  NFR2 (Usability): 0.0538 
+
+FR6:
+  NFR3 (Security): 0.1186 
+  NFR2 (Usability): 0.0807 
+  NFR1 (Operational): 0.0726 
+
+FR7:
+  NFR2 (Usability): 0.2220 [TRACED]
+  NFR1 (Operational): 0.0785 
+  NFR3 (Security): 0.0600 
+
+FR8:
+  NFR2 (Usability): 0.1119 
+  NFR1 (Operational): 0.1092 
+  NFR3 (Security): 0.0747 
+
+FR9:
+  NFR1 (Operational): 0.1716 
+  NFR3 (Security): 0.1411 
+  NFR2 (Usability): 0.0839 
+
+FR10:
+  NFR1 (Operational): 0.2091 [TRACED]
+  NFR3 (Security): 0.1452 
+  NFR2 (Usability): 0.1166 
+
+FR11:
+  NFR1 (Operational): 0.2122 [TRACED]
+  NFR3 (Security): 0.1296 
+  NFR2 (Usability): 0.0644 
+
+FR12:
+  NFR1 (Operational): 0.2102 [TRACED]
+  NFR3 (Security): 0.1278 
+  NFR2 (Usability): 0.1091 
+
+FR13:
+  NFR1 (Operational): 0.2046 [TRACED]
+  NFR3 (Security): 0.1011 
+  NFR2 (Usability): 0.0867 
+
+FR14:
+  NFR2 (Usability): 0.1562 
+  NFR1 (Operational): 0.1457 
+  NFR3 (Security): 0.1382 
+
+FR15:
+  NFR1 (Operational): 0.1552 
+  NFR3 (Security): 0.1098 
+  NFR2 (Usability): 0.0395 
+
+FR16:
+  NFR3 (Security): 0.1831 
+  NFR1 (Operational): 0.1610 
+  NFR2 (Usability): 0.0292 
+
+FR17:
+  NFR3 (Security): 0.1725 
+  NFR1 (Operational): 0.0745 
+  NFR2 (Usability): 0.0500 
+
+FR18:
+  NFR3 (Security): 0.5734 [TRACED]
+  NFR1 (Operational): 0.2140 [TRACED]
+  NFR2 (Usability): 0.0814 
+
+FR19:
+  NFR3 (Security): 0.2244 [TRACED]
+  NFR1 (Operational): 0.1915 
+  NFR2 (Usability): 0.1405 
+
+FR20:
+  NFR3 (Security): 0.2039 [TRACED]
+  NFR1 (Operational): 0.1740 
+  NFR2 (Usability): 0.0709 
+
+FR21:
+  NFR3 (Security): 0.2303 [TRACED]
+  NFR1 (Operational): 0.1965 
+  NFR2 (Usability): 0.1441 
+
+FR22:
+  NFR3 (Security): 0.1579 
+  NFR1 (Operational): 0.0925 
+  NFR2 (Usability): 0.0664 
+
+FR23:
+  NFR3 (Security): 0.2514 [TRACED]
+  NFR2 (Usability): 0.2231 [TRACED]
+  NFR1 (Operational): 0.0788 
+
+FR24:
+  NFR3 (Security): 0.2086 [TRACED]
+  NFR2 (Usability): 0.0466 
+  NFR1 (Operational): 0.0256 
+
+FR25:
+  NFR2 (Usability): 0.1414 
+  NFR1 (Operational): 0.0648 
+  NFR3 (Security): 0.0495 
+
+FR26:
+  NFR2 (Usability): 0.1029 
+  NFR1 (Operational): 0.0668 
+  NFR3 (Security): 0.0000 
+
+FR27:
+  NFR3 (Security): 0.1783 
+  NFR2 (Usability): 0.1220 
+  NFR1 (Operational): 0.0559 
+
+FR28:
+  NFR2 (Usability): 0.1197 
+  NFR1 (Operational): 0.0876 
+  NFR3 (Security): 0.0094 
+
+FR29:
+  NFR2 (Usability): 0.1414 
+  NFR1 (Operational): 0.0648 
+  NFR3 (Security): 0.0495 
+
+FR30:
+  NFR2 (Usability): 0.1314 
+  NFR1 (Operational): 0.1137 
+  NFR3 (Security): 0.0084 
+
+FR31:
+  NFR1 (Operational): 0.1160 
+  NFR2 (Usability): 0.0190 
+  NFR3 (Security): 0.0059 
+
+FR32:
+  NFR1 (Operational): 0.0773 
+  NFR2 (Usability): 0.0579 
+  NFR3 (Security): 0.0046 
+
+FR33:
+  NFR1 (Operational): 0.3077 [TRACED]
+  NFR2 (Usability): 0.1152 
+  NFR3 (Security): 0.0956 
+
+FR34:
+  NFR3 (Security): 0.2745 [TRACED]
+  NFR1 (Operational): 0.1788 
+  NFR2 (Usability): 0.0758 
+
+FR35:
+  NFR2 (Usability): 0.1852 
+  NFR1 (Operational): 0.0655 
+  NFR3 (Security): 0.0501 
+
+FR36:
+  NFR1 (Operational): 0.2032 [TRACED]
+  NFR2 (Usability): 0.1572 
+  NFR3 (Security): 0.1445 
+
+FR37:
+  NFR1 (Operational): 0.0917 
+  NFR2 (Usability): 0.0761 
+  NFR3 (Security): 0.0090 
+
+FR38:
+  NFR2 (Usability): 0.2533 [TRACED]
+  NFR1 (Operational): 0.1052 
+  NFR3 (Security): 0.0384 
+
+FR39:
+  NFR2 (Usability): 0.1407 
+  NFR1 (Operational): 0.0849 
+  NFR3 (Security): 0.0377 
+
+FR40:
+  NFR1 (Operational): 0.0978 
+  NFR2 (Usability): 0.0763 
+  NFR3 (Security): 0.0073 
+
+FR41:
+  NFR2 (Usability): 0.1400 
+  NFR1 (Operational): 0.0751 
+  NFR3 (Security): 0.0000 
+
+FR42:
+  NFR1 (Operational): 0.0927 
+  NFR2 (Usability): 0.0770 
+  NFR3 (Security): 0.0091 
+
+FR43:
+  NFR1 (Operational): 0.0940 
+  NFR2 (Usability): 0.0781 
+  NFR3 (Security): 0.0092 
+
+FR44:
+  NFR2 (Usability): 0.1759 
+  NFR1 (Operational): 0.0723 
+  NFR3 (Security): 0.0000 
+
+FR45:
+  NFR1 (Operational): 0.1986 
+  NFR3 (Security): 0.1261 
+  NFR2 (Usability): 0.1168 
+
+FR46:
+  NFR1 (Operational): 0.2126 [TRACED]
+  NFR2 (Usability): 0.1624 
+  NFR3 (Security): 0.1330 
+
+FR47:
+  NFR1 (Operational): 0.2249 [TRACED]
+  NFR3 (Security): 0.1427 
+  NFR2 (Usability): 0.1322 
+
+FR48:
+  NFR2 (Usability): 0.0632 
+  NFR1 (Operational): 0.0597 
+  NFR3 (Security): 0.0038 
+
+FR49:
+  NFR1 (Operational): 0.1119 
+  NFR2 (Usability): 0.0917 
+  NFR3 (Security): 0.0062 
+
+FR50:
+  NFR1 (Operational): 0.0833 
+  NFR2 (Usability): 0.0692 
+  NFR3 (Security): 0.0082 
+
+FR51:
+  NFR1 (Operational): 0.0902 
+  NFR2 (Usability): 0.0704 
+  NFR3 (Security): 0.0067 
+
+FR52:
+  NFR1 (Operational): 0.2092 [TRACED]
+  NFR2 (Usability): 0.1176 
+  NFR3 (Security): 0.0593 
+
+FR53:
+  NFR1 (Operational): 0.0923 
+  NFR2 (Usability): 0.0767 
+  NFR3 (Security): 0.0091 
+
+FR54:
+  NFR2 (Usability): 0.1716 
+  NFR1 (Operational): 0.1688 
+  NFR3 (Security): 0.0938 
+
+FR55:
+  NFR3 (Security): 0.3101 [TRACED]
+  NFR1 (Operational): 0.2251 [TRACED]
+  NFR2 (Usability): 0.1044 
+
+FR56:
+  NFR2 (Usability): 0.1422 
+  NFR3 (Security): 0.0566 
+  NFR1 (Operational): 0.0446 
+
+FR57:
+  NFR2 (Usability): 0.0919 
+  NFR1 (Operational): 0.0765 
+  NFR3 (Security): 0.0051 
+
+FR58:
+  NFR2 (Usability): 0.1911 
+  NFR1 (Operational): 0.0788 
+  NFR3 (Security): 0.0077 
+
+FR59:
+  NFR1 (Operational): 0.2229 [TRACED]
+  NFR2 (Usability): 0.1637 
+  NFR3 (Security): 0.1435 
+
+FR60:
+  NFR1 (Operational): 0.1354 
+  NFR2 (Usability): 0.0611 
+  NFR3 (Security): 0.0038 
+
+### STEP 5: APPLYING THRESHOLD (>= 0.2) ###
+
+Total trace links found: 23
+Average traces per FR: 0.38
+FRs with 0 traces: 40
+FRs with 1+ traces: 20
+Max traces for single FR: 2
+
+--- FRs with Trace Links ---
+FR7: NFR2 (Usability) (similarity: 0.2220)
+FR10: NFR1 (Operational) (similarity: 0.2091)
+FR11: NFR1 (Operational) (similarity: 0.2122)
+FR12: NFR1 (Operational) (similarity: 0.2102)
+FR13: NFR1 (Operational) (similarity: 0.2046)
+FR18: NFR1 (Operational), NFR3 (Security) (similarity: 0.2140, 0.5734)
+FR19: NFR3 (Security) (similarity: 0.2244)
+FR20: NFR3 (Security) (similarity: 0.2039)
+FR21: NFR3 (Security) (similarity: 0.2303)
+FR23: NFR2 (Usability), NFR3 (Security) (similarity: 0.2231, 0.2514)
+FR24: NFR3 (Security) (similarity: 0.2086)
+FR33: NFR1 (Operational) (similarity: 0.3077)
+FR34: NFR3 (Security) (similarity: 0.2745)
+FR36: NFR1 (Operational) (similarity: 0.2032)
+FR38: NFR2 (Usability) (similarity: 0.2533)
+FR46: NFR1 (Operational) (similarity: 0.2126)
+FR47: NFR1 (Operational) (similarity: 0.2249)
+FR52: NFR1 (Operational) (similarity: 0.2092)
+FR55: NFR1 (Operational), NFR3 (Security) (similarity: 0.2251, 0.3101)
+FR59: NFR1 (Operational) (similarity: 0.2229)
+Loaded 3 NFRs and 60 FRs
+
+Trace matrix saved to: trace_matrix_3.txt
+
+================================================================================
+
+
+################################################################################
+ALL VARIANTS COMPLETED
+################################################################################

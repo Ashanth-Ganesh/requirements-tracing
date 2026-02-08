@@ -1,0 +1,3526 @@
+
+================================================================================
+VARIANT 1
+================================================================================
+
+Configuration: Tokenization, Stop-word removal, POS tagging, Lemmatization
+--------------------------------------------------------------------------------
+
+### STEP 1: PRE-PROCESSING ###
+Loaded 3 NFRs and 60 FRs
+Loaded 3 NFRs and 60 FRs
+
+--- ALL 3 NFRs (Original vs Processed) ---
+
+[1] Original NFR: NFR1 (Availability): The system shall support large-scale events, including town halls with up to 50,000 attendees.
+    Processed NFR: availability system shall support event include town hall attendee
+
+[2] Original NFR: NFR2 (Usability): The system shall provide customizable user experiences including notification size, keyboard shortcuts, window resizing, and customizable layouts.
+    Processed NFR: usability system shall provide customizable user experience include notification size keyboard shortcuts window resize customizable layout
+
+[3] Original NFR: NFR3 (Security & Privacy): The system shall restrict access to sensitive features such as meeting recaps, Copilot insights, private group joins, and screen capture prevention based on user role and license.
+    Processed NFR: security privacy system shall restrict access sensitive feature meet recap copilot insight private group join screen capture prevention base user role license
+
+--- ALL 60 FRs (Original vs Processed) ---
+
+[1] Original FR: FR1: The system shall provide a unified chat and channels experience.
+    Processed FR: system shall provide unified chat channel experience
+
+[2] Original FR: FR2: The system shall allow users to organize chats and channels into sections.
+    Processed FR: system shall allow user organize chat channel section
+
+[3] Original FR: FR3: The system shall allow users to add emoji icons to chat and channel section names.
+    Processed FR: system shall allow user add emoji icon chat channel section name
+
+[4] Original FR: FR4: The system shall support threaded conversations in channels.
+    Processed FR: system shall support thread conversation channel
+
+[5] Original FR: FR5: The system shall allow users to follow threads in channels.
+    Processed FR: system shall allow user follow thread channel
+
+[6] Original FR: FR6: The system shall provide Copilot-generated summaries of threads.
+    Processed FR: system shall provide summary thread
+
+[7] Original FR: FR7: The system shall allow users to take private notes in 1:1 and group chats.
+    Processed FR: system shall allow user take private note group chat
+
+[8] Original FR: FR8: The system shall allow chat notes to include images and @mentions.
+    Processed FR: system shall allow chat note include image mention
+
+[9] Original FR: FR9: The system shall allow users to forward messages with links to the original chat or channel.
+    Processed FR: system shall allow user forward message link original chat channel
+
+[10] Original FR: FR10: The system shall display previews of messages in notifications.
+    Processed FR: system shall display preview message notification
+
+[11] Original FR: FR11: The system shall display shared files and links in a Shared tab.
+    Processed FR: system shall display share file link share tab
+
+[12] Original FR: FR12: The system shall allow users to search shared files by keyword.
+    Processed FR: system shall allow user search share file keyword
+
+[13] Original FR: FR13: The system shall allow users to filter search results to show messages with attachments only.
+    Processed FR: system shall allow user filter search result show message attachment
+
+[14] Original FR: FR14: The system shall allow users to share files from chats, channels, and the Shared tab.
+    Processed FR: system shall allow user share file chat channel share tab
+
+[15] Original FR: FR15: The system shall maintain file permissions when files are shared.
+    Processed FR: system shall maintain file permission file share
+
+[16] Original FR: FR16: The system shall allow users to view Copilot-generated summaries of shared files.
+    Processed FR: system shall allow user view summary share file
+
+[17] Original FR: FR17: The system shall allow users to quickly jump to the original chat where a file was shared.
+    Processed FR: system shall allow user quickly jump original chat file share
+
+[18] Original FR: FR18: The system shall allow users to customize the size of notifications.
+    Processed FR: system shall allow user customize size notification
+
+[19] Original FR: FR19: The system shall allow users to choose where notifications appear on the screen.
+    Processed FR: system shall allow user choose notification appear screen
+
+[20] Original FR: FR20: The system shall allow users to pin the Teams window on top of other windows.
+    Processed FR: system shall allow user pin team window top window
+
+[21] Original FR: FR21: The system shall allow users to open chats, calendars, and activities in pop-out windows.
+    Processed FR: system shall allow user open chat calendar activity window
+
+[22] Original FR: FR22: The system shall provide jump list access to chats and meetings from the taskbar or menu bar.
+    Processed FR: system shall provide jump list access chat meeting taskbar menu bar
+
+[23] Original FR: FR23: The system shall allow users to join meetings from desktop, mobile, and phone dial-in.
+    Processed FR: system shall allow user join meeting desktop mobile phone
+
+[24] Original FR: FR24: The system shall allow users to share their screen or specific windows.
+    Processed FR: system shall allow user share screen specific window
+
+[25] Original FR: FR25: The system shall use the native macOS screen-sharing picker when enabled.
+    Processed FR: system shall use native macos picker enable
+
+[26] Original FR: FR26: The system shall provide real-time microphone volume indicators during meetings.
+    Processed FR: system shall provide microphone volume indicator meeting
+
+[27] Original FR: FR27: The system shall allow meeting organizers to start countdown timers.
+    Processed FR: system shall allow meeting organizer start countdown timer
+
+[28] Original FR: FR28: The system shall allow users to raise hands during meetings and town halls.
+    Processed FR: system shall allow user raise hand meeting town hall
+
+[29] Original FR: FR29: The system shall allow presenters to share slide control with other presenters.
+    Processed FR: system shall allow presenter share slide control presenter
+
+[30] Original FR: FR30: The system shall allow users to open calls in a small window.
+    Processed FR: system shall allow user open call small window
+
+[31] Original FR: FR31: The system shall provide live captions during meetings.
+    Processed FR: system shall provide live caption meeting
+
+[32] Original FR: FR32: The system shall support live transcription in meetings.
+    Processed FR: system shall support live transcription meeting
+
+[33] Original FR: FR33: The system shall limit caption history when transcription is turned off.
+    Processed FR: system shall limit caption history transcription turn
+
+[34] Original FR: FR34: The system shall support Real-Time Text (RTT) in meetings and calls.
+    Processed FR: system shall support text rtt meeting call
+
+[35] Original FR: FR35: The system shall support automatic spoken language detection when Interpreter is enabled.
+    Processed FR: system shall support automatic speak language detection interpreter enable
+
+[36] Original FR: FR36: The system shall display an Interpreter “Preparing” status during initialization.
+    Processed FR: system shall display interpreter prepare status initialization
+
+[37] Original FR: FR37: The system shall support sign language mode with enhanced signer visibility.
+    Processed FR: system shall support sign language mode enhance signer visibility
+
+[38] Original FR: FR38: The system shall support town halls and webinars.
+    Processed FR: system shall support town hall webinars
+
+[39] Original FR: FR39: The system shall support DVR capabilities in town halls.
+    Processed FR: system shall support dvr capability town hall
+
+[40] Original FR: FR40: The system shall allow organizers to preview town halls as attendees.
+    Processed FR: system shall allow organizer preview town hall attendee
+
+[41] Original FR: FR41: The system shall allow organizers to control what content attendees see.
+    Processed FR: system shall allow organizer control content attendee see
+
+[42] Original FR: FR42: The system shall provide presenter analytics for town halls.
+    Processed FR: system shall provide presenter analytics town hall
+
+[43] Original FR: FR43: The system shall allow private chat between organizers and presenters in webinars.
+    Processed FR: system shall allow private chat organizers presenter webinars
+
+[44] Original FR: FR44: The system shall allow organizers to return to the green room after ending events.
+    Processed FR: system shall allow organizer return green room end event
+
+[45] Original FR: FR45: The system shall support immersive 3D events.
+    Processed FR: system shall support immersive event
+
+[46] Original FR: FR46: The system shall allow immersive events to be joined using VR headsets.
+    Processed FR: system shall allow immersive event join use vr headset
+
+[47] Original FR: FR47: The system shall allow users to access Copilot Chat in Teams.
+    Processed FR: system shall allow user access copilot chat team
+
+[48] Original FR: FR48: The system shall allow Copilot to summarize meetings and calls.
+    Processed FR: system shall allow copilot summarize meeting call
+
+[49] Original FR: FR49: The system shall allow Copilot to generate customizable meeting recap summaries.
+    Processed FR: system shall allow copilot generate customizable meeting recap summary
+
+[50] Original FR: FR50: The system shall allow users to listen to audio-based meeting recaps.
+    Processed FR: system shall allow user listen meeting recap
+
+[51] Original FR: FR51: The system shall allow Copilot to summarize chats, threads, and files.
+    Processed FR: system shall allow copilot summarize chat thread file
+
+[52] Original FR: FR52: The system shall allow Copilot usage in calls without recording or transcription.
+    Processed FR: system shall allow copilot usage call without record transcription
+
+[53] Original FR: FR53: The system shall support Facilitator as a meeting AI agent.
+    Processed FR: system shall support facilitator meeting ai agent
+
+[54] Original FR: FR54: The system shall allow the Facilitator to recognize agendas in chat.
+    Processed FR: system shall allow facilitator recognize agenda chat
+
+[55] Original FR: FR55: The system shall allow the Facilitator to track meeting progress.
+    Processed FR: system shall allow facilitator track meeting progress
+
+[56] Original FR: FR56: The system shall require owner approval when joining private groups by code.
+    Processed FR: system shall require owner approval join private group code
+
+[57] Original FR: FR57: The system shall detect and warn users about malicious files and URLs.
+    Processed FR: system shall detect warn user malicious file url
+
+[58] Original FR: FR58: The system shall allow users to flag incorrectly identified malicious links.
+    Processed FR: system shall allow user flag incorrectly identify malicious link
+
+[59] Original FR: FR59: The system shall allow organizers to prevent screen capture during meetings.
+    Processed FR: system shall allow organizer prevent screen capture meeting
+
+[60] Original FR: FR60: The system shall restrict premium features based on Teams Premium and Copilot licenses.
+    Processed FR: system shall restrict premium feature base team premium copilot license
+
+### STEP 2: TF-IDF VECTORIZATION ###
+
+Vocabulary size: 176
+NFR vectors shape: (3, 176)
+FR vectors shape: (60, 176)
+
+--- Top 10 TF-IDF terms for ALL 60 FRs ---
+
+FR1:
+  unified: 0.5608
+  experience: 0.5099
+  provide: 0.3867
+  channel: 0.3867
+  chat: 0.3078
+  system: 0.1256
+  shall: 0.1256
+
+FR2:
+  organize: 0.5761
+  section: 0.5238
+  channel: 0.3973
+  chat: 0.3162
+  user: 0.2503
+  allow: 0.1997
+  system: 0.1290
+  shall: 0.1290
+
+FR3:
+  icon: 0.4078
+  emoji: 0.4078
+  add: 0.4078
+  name: 0.4078
+  section: 0.3708
+  channel: 0.2812
+  chat: 0.2238
+  user: 0.1772
+  allow: 0.1414
+  system: 0.0913
+
+FR4:
+  conversation: 0.6214
+  thread: 0.4939
+  channel: 0.4285
+  support: 0.3842
+  shall: 0.1391
+  system: 0.1391
+
+FR5:
+  follow: 0.6304
+  thread: 0.5010
+  channel: 0.4347
+  user: 0.2739
+  allow: 0.2185
+  system: 0.1412
+  shall: 0.1412
+
+FR6:
+  summary: 0.6095
+  thread: 0.5734
+  provide: 0.4975
+  shall: 0.1616
+  system: 0.1616
+
+FR7:
+  take: 0.5075
+  note: 0.4614
+  group: 0.4287
+  private: 0.4034
+  chat: 0.2785
+  user: 0.2205
+  allow: 0.1759
+  system: 0.1136
+  shall: 0.1136
+
+FR8:
+  image: 0.4962
+  mention: 0.4962
+  note: 0.4511
+  include: 0.4192
+  chat: 0.2723
+  allow: 0.1720
+  shall: 0.1111
+  system: 0.1111
+
+FR9:
+  forward: 0.4746
+  original: 0.4315
+  message: 0.4009
+  link: 0.4009
+  channel: 0.3273
+  chat: 0.2605
+  user: 0.2062
+  allow: 0.1645
+  shall: 0.1063
+  system: 0.1063
+
+FR10:
+  preview: 0.5262
+  message: 0.4889
+  display: 0.4889
+  notification: 0.4600
+  shall: 0.1296
+  system: 0.1296
+
+FR11:
+  share: 0.6216
+  tab: 0.4261
+  display: 0.3959
+  link: 0.3959
+  file: 0.3108
+  system: 0.1049
+  shall: 0.1049
+
+FR12:
+  keyword: 0.5665
+  search: 0.5151
+  file: 0.3757
+  share: 0.3757
+  user: 0.2461
+  allow: 0.1964
+  shall: 0.1269
+  system: 0.1269
+
+FR13:
+  show: 0.4100
+  attachment: 0.4100
+  filter: 0.4100
+  result: 0.4100
+  search: 0.3728
+  message: 0.3463
+  user: 0.1781
+  allow: 0.1421
+  shall: 0.0918
+  system: 0.0918
+
+FR14:
+  share: 0.6463
+  tab: 0.4430
+  channel: 0.3360
+  file: 0.3232
+  chat: 0.2674
+  user: 0.2117
+  allow: 0.1689
+  shall: 0.1091
+  system: 0.1091
+
+FR15:
+  file: 0.6397
+  permission: 0.4823
+  maintain: 0.4823
+  share: 0.3198
+  shall: 0.1080
+  system: 0.1080
+
+FR16:
+  view: 0.5771
+  summary: 0.4875
+  share: 0.3827
+  file: 0.3827
+  user: 0.2507
+  allow: 0.2000
+  system: 0.1292
+  shall: 0.1292
+
+FR17:
+  quickly: 0.4855
+  original: 0.4414
+  jump: 0.4414
+  share: 0.3220
+  file: 0.3220
+  chat: 0.2664
+  user: 0.2109
+  allow: 0.1683
+  system: 0.1087
+  shall: 0.1087
+
+FR18:
+  customize: 0.5905
+  size: 0.5369
+  notification: 0.4694
+  user: 0.2565
+  allow: 0.2047
+  system: 0.1322
+  shall: 0.1322
+
+FR19:
+  appear: 0.5218
+  choose: 0.5218
+  notification: 0.4147
+  screen: 0.4147
+  user: 0.2267
+  allow: 0.1809
+  shall: 0.1168
+  system: 0.1168
+
+FR20:
+  window: 0.6491
+  top: 0.4305
+  pin: 0.4305
+  team: 0.3636
+  user: 0.1870
+  allow: 0.1492
+  shall: 0.0964
+  system: 0.0964
+
+FR21:
+  activity: 0.4935
+  calendar: 0.4935
+  open: 0.4487
+  window: 0.3721
+  chat: 0.2709
+  user: 0.2144
+  allow: 0.1711
+  shall: 0.1105
+  system: 0.1105
+
+FR22:
+  taskbar: 0.3858
+  bar: 0.3858
+  menu: 0.3858
+  list: 0.3858
+  jump: 0.3508
+  access: 0.3259
+  provide: 0.2660
+  meeting: 0.2117
+  chat: 0.2117
+  system: 0.0864
+
+FR23:
+  mobile: 0.4799
+  desktop: 0.4799
+  phone: 0.4799
+  join: 0.3814
+  meeting: 0.2634
+  user: 0.2085
+  allow: 0.1663
+  system: 0.1075
+  shall: 0.1075
+
+FR24:
+  specific: 0.5727
+  screen: 0.4552
+  window: 0.4318
+  share: 0.3798
+  user: 0.2488
+  allow: 0.1985
+  shall: 0.1282
+  system: 0.1282
+
+FR25:
+  native: 0.4587
+  macos: 0.4587
+  picker: 0.4587
+  use: 0.4170
+  enable: 0.4170
+  system: 0.1027
+  shall: 0.1027
+
+FR26:
+  volume: 0.5079
+  microphone: 0.5079
+  indicator: 0.5079
+  provide: 0.3502
+  meeting: 0.2787
+  system: 0.1137
+  shall: 0.1137
+
+FR27:
+  start: 0.4945
+  timer: 0.4945
+  countdown: 0.4945
+  organizer: 0.3728
+  meeting: 0.2714
+  allow: 0.1714
+  shall: 0.1107
+  system: 0.1107
+
+FR28:
+  hand: 0.5167
+  raise: 0.5167
+  town: 0.3718
+  hall: 0.3718
+  meeting: 0.2836
+  user: 0.2245
+  allow: 0.1791
+  system: 0.1157
+  shall: 0.1157
+
+FR29:
+  presenter: 0.7310
+  slide: 0.4327
+  control: 0.3934
+  share: 0.2870
+  allow: 0.1500
+  shall: 0.0969
+  system: 0.0969
+
+FR30:
+  small: 0.5395
+  open: 0.4905
+  call: 0.4288
+  window: 0.4068
+  user: 0.2344
+  allow: 0.1870
+  shall: 0.1208
+  system: 0.1208
+
+FR31:
+  caption: 0.5716
+  live: 0.5716
+  provide: 0.4335
+  meeting: 0.3450
+  shall: 0.1408
+  system: 0.1408
+
+FR32:
+  live: 0.5964
+  transcription: 0.5541
+  support: 0.4056
+  meeting: 0.3600
+  system: 0.1469
+  shall: 0.1469
+
+FR33:
+  turn: 0.4642
+  limit: 0.4642
+  history: 0.4642
+  caption: 0.4221
+  transcription: 0.3922
+  shall: 0.1039
+  system: 0.1039
+
+FR34:
+  text: 0.5411
+  rtt: 0.5411
+  call: 0.4301
+  support: 0.3345
+  meeting: 0.2970
+  shall: 0.1212
+  system: 0.1212
+
+FR35:
+  speak: 0.4095
+  automatic: 0.4095
+  detection: 0.4095
+  interpreter: 0.3723
+  language: 0.3723
+  enable: 0.3723
+  support: 0.2532
+  system: 0.0917
+  shall: 0.0917
+
+FR36:
+  status: 0.4642
+  prepare: 0.4642
+  initialization: 0.4642
+  interpreter: 0.4221
+  display: 0.3922
+  system: 0.1039
+  shall: 0.1039
+
+FR37:
+  visibility: 0.3981
+  signer: 0.3981
+  sign: 0.3981
+  mode: 0.3981
+  enhance: 0.3981
+  language: 0.3620
+  support: 0.2461
+  system: 0.0891
+  shall: 0.0891
+
+FR38:
+  webinars: 0.5938
+  town: 0.4699
+  hall: 0.4699
+  support: 0.4038
+  shall: 0.1462
+  system: 0.1462
+
+FR39:
+  dvr: 0.5332
+  capability: 0.5332
+  town: 0.3836
+  hall: 0.3836
+  support: 0.3296
+  shall: 0.1194
+  system: 0.1194
+
+FR40:
+  preview: 0.4957
+  attendee: 0.4606
+  organizer: 0.4111
+  town: 0.3922
+  hall: 0.3922
+  allow: 0.1890
+  shall: 0.1221
+  system: 0.1221
+
+FR41:
+  see: 0.4806
+  content: 0.4806
+  control: 0.4370
+  attendee: 0.4060
+  organizer: 0.3624
+  allow: 0.1666
+  shall: 0.1076
+  system: 0.1076
+
+FR42:
+  analytics: 0.5484
+  presenter: 0.4633
+  town: 0.3946
+  hall: 0.3946
+  provide: 0.3782
+  system: 0.1228
+  shall: 0.1228
+
+FR43:
+  organizers: 0.5203
+  webinars: 0.4731
+  presenter: 0.4396
+  private: 0.4136
+  chat: 0.2856
+  allow: 0.1804
+  shall: 0.1165
+  system: 0.1165
+
+FR44:
+  green: 0.4295
+  end: 0.4295
+  return: 0.4295
+  room: 0.4295
+  event: 0.3414
+  organizer: 0.3238
+  allow: 0.1489
+  shall: 0.0962
+  system: 0.0962
+
+FR45:
+  immersive: 0.6526
+  event: 0.5705
+  support: 0.4438
+  system: 0.1607
+  shall: 0.1607
+
+FR46:
+  vr: 0.4412
+  headset: 0.4412
+  immersive: 0.4011
+  use: 0.4011
+  event: 0.3507
+  join: 0.3507
+  allow: 0.1529
+  shall: 0.0988
+  system: 0.0988
+
+FR47:
+  team: 0.5226
+  access: 0.5226
+  copilot: 0.4266
+  chat: 0.3395
+  user: 0.2687
+  allow: 0.2144
+  system: 0.1385
+  shall: 0.1385
+
+FR48:
+  summarize: 0.5802
+  call: 0.5072
+  copilot: 0.4401
+  meeting: 0.3502
+  allow: 0.2212
+  system: 0.1429
+  shall: 0.1429
+
+FR49:
+  generate: 0.4850
+  customizable: 0.4410
+  summary: 0.4097
+  recap: 0.4097
+  copilot: 0.3344
+  meeting: 0.2662
+  allow: 0.1681
+  system: 0.1086
+  shall: 0.1086
+
+FR50:
+  listen: 0.6423
+  recap: 0.5426
+  meeting: 0.3525
+  user: 0.2790
+  allow: 0.2226
+  system: 0.1438
+  shall: 0.1438
+
+FR51:
+  summarize: 0.5343
+  thread: 0.4671
+  copilot: 0.4053
+  file: 0.3898
+  chat: 0.3225
+  allow: 0.2037
+  shall: 0.1316
+  system: 0.1316
+
+FR52:
+  without: 0.4454
+  usage: 0.4454
+  record: 0.4454
+  transcription: 0.3762
+  call: 0.3540
+  copilot: 0.3071
+  allow: 0.1544
+  system: 0.0997
+  shall: 0.0997
+
+FR53:
+  ai: 0.5347
+  agent: 0.5347
+  facilitator: 0.4517
+  support: 0.3306
+  meeting: 0.2935
+  system: 0.1197
+  shall: 0.1197
+
+FR54:
+  agenda: 0.5560
+  recognize: 0.5560
+  facilitator: 0.4697
+  chat: 0.3051
+  allow: 0.1927
+  shall: 0.1245
+  system: 0.1245
+
+FR55:
+  track: 0.5560
+  progress: 0.5560
+  facilitator: 0.4697
+  meeting: 0.3051
+  allow: 0.1927
+  system: 0.1245
+  shall: 0.1245
+
+FR56:
+  approval: 0.4056
+  code: 0.4056
+  owner: 0.4056
+  require: 0.4056
+  group: 0.3427
+  private: 0.3224
+  join: 0.3224
+  shall: 0.0908
+  system: 0.0908
+
+FR57:
+  warn: 0.4685
+  url: 0.4685
+  detect: 0.4685
+  malicious: 0.4260
+  file: 0.3107
+  user: 0.2035
+  shall: 0.1049
+  system: 0.1049
+
+FR58:
+  flag: 0.4495
+  incorrectly: 0.4495
+  identify: 0.4495
+  malicious: 0.4087
+  link: 0.3797
+  user: 0.1953
+  allow: 0.1558
+  system: 0.1007
+  shall: 0.1007
+
+FR59:
+  prevent: 0.5309
+  capture: 0.4827
+  screen: 0.4219
+  organizer: 0.4003
+  meeting: 0.2913
+  allow: 0.1840
+  shall: 0.1189
+  system: 0.1189
+
+FR60:
+  premium: 0.6822
+  feature: 0.3101
+  restrict: 0.3101
+  license: 0.3101
+  base: 0.3101
+  team: 0.2881
+  copilot: 0.2352
+  system: 0.0764
+  shall: 0.0764
+
+### STEP 3: COSINE SIMILARITY CALCULATION ###
+
+Similarity matrix shape: (60, 3)
+(rows=FRs: 60, columns=NFRs: 3)
+
+### STEP 4: TOP SIMILARITIES (SORTED) FOR ALL FRs ###
+
+FR1:
+  NFR2 (Usability): 0.2213 [TRACED]
+  NFR1 (Availability): 0.0263 
+  NFR3 (Security & Privacy): 0.0141 
+
+FR2:
+  NFR2 (Usability): 0.0468 
+  NFR3 (Security & Privacy): 0.0417 
+  NFR1 (Availability): 0.0270 
+
+FR3:
+  NFR2 (Usability): 0.0332 
+  NFR3 (Security & Privacy): 0.0295 
+  NFR1 (Availability): 0.0191 
+
+FR4:
+  NFR1 (Availability): 0.1402 
+  NFR2 (Usability): 0.0175 
+  NFR3 (Security & Privacy): 0.0156 
+
+FR5:
+  NFR2 (Usability): 0.0512 
+  NFR3 (Security & Privacy): 0.0456 
+  NFR1 (Availability): 0.0296 
+
+FR6:
+  NFR2 (Usability): 0.1169 
+  NFR1 (Availability): 0.0338 
+  NFR3 (Security & Privacy): 0.0181 
+
+FR7:
+  NFR3 (Security & Privacy): 0.2078 [TRACED]
+  NFR2 (Usability): 0.0413 
+  NFR1 (Availability): 0.0238 
+
+FR8:
+  NFR1 (Availability): 0.1888 
+  NFR2 (Usability): 0.1136 
+  NFR3 (Security & Privacy): 0.0125 
+
+FR9:
+  NFR2 (Usability): 0.0386 
+  NFR3 (Security & Privacy): 0.0344 
+  NFR1 (Availability): 0.0222 
+
+FR10:
+  NFR2 (Usability): 0.1192 
+  NFR1 (Availability): 0.0271 
+  NFR3 (Security & Privacy): 0.0145 
+
+FR11:
+  NFR1 (Availability): 0.0220 
+  NFR2 (Usability): 0.0132 
+  NFR3 (Security & Privacy): 0.0118 
+
+FR12:
+  NFR2 (Usability): 0.0461 
+  NFR3 (Security & Privacy): 0.0410 
+  NFR1 (Availability): 0.0266 
+
+FR13:
+  NFR2 (Usability): 0.0333 
+  NFR3 (Security & Privacy): 0.0297 
+  NFR1 (Availability): 0.0192 
+
+FR14:
+  NFR2 (Usability): 0.0396 
+  NFR3 (Security & Privacy): 0.0353 
+  NFR1 (Availability): 0.0228 
+
+FR15:
+  NFR1 (Availability): 0.0226 
+  NFR2 (Usability): 0.0136 
+  NFR3 (Security & Privacy): 0.0121 
+
+FR16:
+  NFR2 (Usability): 0.0469 
+  NFR3 (Security & Privacy): 0.0418 
+  NFR1 (Availability): 0.0271 
+
+FR17:
+  NFR2 (Usability): 0.0395 
+  NFR3 (Security & Privacy): 0.0351 
+  NFR1 (Availability): 0.0228 
+
+FR18:
+  NFR2 (Usability): 0.2903 [TRACED]
+  NFR3 (Security & Privacy): 0.0428 
+  NFR1 (Availability): 0.0277 
+
+FR19:
+  NFR2 (Usability): 0.1351 
+  NFR3 (Security & Privacy): 0.1204 
+  NFR1 (Availability): 0.0245 
+
+FR20:
+  NFR2 (Usability): 0.1727 
+  NFR3 (Security & Privacy): 0.0312 
+  NFR1 (Availability): 0.0202 
+
+FR21:
+  NFR2 (Usability): 0.1190 
+  NFR3 (Security & Privacy): 0.0357 
+  NFR1 (Availability): 0.0231 
+
+FR22:
+  NFR3 (Security & Privacy): 0.0787 
+  NFR2 (Usability): 0.0625 
+  NFR1 (Availability): 0.0181 
+
+FR23:
+  NFR3 (Security & Privacy): 0.1107 
+  NFR2 (Usability): 0.0390 
+  NFR1 (Availability): 0.0225 
+
+FR24:
+  NFR2 (Usability): 0.1381 
+  NFR3 (Security & Privacy): 0.1321 
+  NFR1 (Availability): 0.0268 
+
+FR25:
+  NFR1 (Availability): 0.0215 
+  NFR2 (Usability): 0.0129 
+  NFR3 (Security & Privacy): 0.0115 
+
+FR26:
+  NFR2 (Usability): 0.0823 
+  NFR1 (Availability): 0.0238 
+  NFR3 (Security & Privacy): 0.0128 
+
+FR27:
+  NFR1 (Availability): 0.0232 
+  NFR2 (Usability): 0.0139 
+  NFR3 (Security & Privacy): 0.0124 
+
+FR28:
+  NFR1 (Availability): 0.2743 [TRACED]
+  NFR2 (Usability): 0.0420 
+  NFR3 (Security & Privacy): 0.0374 
+
+FR29:
+  NFR1 (Availability): 0.0203 
+  NFR2 (Usability): 0.0122 
+  NFR3 (Security & Privacy): 0.0109 
+
+FR30:
+  NFR2 (Usability): 0.1301 
+  NFR3 (Security & Privacy): 0.0391 
+  NFR1 (Availability): 0.0253 
+
+FR31:
+  NFR2 (Usability): 0.1018 
+  NFR1 (Availability): 0.0295 
+  NFR3 (Security & Privacy): 0.0158 
+
+FR32:
+  NFR1 (Availability): 0.1480 
+  NFR2 (Usability): 0.0185 
+  NFR3 (Security & Privacy): 0.0165 
+
+FR33:
+  NFR1 (Availability): 0.0218 
+  NFR2 (Usability): 0.0131 
+  NFR3 (Security & Privacy): 0.0117 
+
+FR34:
+  NFR1 (Availability): 0.1220 
+  NFR2 (Usability): 0.0153 
+  NFR3 (Security & Privacy): 0.0136 
+
+FR35:
+  NFR1 (Availability): 0.0924 
+  NFR2 (Usability): 0.0116 
+  NFR3 (Security & Privacy): 0.0103 
+
+FR36:
+  NFR1 (Availability): 0.0218 
+  NFR2 (Usability): 0.0131 
+  NFR3 (Security & Privacy): 0.0117 
+
+FR37:
+  NFR1 (Availability): 0.0898 
+  NFR2 (Usability): 0.0112 
+  NFR3 (Security & Privacy): 0.0100 
+
+FR38:
+  NFR1 (Availability): 0.4634 [TRACED]
+  NFR2 (Usability): 0.0184 
+  NFR3 (Security & Privacy): 0.0164 
+
+FR39:
+  NFR1 (Availability): 0.3783 [TRACED]
+  NFR2 (Usability): 0.0150 
+  NFR3 (Security & Privacy): 0.0134 
+
+FR40:
+  NFR1 (Availability): 0.4712 [TRACED]
+  NFR2 (Usability): 0.0154 
+  NFR3 (Security & Privacy): 0.0137 
+
+FR41:
+  NFR1 (Availability): 0.1829 
+  NFR2 (Usability): 0.0136 
+  NFR3 (Security & Privacy): 0.0121 
+
+FR42:
+  NFR1 (Availability): 0.2911 [TRACED]
+  NFR2 (Usability): 0.0888 
+  NFR3 (Security & Privacy): 0.0138 
+
+FR43:
+  NFR3 (Security & Privacy): 0.0954 
+  NFR1 (Availability): 0.0244 
+  NFR2 (Usability): 0.0147 
+
+FR44:
+  NFR1 (Availability): 0.1470 
+  NFR2 (Usability): 0.0121 
+  NFR3 (Security & Privacy): 0.0108 
+
+FR45:
+  NFR1 (Availability): 0.3739 [TRACED]
+  NFR2 (Usability): 0.0202 
+  NFR3 (Security & Privacy): 0.0180 
+
+FR46:
+  NFR1 (Availability): 0.1510 
+  NFR3 (Security & Privacy): 0.0809 
+  NFR2 (Usability): 0.0124 
+
+FR47:
+  NFR3 (Security & Privacy): 0.2291 [TRACED]
+  NFR2 (Usability): 0.0503 
+  NFR1 (Availability): 0.0290 
+
+FR48:
+  NFR3 (Security & Privacy): 0.0921 
+  NFR1 (Availability): 0.0299 
+  NFR2 (Usability): 0.0180 
+
+FR49:
+  NFR2 (Usability): 0.2392 [TRACED]
+  NFR3 (Security & Privacy): 0.1567 
+  NFR1 (Availability): 0.0227 
+
+FR50:
+  NFR3 (Security & Privacy): 0.1613 
+  NFR2 (Usability): 0.0522 
+  NFR1 (Availability): 0.0301 
+
+FR51:
+  NFR3 (Security & Privacy): 0.0848 
+  NFR1 (Availability): 0.0275 
+  NFR2 (Usability): 0.0166 
+
+FR52:
+  NFR3 (Security & Privacy): 0.0642 
+  NFR1 (Availability): 0.0209 
+  NFR2 (Usability): 0.0126 
+
+FR53:
+  NFR1 (Availability): 0.1206 
+  NFR2 (Usability): 0.0151 
+  NFR3 (Security & Privacy): 0.0134 
+
+FR54:
+  NFR1 (Availability): 0.0261 
+  NFR2 (Usability): 0.0157 
+  NFR3 (Security & Privacy): 0.0140 
+
+FR55:
+  NFR1 (Availability): 0.0261 
+  NFR2 (Usability): 0.0157 
+  NFR3 (Security & Privacy): 0.0140 
+
+FR56:
+  NFR3 (Security & Privacy): 0.2111 [TRACED]
+  NFR1 (Availability): 0.0190 
+  NFR2 (Usability): 0.0114 
+
+FR57:
+  NFR2 (Usability): 0.0381 
+  NFR3 (Security & Privacy): 0.0339 
+  NFR1 (Availability): 0.0220 
+
+FR58:
+  NFR2 (Usability): 0.0365 
+  NFR3 (Security & Privacy): 0.0325 
+  NFR1 (Availability): 0.0211 
+
+FR59:
+  NFR3 (Security & Privacy): 0.2073 [TRACED]
+  NFR1 (Availability): 0.0249 
+  NFR2 (Usability): 0.0150 
+
+FR60:
+  NFR3 (Security & Privacy): 0.3317 [TRACED]
+  NFR1 (Availability): 0.0160 
+  NFR2 (Usability): 0.0096 
+
+### STEP 5: APPLYING THRESHOLD (>= 0.2) ###
+
+Total trace links found: 14
+Average traces per FR: 0.23
+FRs with 0 traces: 46
+FRs with 1+ traces: 14
+Max traces for single FR: 1
+
+--- FRs with Trace Links ---
+FR1: NFR2 (Usability) (similarity: 0.2213)
+FR7: NFR3 (Security & Privacy) (similarity: 0.2078)
+FR18: NFR2 (Usability) (similarity: 0.2903)
+FR28: NFR1 (Availability) (similarity: 0.2743)
+FR38: NFR1 (Availability) (similarity: 0.4634)
+FR39: NFR1 (Availability) (similarity: 0.3783)
+FR40: NFR1 (Availability) (similarity: 0.4712)
+FR42: NFR1 (Availability) (similarity: 0.2911)
+FR45: NFR1 (Availability) (similarity: 0.3739)
+FR47: NFR3 (Security & Privacy) (similarity: 0.2291)
+FR49: NFR2 (Usability) (similarity: 0.2392)
+FR56: NFR3 (Security & Privacy) (similarity: 0.2111)
+FR59: NFR3 (Security & Privacy) (similarity: 0.2073)
+FR60: NFR3 (Security & Privacy) (similarity: 0.3317)
+Loaded 3 NFRs and 60 FRs
+
+Trace matrix saved to: trace_matrix_1.txt
+
+================================================================================
+
+
+================================================================================
+VARIANT 2
+================================================================================
+
+Configuration: Tokenization, Stop-word removal, POS tagging, Stemming
+--------------------------------------------------------------------------------
+
+### STEP 1: PRE-PROCESSING ###
+Loaded 3 NFRs and 60 FRs
+Loaded 3 NFRs and 60 FRs
+
+--- ALL 3 NFRs (Original vs Processed) ---
+
+[1] Original NFR: NFR1 (Availability): The system shall support large-scale events, including town halls with up to 50,000 attendees.
+    Processed NFR: avail system shall support event includ town hall attende
+
+[2] Original NFR: NFR2 (Usability): The system shall provide customizable user experiences including notification size, keyboard shortcuts, window resizing, and customizable layouts.
+    Processed NFR: usabl system shall provid customiz user experi includ notif size keyboard shortcut window resiz customiz layout
+
+[3] Original NFR: NFR3 (Security & Privacy): The system shall restrict access to sensitive features such as meeting recaps, Copilot insights, private group joins, and screen capture prevention based on user role and license.
+    Processed NFR: secur privaci system shall restrict access sensit featur meet recap copilot insight privat group join screen captur prevent base user role licens
+
+--- ALL 60 FRs (Original vs Processed) ---
+
+[1] Original FR: FR1: The system shall provide a unified chat and channels experience.
+    Processed FR: system shall provid unifi chat channel experi
+
+[2] Original FR: FR2: The system shall allow users to organize chats and channels into sections.
+    Processed FR: system shall allow user organ chat channel section
+
+[3] Original FR: FR3: The system shall allow users to add emoji icons to chat and channel section names.
+    Processed FR: system shall allow user add emoji icon chat channel section name
+
+[4] Original FR: FR4: The system shall support threaded conversations in channels.
+    Processed FR: system shall support thread convers channel
+
+[5] Original FR: FR5: The system shall allow users to follow threads in channels.
+    Processed FR: system shall allow user follow thread channel
+
+[6] Original FR: FR6: The system shall provide Copilot-generated summaries of threads.
+    Processed FR: system shall provid summari thread
+
+[7] Original FR: FR7: The system shall allow users to take private notes in 1:1 and group chats.
+    Processed FR: system shall allow user take privat note group chat
+
+[8] Original FR: FR8: The system shall allow chat notes to include images and @mentions.
+    Processed FR: system shall allow chat note includ imag mention
+
+[9] Original FR: FR9: The system shall allow users to forward messages with links to the original chat or channel.
+    Processed FR: system shall allow user forward messag link origin chat channel
+
+[10] Original FR: FR10: The system shall display previews of messages in notifications.
+    Processed FR: system shall display preview messag notif
+
+[11] Original FR: FR11: The system shall display shared files and links in a Shared tab.
+    Processed FR: system shall display share file link share tab
+
+[12] Original FR: FR12: The system shall allow users to search shared files by keyword.
+    Processed FR: system shall allow user search share file keyword
+
+[13] Original FR: FR13: The system shall allow users to filter search results to show messages with attachments only.
+    Processed FR: system shall allow user filter search result show messag attach
+
+[14] Original FR: FR14: The system shall allow users to share files from chats, channels, and the Shared tab.
+    Processed FR: system shall allow user share file chat channel share tab
+
+[15] Original FR: FR15: The system shall maintain file permissions when files are shared.
+    Processed FR: system shall maintain file permiss file share
+
+[16] Original FR: FR16: The system shall allow users to view Copilot-generated summaries of shared files.
+    Processed FR: system shall allow user view summari share file
+
+[17] Original FR: FR17: The system shall allow users to quickly jump to the original chat where a file was shared.
+    Processed FR: system shall allow user quickli jump origin chat file share
+
+[18] Original FR: FR18: The system shall allow users to customize the size of notifications.
+    Processed FR: system shall allow user custom size notif
+
+[19] Original FR: FR19: The system shall allow users to choose where notifications appear on the screen.
+    Processed FR: system shall allow user choos notif appear screen
+
+[20] Original FR: FR20: The system shall allow users to pin the Teams window on top of other windows.
+    Processed FR: system shall allow user pin team window top window
+
+[21] Original FR: FR21: The system shall allow users to open chats, calendars, and activities in pop-out windows.
+    Processed FR: system shall allow user open chat calendar activ window
+
+[22] Original FR: FR22: The system shall provide jump list access to chats and meetings from the taskbar or menu bar.
+    Processed FR: system shall provid jump list access chat meet taskbar menu bar
+
+[23] Original FR: FR23: The system shall allow users to join meetings from desktop, mobile, and phone dial-in.
+    Processed FR: system shall allow user join meet desktop mobil phone
+
+[24] Original FR: FR24: The system shall allow users to share their screen or specific windows.
+    Processed FR: system shall allow user share screen specif window
+
+[25] Original FR: FR25: The system shall use the native macOS screen-sharing picker when enabled.
+    Processed FR: system shall use nativ maco picker enabl
+
+[26] Original FR: FR26: The system shall provide real-time microphone volume indicators during meetings.
+    Processed FR: system shall provid microphon volum indic meet
+
+[27] Original FR: FR27: The system shall allow meeting organizers to start countdown timers.
+    Processed FR: system shall allow meet organ start countdown timer
+
+[28] Original FR: FR28: The system shall allow users to raise hands during meetings and town halls.
+    Processed FR: system shall allow user rais hand meet town hall
+
+[29] Original FR: FR29: The system shall allow presenters to share slide control with other presenters.
+    Processed FR: system shall allow present share slide control present
+
+[30] Original FR: FR30: The system shall allow users to open calls in a small window.
+    Processed FR: system shall allow user open call small window
+
+[31] Original FR: FR31: The system shall provide live captions during meetings.
+    Processed FR: system shall provid live caption meet
+
+[32] Original FR: FR32: The system shall support live transcription in meetings.
+    Processed FR: system shall support live transcript meet
+
+[33] Original FR: FR33: The system shall limit caption history when transcription is turned off.
+    Processed FR: system shall limit caption histori transcript turn
+
+[34] Original FR: FR34: The system shall support Real-Time Text (RTT) in meetings and calls.
+    Processed FR: system shall support text rtt meet call
+
+[35] Original FR: FR35: The system shall support automatic spoken language detection when Interpreter is enabled.
+    Processed FR: system shall support automat spoken languag detect interpret enabl
+
+[36] Original FR: FR36: The system shall display an Interpreter “Preparing” status during initialization.
+    Processed FR: system shall display interpret prepar statu initi
+
+[37] Original FR: FR37: The system shall support sign language mode with enhanced signer visibility.
+    Processed FR: system shall support sign languag mode enhanc signer visibl
+
+[38] Original FR: FR38: The system shall support town halls and webinars.
+    Processed FR: system shall support town hall webinar
+
+[39] Original FR: FR39: The system shall support DVR capabilities in town halls.
+    Processed FR: system shall support dvr capabl town hall
+
+[40] Original FR: FR40: The system shall allow organizers to preview town halls as attendees.
+    Processed FR: system shall allow organ preview town hall attende
+
+[41] Original FR: FR41: The system shall allow organizers to control what content attendees see.
+    Processed FR: system shall allow organ control content attende see
+
+[42] Original FR: FR42: The system shall provide presenter analytics for town halls.
+    Processed FR: system shall provid present analyt town hall
+
+[43] Original FR: FR43: The system shall allow private chat between organizers and presenters in webinars.
+    Processed FR: system shall allow privat chat organ present webinar
+
+[44] Original FR: FR44: The system shall allow organizers to return to the green room after ending events.
+    Processed FR: system shall allow organ return green room end event
+
+[45] Original FR: FR45: The system shall support immersive 3D events.
+    Processed FR: system shall support immers event
+
+[46] Original FR: FR46: The system shall allow immersive events to be joined using VR headsets.
+    Processed FR: system shall allow immers event join use vr headset
+
+[47] Original FR: FR47: The system shall allow users to access Copilot Chat in Teams.
+    Processed FR: system shall allow user access copilot chat team
+
+[48] Original FR: FR48: The system shall allow Copilot to summarize meetings and calls.
+    Processed FR: system shall allow copilot summar meet call
+
+[49] Original FR: FR49: The system shall allow Copilot to generate customizable meeting recap summaries.
+    Processed FR: system shall allow copilot gener customiz meet recap summari
+
+[50] Original FR: FR50: The system shall allow users to listen to audio-based meeting recaps.
+    Processed FR: system shall allow user listen meet recap
+
+[51] Original FR: FR51: The system shall allow Copilot to summarize chats, threads, and files.
+    Processed FR: system shall allow copilot summar chat thread file
+
+[52] Original FR: FR52: The system shall allow Copilot usage in calls without recording or transcription.
+    Processed FR: system shall allow copilot usag call without record transcript
+
+[53] Original FR: FR53: The system shall support Facilitator as a meeting AI agent.
+    Processed FR: system shall support facilit meet ai agent
+
+[54] Original FR: FR54: The system shall allow the Facilitator to recognize agendas in chat.
+    Processed FR: system shall allow facilit recogn agenda chat
+
+[55] Original FR: FR55: The system shall allow the Facilitator to track meeting progress.
+    Processed FR: system shall allow facilit track meet progress
+
+[56] Original FR: FR56: The system shall require owner approval when joining private groups by code.
+    Processed FR: system shall requir owner approv join privat group code
+
+[57] Original FR: FR57: The system shall detect and warn users about malicious files and URLs.
+    Processed FR: system shall detect warn user malici file url
+
+[58] Original FR: FR58: The system shall allow users to flag incorrectly identified malicious links.
+    Processed FR: system shall allow user flag incorrectli identifi malici link
+
+[59] Original FR: FR59: The system shall allow organizers to prevent screen capture during meetings.
+    Processed FR: system shall allow organ prevent screen captur meet
+
+[60] Original FR: FR60: The system shall restrict premium features based on Teams Premium and Copilot licenses.
+    Processed FR: system shall restrict premium featur base team premium copilot licens
+
+### STEP 2: TF-IDF VECTORIZATION ###
+
+Vocabulary size: 171
+NFR vectors shape: (3, 171)
+FR vectors shape: (60, 171)
+
+--- Top 10 TF-IDF terms for ALL 60 FRs ---
+
+FR1:
+  unifi: 0.5608
+  experi: 0.5099
+  provid: 0.3867
+  channel: 0.3867
+  chat: 0.3078
+  system: 0.1256
+  shall: 0.1256
+
+FR2:
+  section: 0.5764
+  organ: 0.4372
+  channel: 0.4372
+  chat: 0.3479
+  user: 0.2754
+  allow: 0.2198
+  shall: 0.1420
+  system: 0.1420
+
+FR3:
+  emoji: 0.4078
+  add: 0.4078
+  name: 0.4078
+  icon: 0.4078
+  section: 0.3708
+  channel: 0.2812
+  chat: 0.2238
+  user: 0.1772
+  allow: 0.1414
+  shall: 0.0913
+
+FR4:
+  convers: 0.6214
+  thread: 0.4939
+  channel: 0.4285
+  support: 0.3842
+  shall: 0.1391
+  system: 0.1391
+
+FR5:
+  follow: 0.6304
+  thread: 0.5010
+  channel: 0.4347
+  user: 0.2739
+  allow: 0.2185
+  shall: 0.1412
+  system: 0.1412
+
+FR6:
+  summari: 0.6095
+  thread: 0.5734
+  provid: 0.4975
+  system: 0.1616
+  shall: 0.1616
+
+FR7:
+  take: 0.5075
+  note: 0.4614
+  group: 0.4287
+  privat: 0.4034
+  chat: 0.2785
+  user: 0.2205
+  allow: 0.1759
+  shall: 0.1136
+  system: 0.1136
+
+FR8:
+  mention: 0.4962
+  imag: 0.4962
+  note: 0.4511
+  includ: 0.4192
+  chat: 0.2723
+  allow: 0.1720
+  system: 0.1111
+  shall: 0.1111
+
+FR9:
+  forward: 0.4746
+  origin: 0.4315
+  link: 0.4009
+  messag: 0.4009
+  channel: 0.3273
+  chat: 0.2605
+  user: 0.2062
+  allow: 0.1645
+  shall: 0.1063
+  system: 0.1063
+
+FR10:
+  preview: 0.5262
+  messag: 0.4889
+  display: 0.4889
+  notif: 0.4600
+  system: 0.1296
+  shall: 0.1296
+
+FR11:
+  share: 0.6216
+  tab: 0.4261
+  link: 0.3959
+  display: 0.3959
+  file: 0.3108
+  system: 0.1049
+  shall: 0.1049
+
+FR12:
+  keyword: 0.5665
+  search: 0.5151
+  share: 0.3757
+  file: 0.3757
+  user: 0.2461
+  allow: 0.1964
+  system: 0.1269
+  shall: 0.1269
+
+FR13:
+  show: 0.4100
+  filter: 0.4100
+  result: 0.4100
+  attach: 0.4100
+  search: 0.3728
+  messag: 0.3463
+  user: 0.1781
+  allow: 0.1421
+  system: 0.0918
+  shall: 0.0918
+
+FR14:
+  share: 0.6463
+  tab: 0.4430
+  channel: 0.3360
+  file: 0.3232
+  chat: 0.2674
+  user: 0.2117
+  allow: 0.1689
+  system: 0.1091
+  shall: 0.1091
+
+FR15:
+  file: 0.6397
+  permiss: 0.4823
+  maintain: 0.4823
+  share: 0.3198
+  system: 0.1080
+  shall: 0.1080
+
+FR16:
+  view: 0.5771
+  summari: 0.4875
+  share: 0.3827
+  file: 0.3827
+  user: 0.2507
+  allow: 0.2000
+  system: 0.1292
+  shall: 0.1292
+
+FR17:
+  quickli: 0.4855
+  origin: 0.4414
+  jump: 0.4414
+  file: 0.3220
+  share: 0.3220
+  chat: 0.2664
+  user: 0.2109
+  allow: 0.1683
+  system: 0.1087
+  shall: 0.1087
+
+FR18:
+  custom: 0.5905
+  size: 0.5369
+  notif: 0.4694
+  user: 0.2565
+  allow: 0.2047
+  shall: 0.1322
+  system: 0.1322
+
+FR19:
+  choos: 0.5218
+  appear: 0.5218
+  screen: 0.4147
+  notif: 0.4147
+  user: 0.2267
+  allow: 0.1809
+  shall: 0.1168
+  system: 0.1168
+
+FR20:
+  window: 0.6491
+  top: 0.4305
+  pin: 0.4305
+  team: 0.3636
+  user: 0.1870
+  allow: 0.1492
+  system: 0.0964
+  shall: 0.0964
+
+FR21:
+  calendar: 0.4935
+  activ: 0.4935
+  open: 0.4487
+  window: 0.3721
+  chat: 0.2709
+  user: 0.2144
+  allow: 0.1711
+  shall: 0.1105
+  system: 0.1105
+
+FR22:
+  taskbar: 0.3863
+  menu: 0.3863
+  list: 0.3863
+  bar: 0.3863
+  jump: 0.3512
+  access: 0.3263
+  provid: 0.2663
+  chat: 0.2120
+  meet: 0.2064
+  system: 0.0865
+
+FR23:
+  desktop: 0.4808
+  mobil: 0.4808
+  phone: 0.4808
+  join: 0.3821
+  meet: 0.2569
+  user: 0.2089
+  allow: 0.1666
+  shall: 0.1077
+  system: 0.1077
+
+FR24:
+  specif: 0.5727
+  screen: 0.4552
+  window: 0.4318
+  share: 0.3798
+  user: 0.2488
+  allow: 0.1985
+  system: 0.1282
+  shall: 0.1282
+
+FR25:
+  maco: 0.4587
+  nativ: 0.4587
+  picker: 0.4587
+  enabl: 0.4170
+  use: 0.4170
+  shall: 0.1027
+  system: 0.1027
+
+FR26:
+  volum: 0.5089
+  indic: 0.5089
+  microphon: 0.5089
+  provid: 0.3509
+  meet: 0.2719
+  shall: 0.1140
+  system: 0.1140
+
+FR27:
+  timer: 0.5012
+  start: 0.5012
+  countdown: 0.5012
+  organ: 0.3456
+  meet: 0.2678
+  allow: 0.1737
+  shall: 0.1122
+  system: 0.1122
+
+FR28:
+  rais: 0.5178
+  hand: 0.5178
+  town: 0.3725
+  hall: 0.3725
+  meet: 0.2767
+  user: 0.2249
+  allow: 0.1795
+  shall: 0.1159
+  system: 0.1159
+
+FR29:
+  present: 0.7310
+  slide: 0.4327
+  control: 0.3934
+  share: 0.2870
+  allow: 0.1500
+  shall: 0.0969
+  system: 0.0969
+
+FR30:
+  small: 0.5395
+  open: 0.4905
+  call: 0.4288
+  window: 0.4068
+  user: 0.2344
+  allow: 0.1870
+  system: 0.1208
+  shall: 0.1208
+
+FR31:
+  live: 0.5734
+  caption: 0.5734
+  provid: 0.4349
+  meet: 0.3370
+  system: 0.1412
+  shall: 0.1412
+
+FR32:
+  live: 0.5984
+  transcript: 0.5560
+  support: 0.4069
+  meet: 0.3517
+  shall: 0.1474
+  system: 0.1474
+
+FR33:
+  turn: 0.4642
+  histori: 0.4642
+  limit: 0.4642
+  caption: 0.4221
+  transcript: 0.3922
+  shall: 0.1039
+  system: 0.1039
+
+FR34:
+  text: 0.5423
+  rtt: 0.5423
+  call: 0.4311
+  support: 0.3353
+  meet: 0.2898
+  system: 0.1214
+  shall: 0.1214
+
+FR35:
+  spoken: 0.4156
+  automat: 0.4156
+  interpret: 0.3779
+  languag: 0.3779
+  enabl: 0.3779
+  detect: 0.3779
+  support: 0.2570
+  shall: 0.0931
+  system: 0.0931
+
+FR36:
+  statu: 0.4642
+  initi: 0.4642
+  prepar: 0.4642
+  interpret: 0.4221
+  display: 0.3922
+  system: 0.1039
+  shall: 0.1039
+
+FR37:
+  visibl: 0.3981
+  signer: 0.3981
+  sign: 0.3981
+  enhanc: 0.3981
+  mode: 0.3981
+  languag: 0.3620
+  support: 0.2461
+  shall: 0.0891
+  system: 0.0891
+
+FR38:
+  webinar: 0.5938
+  town: 0.4699
+  hall: 0.4699
+  support: 0.4038
+  system: 0.1462
+  shall: 0.1462
+
+FR39:
+  capabl: 0.5332
+  dvr: 0.5332
+  town: 0.3836
+  hall: 0.3836
+  support: 0.3296
+  system: 0.1194
+  shall: 0.1194
+
+FR40:
+  preview: 0.5027
+  attende: 0.4671
+  town: 0.3978
+  hall: 0.3978
+  organ: 0.3812
+  allow: 0.1916
+  system: 0.1238
+  shall: 0.1238
+
+FR41:
+  see: 0.4859
+  content: 0.4859
+  control: 0.4417
+  attende: 0.4104
+  organ: 0.3350
+  allow: 0.1684
+  system: 0.1088
+  shall: 0.1088
+
+FR42:
+  analyt: 0.5484
+  present: 0.4633
+  town: 0.3946
+  hall: 0.3946
+  provid: 0.3782
+  system: 0.1228
+  shall: 0.1228
+
+FR43:
+  webinar: 0.5107
+  present: 0.4745
+  privat: 0.4465
+  organ: 0.3874
+  chat: 0.3083
+  allow: 0.1947
+  shall: 0.1258
+  system: 0.1258
+
+FR44:
+  end: 0.4332
+  return: 0.4332
+  room: 0.4332
+  green: 0.4332
+  event: 0.3443
+  organ: 0.2988
+  allow: 0.1502
+  shall: 0.0970
+  system: 0.0970
+
+FR45:
+  immers: 0.6526
+  event: 0.5705
+  support: 0.4438
+  system: 0.1607
+  shall: 0.1607
+
+FR46:
+  vr: 0.4412
+  headset: 0.4412
+  use: 0.4011
+  immers: 0.4011
+  join: 0.3507
+  event: 0.3507
+  allow: 0.1529
+  shall: 0.0988
+  system: 0.0988
+
+FR47:
+  team: 0.5226
+  access: 0.5226
+  copilot: 0.4266
+  chat: 0.3395
+  user: 0.2687
+  allow: 0.2144
+  system: 0.1385
+  shall: 0.1385
+
+FR48:
+  summar: 0.5821
+  call: 0.5088
+  copilot: 0.4415
+  meet: 0.3421
+  allow: 0.2219
+  system: 0.1434
+  shall: 0.1434
+
+FR49:
+  gener: 0.4859
+  customiz: 0.4418
+  summari: 0.4105
+  recap: 0.4105
+  copilot: 0.3351
+  meet: 0.2596
+  allow: 0.1684
+  system: 0.1088
+  shall: 0.1088
+
+FR50:
+  listen: 0.6444
+  recap: 0.5444
+  meet: 0.3443
+  user: 0.2799
+  allow: 0.2234
+  shall: 0.1443
+  system: 0.1443
+
+FR51:
+  summar: 0.5343
+  thread: 0.4671
+  copilot: 0.4053
+  file: 0.3898
+  chat: 0.3225
+  allow: 0.2037
+  shall: 0.1316
+  system: 0.1316
+
+FR52:
+  without: 0.4454
+  usag: 0.4454
+  record: 0.4454
+  transcript: 0.3762
+  call: 0.3540
+  copilot: 0.3071
+  allow: 0.1544
+  system: 0.0997
+  shall: 0.0997
+
+FR53:
+  agent: 0.5359
+  ai: 0.5359
+  facilit: 0.4527
+  support: 0.3313
+  meet: 0.2864
+  system: 0.1200
+  shall: 0.1200
+
+FR54:
+  recogn: 0.5560
+  agenda: 0.5560
+  facilit: 0.4697
+  chat: 0.3051
+  allow: 0.1927
+  shall: 0.1245
+  system: 0.1245
+
+FR55:
+  track: 0.5573
+  progress: 0.5573
+  facilit: 0.4708
+  meet: 0.2978
+  allow: 0.1932
+  system: 0.1248
+  shall: 0.1248
+
+FR56:
+  code: 0.4056
+  owner: 0.4056
+  requir: 0.4056
+  approv: 0.4056
+  group: 0.3427
+  join: 0.3224
+  privat: 0.3224
+  shall: 0.0908
+  system: 0.0908
+
+FR57:
+  warn: 0.4777
+  url: 0.4777
+  malici: 0.4343
+  detect: 0.4343
+  file: 0.3168
+  user: 0.2075
+  system: 0.1070
+  shall: 0.1070
+
+FR58:
+  incorrectli: 0.4495
+  flag: 0.4495
+  identifi: 0.4495
+  malici: 0.4087
+  link: 0.3797
+  user: 0.1953
+  allow: 0.1558
+  shall: 0.1007
+  system: 0.1007
+
+FR59:
+  prevent: 0.5031
+  captur: 0.5031
+  screen: 0.4398
+  organ: 0.3815
+  meet: 0.2957
+  allow: 0.1918
+  system: 0.1239
+  shall: 0.1239
+
+FR60:
+  premium: 0.6822
+  restrict: 0.3101
+  licens: 0.3101
+  featur: 0.3101
+  base: 0.3101
+  team: 0.2881
+  copilot: 0.2352
+  system: 0.0764
+  shall: 0.0764
+
+### STEP 3: COSINE SIMILARITY CALCULATION ###
+
+Similarity matrix shape: (60, 3)
+(rows=FRs: 60, columns=NFRs: 3)
+
+### STEP 4: TOP SIMILARITIES (SORTED) FOR ALL FRs ###
+
+FR1:
+  NFR2 (Usability): 0.2213 [TRACED]
+  NFR1 (Availability): 0.0263 
+  NFR3 (Security & Privacy): 0.0145 
+
+FR2:
+  NFR2 (Usability): 0.0515 
+  NFR3 (Security & Privacy): 0.0472 
+  NFR1 (Availability): 0.0297 
+
+FR3:
+  NFR2 (Usability): 0.0332 
+  NFR3 (Security & Privacy): 0.0304 
+  NFR1 (Availability): 0.0191 
+
+FR4:
+  NFR1 (Availability): 0.1402 
+  NFR2 (Usability): 0.0175 
+  NFR3 (Security & Privacy): 0.0161 
+
+FR5:
+  NFR2 (Usability): 0.0512 
+  NFR3 (Security & Privacy): 0.0470 
+  NFR1 (Availability): 0.0296 
+
+FR6:
+  NFR2 (Usability): 0.1169 
+  NFR1 (Availability): 0.0338 
+  NFR3 (Security & Privacy): 0.0187 
+
+FR7:
+  NFR3 (Security & Privacy): 0.2138 [TRACED]
+  NFR2 (Usability): 0.0413 
+  NFR1 (Availability): 0.0238 
+
+FR8:
+  NFR1 (Availability): 0.1888 
+  NFR2 (Usability): 0.1136 
+  NFR3 (Security & Privacy): 0.0128 
+
+FR9:
+  NFR2 (Usability): 0.0386 
+  NFR3 (Security & Privacy): 0.0354 
+  NFR1 (Availability): 0.0222 
+
+FR10:
+  NFR2 (Usability): 0.1192 
+  NFR1 (Availability): 0.0271 
+  NFR3 (Security & Privacy): 0.0150 
+
+FR11:
+  NFR1 (Availability): 0.0220 
+  NFR2 (Usability): 0.0132 
+  NFR3 (Security & Privacy): 0.0121 
+
+FR12:
+  NFR2 (Usability): 0.0461 
+  NFR3 (Security & Privacy): 0.0422 
+  NFR1 (Availability): 0.0266 
+
+FR13:
+  NFR2 (Usability): 0.0333 
+  NFR3 (Security & Privacy): 0.0305 
+  NFR1 (Availability): 0.0192 
+
+FR14:
+  NFR2 (Usability): 0.0396 
+  NFR3 (Security & Privacy): 0.0363 
+  NFR1 (Availability): 0.0228 
+
+FR15:
+  NFR1 (Availability): 0.0226 
+  NFR2 (Usability): 0.0136 
+  NFR3 (Security & Privacy): 0.0125 
+
+FR16:
+  NFR2 (Usability): 0.0469 
+  NFR3 (Security & Privacy): 0.0430 
+  NFR1 (Availability): 0.0271 
+
+FR17:
+  NFR2 (Usability): 0.0395 
+  NFR3 (Security & Privacy): 0.0362 
+  NFR1 (Availability): 0.0228 
+
+FR18:
+  NFR2 (Usability): 0.2903 [TRACED]
+  NFR3 (Security & Privacy): 0.0440 
+  NFR1 (Availability): 0.0277 
+
+FR19:
+  NFR2 (Usability): 0.1351 
+  NFR3 (Security & Privacy): 0.1239 
+  NFR1 (Availability): 0.0245 
+
+FR20:
+  NFR2 (Usability): 0.1727 
+  NFR3 (Security & Privacy): 0.0321 
+  NFR1 (Availability): 0.0202 
+
+FR21:
+  NFR2 (Usability): 0.1190 
+  NFR3 (Security & Privacy): 0.0368 
+  NFR1 (Availability): 0.0231 
+
+FR22:
+  NFR3 (Security & Privacy): 0.1095 
+  NFR2 (Usability): 0.0626 
+  NFR1 (Availability): 0.0181 
+
+FR23:
+  NFR3 (Security & Privacy): 0.1495 
+  NFR2 (Usability): 0.0391 
+  NFR1 (Availability): 0.0225 
+
+FR24:
+  NFR2 (Usability): 0.1381 
+  NFR3 (Security & Privacy): 0.1359 
+  NFR1 (Availability): 0.0268 
+
+FR25:
+  NFR1 (Availability): 0.0215 
+  NFR2 (Usability): 0.0129 
+  NFR3 (Security & Privacy): 0.0119 
+
+FR26:
+  NFR2 (Usability): 0.0824 
+  NFR3 (Security & Privacy): 0.0506 
+  NFR1 (Availability): 0.0239 
+
+FR27:
+  NFR3 (Security & Privacy): 0.0498 
+  NFR1 (Availability): 0.0235 
+  NFR2 (Usability): 0.0141 
+
+FR28:
+  NFR1 (Availability): 0.2748 [TRACED]
+  NFR3 (Security & Privacy): 0.0767 
+  NFR2 (Usability): 0.0421 
+
+FR29:
+  NFR1 (Availability): 0.0203 
+  NFR2 (Usability): 0.0122 
+  NFR3 (Security & Privacy): 0.0112 
+
+FR30:
+  NFR2 (Usability): 0.1301 
+  NFR3 (Security & Privacy): 0.0402 
+  NFR1 (Availability): 0.0253 
+
+FR31:
+  NFR2 (Usability): 0.1021 
+  NFR3 (Security & Privacy): 0.0627 
+  NFR1 (Availability): 0.0296 
+
+FR32:
+  NFR1 (Availability): 0.1485 
+  NFR3 (Security & Privacy): 0.0655 
+  NFR2 (Usability): 0.0186 
+
+FR33:
+  NFR1 (Availability): 0.0218 
+  NFR2 (Usability): 0.0131 
+  NFR3 (Security & Privacy): 0.0120 
+
+FR34:
+  NFR1 (Availability): 0.1223 
+  NFR3 (Security & Privacy): 0.0539 
+  NFR2 (Usability): 0.0153 
+
+FR35:
+  NFR1 (Availability): 0.0937 
+  NFR2 (Usability): 0.0117 
+  NFR3 (Security & Privacy): 0.0107 
+
+FR36:
+  NFR1 (Availability): 0.0218 
+  NFR2 (Usability): 0.0131 
+  NFR3 (Security & Privacy): 0.0120 
+
+FR37:
+  NFR1 (Availability): 0.0898 
+  NFR2 (Usability): 0.0112 
+  NFR3 (Security & Privacy): 0.0103 
+
+FR38:
+  NFR1 (Availability): 0.4634 [TRACED]
+  NFR2 (Usability): 0.0184 
+  NFR3 (Security & Privacy): 0.0169 
+
+FR39:
+  NFR1 (Availability): 0.3783 [TRACED]
+  NFR2 (Usability): 0.0150 
+  NFR3 (Security & Privacy): 0.0138 
+
+FR40:
+  NFR1 (Availability): 0.4779 [TRACED]
+  NFR2 (Usability): 0.0156 
+  NFR3 (Security & Privacy): 0.0143 
+
+FR41:
+  NFR1 (Availability): 0.1849 
+  NFR2 (Usability): 0.0137 
+  NFR3 (Security & Privacy): 0.0126 
+
+FR42:
+  NFR1 (Availability): 0.2911 [TRACED]
+  NFR2 (Usability): 0.0888 
+  NFR3 (Security & Privacy): 0.0142 
+
+FR43:
+  NFR3 (Security & Privacy): 0.1060 
+  NFR1 (Availability): 0.0263 
+  NFR2 (Usability): 0.0158 
+
+FR44:
+  NFR1 (Availability): 0.1482 
+  NFR2 (Usability): 0.0122 
+  NFR3 (Security & Privacy): 0.0112 
+
+FR45:
+  NFR1 (Availability): 0.3739 [TRACED]
+  NFR2 (Usability): 0.0202 
+  NFR3 (Security & Privacy): 0.0186 
+
+FR46:
+  NFR1 (Availability): 0.1510 
+  NFR3 (Security & Privacy): 0.0833 
+  NFR2 (Usability): 0.0124 
+
+FR47:
+  NFR3 (Security & Privacy): 0.2357 [TRACED]
+  NFR2 (Usability): 0.0503 
+  NFR1 (Availability): 0.0290 
+
+FR48:
+  NFR3 (Security & Privacy): 0.1422 
+  NFR1 (Availability): 0.0300 
+  NFR2 (Usability): 0.0181 
+
+FR49:
+  NFR2 (Usability): 0.2397 [TRACED]
+  NFR3 (Security & Privacy): 0.1973 
+  NFR1 (Availability): 0.0228 
+
+FR50:
+  NFR3 (Security & Privacy): 0.2140 [TRACED]
+  NFR2 (Usability): 0.0524 
+  NFR1 (Availability): 0.0302 
+
+FR51:
+  NFR3 (Security & Privacy): 0.0872 
+  NFR1 (Availability): 0.0275 
+  NFR2 (Usability): 0.0166 
+
+FR52:
+  NFR3 (Security & Privacy): 0.0661 
+  NFR1 (Availability): 0.0209 
+  NFR2 (Usability): 0.0126 
+
+FR53:
+  NFR1 (Availability): 0.1209 
+  NFR3 (Security & Privacy): 0.0533 
+  NFR2 (Usability): 0.0151 
+
+FR54:
+  NFR1 (Availability): 0.0261 
+  NFR2 (Usability): 0.0157 
+  NFR3 (Security & Privacy): 0.0144 
+
+FR55:
+  NFR3 (Security & Privacy): 0.0554 
+  NFR1 (Availability): 0.0261 
+  NFR2 (Usability): 0.0157 
+
+FR56:
+  NFR3 (Security & Privacy): 0.2172 [TRACED]
+  NFR1 (Availability): 0.0190 
+  NFR2 (Usability): 0.0114 
+
+FR57:
+  NFR2 (Usability): 0.0388 
+  NFR3 (Security & Privacy): 0.0356 
+  NFR1 (Availability): 0.0224 
+
+FR58:
+  NFR2 (Usability): 0.0365 
+  NFR3 (Security & Privacy): 0.0335 
+  NFR1 (Availability): 0.0211 
+
+FR59:
+  NFR3 (Security & Privacy): 0.3810 [TRACED]
+  NFR1 (Availability): 0.0259 
+  NFR2 (Usability): 0.0156 
+
+FR60:
+  NFR3 (Security & Privacy): 0.3414 [TRACED]
+  NFR1 (Availability): 0.0160 
+  NFR2 (Usability): 0.0096 
+
+### STEP 5: APPLYING THRESHOLD (>= 0.2) ###
+
+Total trace links found: 15
+Average traces per FR: 0.25
+FRs with 0 traces: 45
+FRs with 1+ traces: 15
+Max traces for single FR: 1
+
+--- FRs with Trace Links ---
+FR1: NFR2 (Usability) (similarity: 0.2213)
+FR7: NFR3 (Security & Privacy) (similarity: 0.2138)
+FR18: NFR2 (Usability) (similarity: 0.2903)
+FR28: NFR1 (Availability) (similarity: 0.2748)
+FR38: NFR1 (Availability) (similarity: 0.4634)
+FR39: NFR1 (Availability) (similarity: 0.3783)
+FR40: NFR1 (Availability) (similarity: 0.4779)
+FR42: NFR1 (Availability) (similarity: 0.2911)
+FR45: NFR1 (Availability) (similarity: 0.3739)
+FR47: NFR3 (Security & Privacy) (similarity: 0.2357)
+FR49: NFR2 (Usability) (similarity: 0.2397)
+FR50: NFR3 (Security & Privacy) (similarity: 0.2140)
+FR56: NFR3 (Security & Privacy) (similarity: 0.2172)
+FR59: NFR3 (Security & Privacy) (similarity: 0.3810)
+FR60: NFR3 (Security & Privacy) (similarity: 0.3414)
+Loaded 3 NFRs and 60 FRs
+
+Trace matrix saved to: trace_matrix_2.txt
+
+================================================================================
+
+
+================================================================================
+VARIANT 3
+================================================================================
+
+Configuration: Tokenization, POS tagging, Stemming
+--------------------------------------------------------------------------------
+
+### STEP 1: PRE-PROCESSING ###
+Loaded 3 NFRs and 60 FRs
+Loaded 3 NFRs and 60 FRs
+
+--- ALL 3 NFRs (Original vs Processed) ---
+
+[1] Original NFR: NFR1 (Availability): The system shall support large-scale events, including town halls with up to 50,000 attendees.
+    Processed NFR: avail the system shall support event includ town hall with up to attende
+
+[2] Original NFR: NFR2 (Usability): The system shall provide customizable user experiences including notification size, keyboard shortcuts, window resizing, and customizable layouts.
+    Processed NFR: usabl the system shall provid customiz user experi includ notif size keyboard shortcut window resiz and customiz layout
+
+[3] Original NFR: NFR3 (Security & Privacy): The system shall restrict access to sensitive features such as meeting recaps, Copilot insights, private group joins, and screen capture prevention based on user role and license.
+    Processed NFR: secur privaci the system shall restrict access to sensit featur such as meet recap copilot insight privat group join and screen captur prevent base on user role and licens
+
+--- ALL 60 FRs (Original vs Processed) ---
+
+[1] Original FR: FR1: The system shall provide a unified chat and channels experience.
+    Processed FR: the system shall provid a unifi chat and channel experi
+
+[2] Original FR: FR2: The system shall allow users to organize chats and channels into sections.
+    Processed FR: the system shall allow user to organ chat and channel into section
+
+[3] Original FR: FR3: The system shall allow users to add emoji icons to chat and channel section names.
+    Processed FR: the system shall allow user to add emoji icon to chat and channel section name
+
+[4] Original FR: FR4: The system shall support threaded conversations in channels.
+    Processed FR: the system shall support thread convers in channel
+
+[5] Original FR: FR5: The system shall allow users to follow threads in channels.
+    Processed FR: the system shall allow user to follow thread in channel
+
+[6] Original FR: FR6: The system shall provide Copilot-generated summaries of threads.
+    Processed FR: the system shall provid summari of thread
+
+[7] Original FR: FR7: The system shall allow users to take private notes in 1:1 and group chats.
+    Processed FR: the system shall allow user to take privat note in and group chat
+
+[8] Original FR: FR8: The system shall allow chat notes to include images and @mentions.
+    Processed FR: the system shall allow chat note to includ imag and mention
+
+[9] Original FR: FR9: The system shall allow users to forward messages with links to the original chat or channel.
+    Processed FR: the system shall allow user to forward messag with link to the origin chat or channel
+
+[10] Original FR: FR10: The system shall display previews of messages in notifications.
+    Processed FR: the system shall display preview of messag in notif
+
+[11] Original FR: FR11: The system shall display shared files and links in a Shared tab.
+    Processed FR: the system shall display share file and link in a share tab
+
+[12] Original FR: FR12: The system shall allow users to search shared files by keyword.
+    Processed FR: the system shall allow user to search share file by keyword
+
+[13] Original FR: FR13: The system shall allow users to filter search results to show messages with attachments only.
+    Processed FR: the system shall allow user to filter search result to show messag with attach onli
+
+[14] Original FR: FR14: The system shall allow users to share files from chats, channels, and the Shared tab.
+    Processed FR: the system shall allow user to share file from chat channel and the share tab
+
+[15] Original FR: FR15: The system shall maintain file permissions when files are shared.
+    Processed FR: the system shall maintain file permiss when file are share
+
+[16] Original FR: FR16: The system shall allow users to view Copilot-generated summaries of shared files.
+    Processed FR: the system shall allow user to view summari of share file
+
+[17] Original FR: FR17: The system shall allow users to quickly jump to the original chat where a file was shared.
+    Processed FR: the system shall allow user to quickli jump to the origin chat where a file wa share
+
+[18] Original FR: FR18: The system shall allow users to customize the size of notifications.
+    Processed FR: the system shall allow user to custom the size of notif
+
+[19] Original FR: FR19: The system shall allow users to choose where notifications appear on the screen.
+    Processed FR: the system shall allow user to choos where notif appear on the screen
+
+[20] Original FR: FR20: The system shall allow users to pin the Teams window on top of other windows.
+    Processed FR: the system shall allow user to pin the team window on top of other window
+
+[21] Original FR: FR21: The system shall allow users to open chats, calendars, and activities in pop-out windows.
+    Processed FR: the system shall allow user to open chat calendar and activ in window
+
+[22] Original FR: FR22: The system shall provide jump list access to chats and meetings from the taskbar or menu bar.
+    Processed FR: the system shall provid jump list access to chat and meet from the taskbar or menu bar
+
+[23] Original FR: FR23: The system shall allow users to join meetings from desktop, mobile, and phone dial-in.
+    Processed FR: the system shall allow user to join meet from desktop mobil and phone
+
+[24] Original FR: FR24: The system shall allow users to share their screen or specific windows.
+    Processed FR: the system shall allow user to share their screen or specif window
+
+[25] Original FR: FR25: The system shall use the native macOS screen-sharing picker when enabled.
+    Processed FR: the system shall use the nativ maco picker when enabl
+
+[26] Original FR: FR26: The system shall provide real-time microphone volume indicators during meetings.
+    Processed FR: the system shall provid microphon volum indic dure meet
+
+[27] Original FR: FR27: The system shall allow meeting organizers to start countdown timers.
+    Processed FR: the system shall allow meet organ to start countdown timer
+
+[28] Original FR: FR28: The system shall allow users to raise hands during meetings and town halls.
+    Processed FR: the system shall allow user to rais hand dure meet and town hall
+
+[29] Original FR: FR29: The system shall allow presenters to share slide control with other presenters.
+    Processed FR: the system shall allow present to share slide control with other present
+
+[30] Original FR: FR30: The system shall allow users to open calls in a small window.
+    Processed FR: the system shall allow user to open call in a small window
+
+[31] Original FR: FR31: The system shall provide live captions during meetings.
+    Processed FR: the system shall provid live caption dure meet
+
+[32] Original FR: FR32: The system shall support live transcription in meetings.
+    Processed FR: the system shall support live transcript in meet
+
+[33] Original FR: FR33: The system shall limit caption history when transcription is turned off.
+    Processed FR: the system shall limit caption histori when transcript is turn off
+
+[34] Original FR: FR34: The system shall support Real-Time Text (RTT) in meetings and calls.
+    Processed FR: the system shall support text rtt in meet and call
+
+[35] Original FR: FR35: The system shall support automatic spoken language detection when Interpreter is enabled.
+    Processed FR: the system shall support automat spoken languag detect when interpret is enabl
+
+[36] Original FR: FR36: The system shall display an Interpreter “Preparing” status during initialization.
+    Processed FR: the system shall display an interpret prepar statu dure initi
+
+[37] Original FR: FR37: The system shall support sign language mode with enhanced signer visibility.
+    Processed FR: the system shall support sign languag mode with enhanc signer visibl
+
+[38] Original FR: FR38: The system shall support town halls and webinars.
+    Processed FR: the system shall support town hall and webinar
+
+[39] Original FR: FR39: The system shall support DVR capabilities in town halls.
+    Processed FR: the system shall support dvr capabl in town hall
+
+[40] Original FR: FR40: The system shall allow organizers to preview town halls as attendees.
+    Processed FR: the system shall allow organ to preview town hall as attende
+
+[41] Original FR: FR41: The system shall allow organizers to control what content attendees see.
+    Processed FR: the system shall allow organ to control what content attende see
+
+[42] Original FR: FR42: The system shall provide presenter analytics for town halls.
+    Processed FR: the system shall provid present analyt for town hall
+
+[43] Original FR: FR43: The system shall allow private chat between organizers and presenters in webinars.
+    Processed FR: the system shall allow privat chat between organ and present in webinar
+
+[44] Original FR: FR44: The system shall allow organizers to return to the green room after ending events.
+    Processed FR: the system shall allow organ to return to the green room after end event
+
+[45] Original FR: FR45: The system shall support immersive 3D events.
+    Processed FR: the system shall support immers event
+
+[46] Original FR: FR46: The system shall allow immersive events to be joined using VR headsets.
+    Processed FR: the system shall allow immers event to be join use vr headset
+
+[47] Original FR: FR47: The system shall allow users to access Copilot Chat in Teams.
+    Processed FR: the system shall allow user to access copilot chat in team
+
+[48] Original FR: FR48: The system shall allow Copilot to summarize meetings and calls.
+    Processed FR: the system shall allow copilot to summar meet and call
+
+[49] Original FR: FR49: The system shall allow Copilot to generate customizable meeting recap summaries.
+    Processed FR: the system shall allow copilot to gener customiz meet recap summari
+
+[50] Original FR: FR50: The system shall allow users to listen to audio-based meeting recaps.
+    Processed FR: the system shall allow user to listen to meet recap
+
+[51] Original FR: FR51: The system shall allow Copilot to summarize chats, threads, and files.
+    Processed FR: the system shall allow copilot to summar chat thread and file
+
+[52] Original FR: FR52: The system shall allow Copilot usage in calls without recording or transcription.
+    Processed FR: the system shall allow copilot usag in call without record or transcript
+
+[53] Original FR: FR53: The system shall support Facilitator as a meeting AI agent.
+    Processed FR: the system shall support facilit as a meet ai agent
+
+[54] Original FR: FR54: The system shall allow the Facilitator to recognize agendas in chat.
+    Processed FR: the system shall allow the facilit to recogn agenda in chat
+
+[55] Original FR: FR55: The system shall allow the Facilitator to track meeting progress.
+    Processed FR: the system shall allow the facilit to track meet progress
+
+[56] Original FR: FR56: The system shall require owner approval when joining private groups by code.
+    Processed FR: the system shall requir owner approv when join privat group by code
+
+[57] Original FR: FR57: The system shall detect and warn users about malicious files and URLs.
+    Processed FR: the system shall detect and warn user about malici file and url
+
+[58] Original FR: FR58: The system shall allow users to flag incorrectly identified malicious links.
+    Processed FR: the system shall allow user to flag incorrectli identifi malici link
+
+[59] Original FR: FR59: The system shall allow organizers to prevent screen capture during meetings.
+    Processed FR: the system shall allow organ to prevent screen captur dure meet
+
+[60] Original FR: FR60: The system shall restrict premium features based on Teams Premium and Copilot licenses.
+    Processed FR: the system shall restrict premium featur base on team premium and copilot licens
+
+### STEP 2: TF-IDF VECTORIZATION ###
+
+Vocabulary size: 202
+NFR vectors shape: (3, 202)
+FR vectors shape: (60, 202)
+
+--- Top 10 TF-IDF terms for ALL 60 FRs ---
+
+FR1:
+  unifi: 0.5381
+  experi: 0.4893
+  channel: 0.3711
+  provid: 0.3711
+  chat: 0.2953
+  and: 0.2548
+  the: 0.1205
+  system: 0.1205
+  shall: 0.1205
+
+FR2:
+  into: 0.5078
+  section: 0.4617
+  organ: 0.3501
+  channel: 0.3501
+  chat: 0.2787
+  and: 0.2404
+  user: 0.2206
+  allow: 0.1760
+  to: 0.1730
+  system: 0.1137
+
+FR3:
+  icon: 0.3849
+  name: 0.3849
+  emoji: 0.3849
+  add: 0.3849
+  section: 0.3499
+  channel: 0.2654
+  to: 0.2622
+  chat: 0.2112
+  and: 0.1822
+  user: 0.1672
+
+FR4:
+  convers: 0.5831
+  thread: 0.4635
+  channel: 0.4021
+  support: 0.3605
+  in: 0.3200
+  system: 0.1306
+  shall: 0.1306
+  the: 0.1306
+
+FR5:
+  follow: 0.5789
+  thread: 0.4601
+  channel: 0.3992
+  in: 0.3177
+  user: 0.2515
+  allow: 0.2007
+  to: 0.1972
+  the: 0.1296
+  shall: 0.1296
+  system: 0.1296
+
+FR6:
+  summari: 0.5301
+  thread: 0.4987
+  of: 0.4731
+  provid: 0.4327
+  system: 0.1405
+  the: 0.1405
+  shall: 0.1405
+
+FR7:
+  take: 0.4676
+  note: 0.4251
+  group: 0.3950
+  privat: 0.3716
+  in: 0.2566
+  chat: 0.2566
+  and: 0.2214
+  user: 0.2031
+  allow: 0.1621
+  to: 0.1593
+
+FR8:
+  imag: 0.4739
+  mention: 0.4739
+  note: 0.4309
+  includ: 0.4004
+  chat: 0.2601
+  and: 0.2244
+  allow: 0.1643
+  to: 0.1614
+  shall: 0.1061
+  the: 0.1061
+
+FR9:
+  forward: 0.3983
+  origin: 0.3621
+  messag: 0.3364
+  link: 0.3364
+  or: 0.3165
+  with: 0.3003
+  channel: 0.2746
+  to: 0.2713
+  chat: 0.2186
+  the: 0.1784
+
+FR10:
+  preview: 0.4600
+  messag: 0.4275
+  display: 0.4275
+  notif: 0.4022
+  of: 0.3815
+  in: 0.2777
+  shall: 0.1133
+  system: 0.1133
+  the: 0.1133
+
+FR11:
+  share: 0.5857
+  tab: 0.4015
+  display: 0.3730
+  link: 0.3730
+  file: 0.2928
+  in: 0.2423
+  and: 0.2091
+  the: 0.0989
+  shall: 0.0989
+  system: 0.0989
+
+FR12:
+  keyword: 0.4934
+  search: 0.4486
+  by: 0.4486
+  file: 0.3272
+  share: 0.3272
+  user: 0.2143
+  allow: 0.1710
+  to: 0.1681
+  shall: 0.1105
+  system: 0.1105
+
+FR13:
+  show: 0.3528
+  result: 0.3528
+  filter: 0.3528
+  attach: 0.3528
+  onli: 0.3528
+  search: 0.3208
+  messag: 0.2981
+  with: 0.2660
+  to: 0.2404
+  user: 0.1533
+
+FR14:
+  share: 0.5673
+  tab: 0.3889
+  from: 0.3613
+  channel: 0.2949
+  file: 0.2837
+  chat: 0.2347
+  and: 0.2025
+  the: 0.1916
+  user: 0.1858
+  allow: 0.1483
+
+FR15:
+  file: 0.5452
+  permiss: 0.4111
+  maintain: 0.4111
+  are: 0.4111
+  when: 0.3099
+  share: 0.2726
+  the: 0.0920
+  shall: 0.0920
+  system: 0.0920
+
+FR16:
+  view: 0.5173
+  summari: 0.4370
+  of: 0.3900
+  share: 0.3431
+  file: 0.3431
+  user: 0.2247
+  allow: 0.1793
+  to: 0.1762
+  system: 0.1158
+  the: 0.1158
+
+FR17:
+  wa: 0.3853
+  quickli: 0.3853
+  where: 0.3503
+  origin: 0.3503
+  jump: 0.3503
+  to: 0.2625
+  share: 0.2556
+  file: 0.2556
+  chat: 0.2115
+  the: 0.1726
+
+FR18:
+  custom: 0.5162
+  size: 0.4693
+  notif: 0.4103
+  of: 0.3892
+  the: 0.2312
+  user: 0.2243
+  allow: 0.1789
+  to: 0.1759
+  system: 0.1156
+  shall: 0.1156
+
+FR19:
+  choos: 0.4284
+  appear: 0.4284
+  where: 0.3895
+  notif: 0.3405
+  on: 0.3405
+  screen: 0.3405
+  the: 0.1919
+  user: 0.1861
+  allow: 0.1485
+  to: 0.1460
+
+FR20:
+  window: 0.5420
+  top: 0.3594
+  pin: 0.3594
+  other: 0.3268
+  team: 0.3036
+  on: 0.2857
+  of: 0.2710
+  the: 0.1610
+  user: 0.1561
+  allow: 0.1246
+
+FR21:
+  activ: 0.4566
+  calendar: 0.4566
+  open: 0.4151
+  window: 0.3443
+  in: 0.2506
+  chat: 0.2506
+  and: 0.2162
+  user: 0.1983
+  allow: 0.1583
+  to: 0.1555
+
+FR22:
+  taskbar: 0.3412
+  menu: 0.3412
+  list: 0.3412
+  bar: 0.3412
+  jump: 0.3102
+  from: 0.2883
+  access: 0.2883
+  or: 0.2712
+  provid: 0.2353
+  chat: 0.1873
+
+FR23:
+  mobil: 0.4291
+  phone: 0.4291
+  desktop: 0.4291
+  from: 0.3625
+  join: 0.3411
+  meet: 0.2293
+  and: 0.2032
+  user: 0.1864
+  allow: 0.1487
+  to: 0.1462
+
+FR24:
+  specif: 0.4542
+  their: 0.4542
+  screen: 0.3610
+  or: 0.3610
+  window: 0.3425
+  share: 0.3012
+  user: 0.1973
+  allow: 0.1574
+  to: 0.1547
+  system: 0.1017
+
+FR25:
+  nativ: 0.4255
+  picker: 0.4255
+  maco: 0.4255
+  enabl: 0.3869
+  use: 0.3869
+  when: 0.3208
+  the: 0.1906
+  system: 0.0953
+  shall: 0.0953
+
+FR26:
+  volum: 0.4725
+  microphon: 0.4725
+  indic: 0.4725
+  dure: 0.3562
+  provid: 0.3258
+  meet: 0.2525
+  the: 0.1058
+  system: 0.1058
+  shall: 0.1058
+
+FR27:
+  timer: 0.4910
+  start: 0.4910
+  countdown: 0.4910
+  organ: 0.3386
+  meet: 0.2624
+  allow: 0.1702
+  to: 0.1673
+  system: 0.1100
+  shall: 0.1100
+  the: 0.1100
+
+FR28:
+  rais: 0.4618
+  hand: 0.4618
+  dure: 0.3482
+  hall: 0.3323
+  town: 0.3323
+  meet: 0.2468
+  and: 0.2187
+  user: 0.2006
+  allow: 0.1601
+  to: 0.1573
+
+FR29:
+  present: 0.6431
+  slide: 0.3806
+  other: 0.3461
+  control: 0.3461
+  with: 0.2870
+  share: 0.2524
+  allow: 0.1319
+  to: 0.1297
+  the: 0.0852
+  system: 0.0852
+
+FR30:
+  small: 0.5061
+  open: 0.4602
+  call: 0.4023
+  window: 0.3816
+  in: 0.2778
+  user: 0.2199
+  allow: 0.1754
+  to: 0.1724
+  system: 0.1133
+  shall: 0.1133
+
+FR31:
+  caption: 0.5136
+  live: 0.5136
+  dure: 0.4260
+  provid: 0.3896
+  meet: 0.3019
+  system: 0.1265
+  the: 0.1265
+  shall: 0.1265
+
+FR32:
+  live: 0.5575
+  transcript: 0.5180
+  support: 0.3791
+  in: 0.3365
+  meet: 0.3277
+  system: 0.1373
+  shall: 0.1373
+  the: 0.1373
+
+FR33:
+  turn: 0.3757
+  off: 0.3757
+  limit: 0.3757
+  histori: 0.3757
+  is: 0.3416
+  caption: 0.3416
+  transcript: 0.3174
+  when: 0.2832
+  the: 0.0841
+  system: 0.0841
+
+FR34:
+  rtt: 0.5016
+  text: 0.5016
+  call: 0.3986
+  support: 0.3101
+  in: 0.2753
+  meet: 0.2680
+  and: 0.2375
+  the: 0.1123
+  system: 0.1123
+  shall: 0.1123
+
+FR35:
+  spoken: 0.3718
+  automat: 0.3718
+  interpret: 0.3380
+  is: 0.3380
+  enabl: 0.3380
+  detect: 0.3380
+  languag: 0.3380
+  when: 0.2803
+  support: 0.2299
+  system: 0.0833
+
+FR36:
+  statu: 0.3997
+  prepar: 0.3997
+  initi: 0.3997
+  an: 0.3997
+  interpret: 0.3634
+  display: 0.3377
+  dure: 0.3014
+  system: 0.0895
+  shall: 0.0895
+  the: 0.0895
+
+FR37:
+  sign: 0.3799
+  visibl: 0.3799
+  signer: 0.3799
+  mode: 0.3799
+  enhanc: 0.3799
+  languag: 0.3454
+  with: 0.2865
+  support: 0.2349
+  shall: 0.0851
+  the: 0.0851
+
+FR38:
+  webinar: 0.5618
+  town: 0.4446
+  hall: 0.4446
+  support: 0.3821
+  and: 0.2926
+  the: 0.1384
+  system: 0.1384
+  shall: 0.1384
+
+FR39:
+  dvr: 0.5084
+  capabl: 0.5084
+  town: 0.3658
+  hall: 0.3658
+  support: 0.3143
+  in: 0.2790
+  system: 0.1138
+  the: 0.1138
+  shall: 0.1138
+
+FR40:
+  preview: 0.4462
+  as: 0.4146
+  attende: 0.4146
+  hall: 0.3531
+  town: 0.3531
+  organ: 0.3384
+  allow: 0.1701
+  to: 0.1672
+  the: 0.1099
+  system: 0.1099
+
+FR41:
+  what: 0.4302
+  see: 0.4302
+  content: 0.4302
+  control: 0.3912
+  attende: 0.3635
+  organ: 0.2967
+  allow: 0.1491
+  to: 0.1466
+  the: 0.0963
+  system: 0.0963
+
+FR42:
+  for: 0.4781
+  analyt: 0.4781
+  present: 0.4039
+  hall: 0.3440
+  town: 0.3440
+  provid: 0.3297
+  the: 0.1071
+  system: 0.1071
+  shall: 0.1071
+
+FR43:
+  between: 0.4591
+  webinar: 0.4174
+  present: 0.3878
+  privat: 0.3649
+  organ: 0.3166
+  chat: 0.2520
+  in: 0.2520
+  and: 0.2174
+  allow: 0.1591
+  system: 0.1028
+
+FR44:
+  return: 0.3782
+  room: 0.3782
+  after: 0.3782
+  green: 0.3782
+  end: 0.3782
+  event: 0.3006
+  organ: 0.2608
+  to: 0.2577
+  the: 0.1694
+  allow: 0.1311
+
+FR45:
+  immers: 0.6443
+  event: 0.5633
+  support: 0.4382
+  system: 0.1587
+  shall: 0.1587
+  the: 0.1587
+
+FR46:
+  vr: 0.3983
+  headset: 0.3983
+  be: 0.3983
+  immers: 0.3621
+  use: 0.3621
+  join: 0.3166
+  event: 0.3166
+  allow: 0.1381
+  to: 0.1357
+  system: 0.0892
+
+FR47:
+  team: 0.4813
+  access: 0.4813
+  copilot: 0.3929
+  in: 0.3127
+  chat: 0.3127
+  user: 0.2475
+  allow: 0.1975
+  to: 0.1941
+  shall: 0.1276
+  the: 0.1276
+
+FR48:
+  summar: 0.5404
+  call: 0.4725
+  copilot: 0.4099
+  meet: 0.3176
+  and: 0.2814
+  allow: 0.2060
+  to: 0.2025
+  system: 0.1331
+  shall: 0.1331
+  the: 0.1331
+
+FR49:
+  gener: 0.4766
+  customiz: 0.4334
+  recap: 0.4027
+  summari: 0.4027
+  copilot: 0.3287
+  meet: 0.2547
+  allow: 0.1652
+  to: 0.1624
+  system: 0.1067
+  the: 0.1067
+
+FR50:
+  listen: 0.5849
+  recap: 0.4941
+  to: 0.3985
+  meet: 0.3126
+  user: 0.2541
+  allow: 0.2028
+  the: 0.1310
+  system: 0.1310
+  shall: 0.1310
+
+FR51:
+  summar: 0.5016
+  thread: 0.4385
+  copilot: 0.3804
+  file: 0.3659
+  chat: 0.3028
+  and: 0.2612
+  allow: 0.1912
+  to: 0.1879
+  shall: 0.1235
+  system: 0.1235
+
+FR52:
+  without: 0.4074
+  usag: 0.4074
+  record: 0.4074
+  transcript: 0.3442
+  call: 0.3238
+  or: 0.3238
+  copilot: 0.2809
+  in: 0.2236
+  allow: 0.1412
+  system: 0.0912
+
+FR53:
+  agent: 0.4853
+  ai: 0.4853
+  facilit: 0.4100
+  as: 0.4100
+  support: 0.3001
+  meet: 0.2593
+  shall: 0.1087
+  system: 0.1087
+  the: 0.1087
+
+FR54:
+  recogn: 0.5094
+  agenda: 0.5094
+  facilit: 0.4304
+  in: 0.2796
+  chat: 0.2796
+  the: 0.2282
+  allow: 0.1766
+  to: 0.1735
+  shall: 0.1141
+  system: 0.1141
+
+FR55:
+  progress: 0.5318
+  track: 0.5318
+  facilit: 0.4492
+  meet: 0.2842
+  the: 0.2382
+  allow: 0.1843
+  to: 0.1812
+  system: 0.1191
+  shall: 0.1191
+
+FR56:
+  requir: 0.3646
+  owner: 0.3646
+  code: 0.3646
+  approv: 0.3646
+  by: 0.3315
+  group: 0.3080
+  privat: 0.2898
+  join: 0.2898
+  when: 0.2749
+  the: 0.0816
+
+FR57:
+  warn: 0.3975
+  url: 0.3975
+  about: 0.3975
+  and: 0.3764
+  detect: 0.3614
+  malici: 0.3614
+  file: 0.2636
+  user: 0.1727
+  the: 0.0890
+  system: 0.0890
+
+FR58:
+  identifi: 0.4421
+  incorrectli: 0.4421
+  flag: 0.4421
+  malici: 0.4020
+  link: 0.3735
+  user: 0.1921
+  allow: 0.1533
+  to: 0.1506
+  the: 0.0990
+  system: 0.0990
+
+FR59:
+  captur: 0.4545
+  prevent: 0.4545
+  screen: 0.3973
+  dure: 0.3769
+  organ: 0.3447
+  meet: 0.2671
+  allow: 0.1733
+  to: 0.1703
+  the: 0.1119
+  system: 0.1119
+
+FR60:
+  premium: 0.6488
+  restrict: 0.2950
+  featur: 0.2950
+  base: 0.2950
+  licens: 0.2950
+  team: 0.2741
+  on: 0.2578
+  copilot: 0.2237
+  and: 0.1536
+  the: 0.0726
+
+### STEP 3: COSINE SIMILARITY CALCULATION ###
+
+Similarity matrix shape: (60, 3)
+(rows=FRs: 60, columns=NFRs: 3)
+
+### STEP 4: TOP SIMILARITIES (SORTED) FOR ALL FRs ###
+
+FR1:
+  NFR2 (Usability): 0.2511 [TRACED]
+  NFR3 (Security & Privacy): 0.0750 
+  NFR1 (Availability): 0.0322 
+
+FR2:
+  NFR3 (Security & Privacy): 0.1068 
+  NFR2 (Usability): 0.0796 
+  NFR1 (Availability): 0.0539 
+
+FR3:
+  NFR3 (Security & Privacy): 0.0913 
+  NFR2 (Usability): 0.0603 
+  NFR1 (Availability): 0.0586 
+
+FR4:
+  NFR1 (Availability): 0.1236 
+  NFR2 (Usability): 0.0244 
+  NFR3 (Security & Privacy): 0.0204 
+
+FR5:
+  NFR1 (Availability): 0.0614 
+  NFR3 (Security & Privacy): 0.0613 
+  NFR2 (Usability): 0.0546 
+
+FR6:
+  NFR2 (Usability): 0.1093 
+  NFR1 (Availability): 0.0376 
+  NFR3 (Security & Privacy): 0.0220 
+
+FR7:
+  NFR3 (Security & Privacy): 0.2448 [TRACED]
+  NFR2 (Usability): 0.0733 
+  NFR1 (Availability): 0.0496 
+
+FR8:
+  NFR1 (Availability): 0.1849 
+  NFR2 (Usability): 0.1435 
+  NFR3 (Security & Privacy): 0.0789 
+
+FR9:
+  NFR1 (Availability): 0.1587 
+  NFR3 (Security & Privacy): 0.0576 
+  NFR2 (Usability): 0.0431 
+
+FR10:
+  NFR2 (Usability): 0.1101 
+  NFR1 (Availability): 0.0303 
+  NFR3 (Security & Privacy): 0.0177 
+
+FR11:
+  NFR3 (Security & Privacy): 0.0615 
+  NFR2 (Usability): 0.0460 
+  NFR1 (Availability): 0.0264 
+
+FR12:
+  NFR1 (Availability): 0.0523 
+  NFR3 (Security & Privacy): 0.0523 
+  NFR2 (Usability): 0.0466 
+
+FR13:
+  NFR1 (Availability): 0.1336 
+  NFR3 (Security & Privacy): 0.0469 
+  NFR2 (Usability): 0.0333 
+
+FR14:
+  NFR3 (Security & Privacy): 0.0950 
+  NFR2 (Usability): 0.0730 
+  NFR1 (Availability): 0.0539 
+
+FR15:
+  NFR1 (Availability): 0.0246 
+  NFR2 (Usability): 0.0172 
+  NFR3 (Security & Privacy): 0.0144 
+
+FR16:
+  NFR1 (Availability): 0.0549 
+  NFR3 (Security & Privacy): 0.0548 
+  NFR2 (Usability): 0.0488 
+
+FR17:
+  NFR1 (Availability): 0.0664 
+  NFR3 (Security & Privacy): 0.0557 
+  NFR2 (Usability): 0.0417 
+
+FR18:
+  NFR2 (Usability): 0.2654 [TRACED]
+  NFR1 (Availability): 0.0651 
+  NFR3 (Security & Privacy): 0.0607 
+
+FR19:
+  NFR3 (Security & Privacy): 0.1764 
+  NFR2 (Usability): 0.1217 
+  NFR1 (Availability): 0.0540 
+
+FR20:
+  NFR2 (Usability): 0.1527 
+  NFR3 (Security & Privacy): 0.0951 
+  NFR1 (Availability): 0.0453 
+
+FR21:
+  NFR2 (Usability): 0.1438 
+  NFR3 (Security & Privacy): 0.0960 
+  NFR1 (Availability): 0.0484 
+
+FR22:
+  NFR3 (Security & Privacy): 0.1401 
+  NFR2 (Usability): 0.0855 
+  NFR1 (Availability): 0.0430 
+
+FR23:
+  NFR3 (Security & Privacy): 0.1819 
+  NFR2 (Usability): 0.0673 
+  NFR1 (Availability): 0.0455 
+
+FR24:
+  NFR3 (Security & Privacy): 0.1149 
+  NFR2 (Usability): 0.1147 
+  NFR1 (Availability): 0.0482 
+
+FR25:
+  NFR1 (Availability): 0.0340 
+  NFR2 (Usability): 0.0238 
+  NFR3 (Security & Privacy): 0.0199 
+
+FR26:
+  NFR2 (Usability): 0.0823 
+  NFR3 (Security & Privacy): 0.0479 
+  NFR1 (Availability): 0.0283 
+
+FR27:
+  NFR3 (Security & Privacy): 0.0631 
+  NFR1 (Availability): 0.0521 
+  NFR2 (Usability): 0.0206 
+
+FR28:
+  NFR1 (Availability): 0.2393 [TRACED]
+  NFR3 (Security & Privacy): 0.1278 
+  NFR2 (Usability): 0.0724 
+
+FR29:
+  NFR1 (Availability): 0.1265 
+  NFR3 (Security & Privacy): 0.0236 
+  NFR2 (Usability): 0.0159 
+
+FR30:
+  NFR2 (Usability): 0.1278 
+  NFR1 (Availability): 0.0537 
+  NFR3 (Security & Privacy): 0.0536 
+
+FR31:
+  NFR2 (Usability): 0.0984 
+  NFR3 (Security & Privacy): 0.0573 
+  NFR1 (Availability): 0.0338 
+
+FR32:
+  NFR1 (Availability): 0.1300 
+  NFR3 (Security & Privacy): 0.0622 
+  NFR2 (Usability): 0.0257 
+
+FR33:
+  NFR1 (Availability): 0.0225 
+  NFR2 (Usability): 0.0157 
+  NFR3 (Security & Privacy): 0.0132 
+
+FR34:
+  NFR1 (Availability): 0.1063 
+  NFR3 (Security & Privacy): 0.1032 
+  NFR2 (Usability): 0.0523 
+
+FR35:
+  NFR1 (Availability): 0.0788 
+  NFR2 (Usability): 0.0156 
+  NFR3 (Security & Privacy): 0.0130 
+
+FR36:
+  NFR1 (Availability): 0.0239 
+  NFR2 (Usability): 0.0167 
+  NFR3 (Security & Privacy): 0.0140 
+
+FR37:
+  NFR1 (Availability): 0.1665 
+  NFR2 (Usability): 0.0159 
+  NFR3 (Security & Privacy): 0.0133 
+
+FR38:
+  NFR1 (Availability): 0.3857 [TRACED]
+  NFR3 (Security & Privacy): 0.0861 
+  NFR2 (Usability): 0.0644 
+
+FR39:
+  NFR1 (Availability): 0.3173 [TRACED]
+  NFR2 (Usability): 0.0213 
+  NFR3 (Security & Privacy): 0.0178 
+
+FR40:
+  NFR1 (Availability): 0.3937 [TRACED]
+  NFR3 (Security & Privacy): 0.1120 
+  NFR2 (Usability): 0.0205 
+
+FR41:
+  NFR1 (Availability): 0.1679 
+  NFR3 (Security & Privacy): 0.0267 
+  NFR2 (Usability): 0.0180 
+
+FR42:
+  NFR1 (Availability): 0.2256 [TRACED]
+  NFR2 (Usability): 0.0833 
+  NFR3 (Security & Privacy): 0.0167 
+
+FR43:
+  NFR3 (Security & Privacy): 0.1315 
+  NFR2 (Usability): 0.0479 
+  NFR1 (Availability): 0.0275 
+
+FR44:
+  NFR1 (Availability): 0.1602 
+  NFR3 (Security & Privacy): 0.0381 
+  NFR2 (Usability): 0.0211 
+
+FR45:
+  NFR1 (Availability): 0.3285 [TRACED]
+  NFR2 (Usability): 0.0297 
+  NFR3 (Security & Privacy): 0.0248 
+
+FR46:
+  NFR1 (Availability): 0.1424 
+  NFR3 (Security & Privacy): 0.0833 
+  NFR2 (Usability): 0.0167 
+
+FR47:
+  NFR3 (Security & Privacy): 0.2181 [TRACED]
+  NFR1 (Availability): 0.0604 
+  NFR2 (Usability): 0.0538 
+
+FR48:
+  NFR3 (Security & Privacy): 0.2042 [TRACED]
+  NFR1 (Availability): 0.0630 
+  NFR2 (Usability): 0.0620 
+
+FR49:
+  NFR2 (Usability): 0.2393 [TRACED]
+  NFR3 (Security & Privacy): 0.1932 
+  NFR1 (Availability): 0.0506 
+
+FR50:
+  NFR3 (Security & Privacy): 0.2138 [TRACED]
+  NFR1 (Availability): 0.0891 
+  NFR2 (Usability): 0.0552 
+
+FR51:
+  NFR3 (Security & Privacy): 0.1529 
+  NFR1 (Availability): 0.0585 
+  NFR2 (Usability): 0.0575 
+
+FR52:
+  NFR3 (Security & Privacy): 0.0594 
+  NFR1 (Availability): 0.0244 
+  NFR2 (Usability): 0.0171 
+
+FR53:
+  NFR3 (Security & Privacy): 0.1299 
+  NFR1 (Availability): 0.1029 
+  NFR2 (Usability): 0.0203 
+
+FR54:
+  NFR1 (Availability): 0.0642 
+  NFR3 (Security & Privacy): 0.0375 
+  NFR2 (Usability): 0.0284 
+
+FR55:
+  NFR3 (Security & Privacy): 0.0745 
+  NFR1 (Availability): 0.0670 
+  NFR2 (Usability): 0.0297 
+
+FR56:
+  NFR3 (Security & Privacy): 0.1806 
+  NFR1 (Availability): 0.0218 
+  NFR2 (Usability): 0.0153 
+
+FR57:
+  NFR3 (Security & Privacy): 0.1144 
+  NFR2 (Usability): 0.0871 
+  NFR1 (Availability): 0.0238 
+
+FR58:
+  NFR1 (Availability): 0.0469 
+  NFR3 (Security & Privacy): 0.0468 
+  NFR2 (Usability): 0.0417 
+
+FR59:
+  NFR3 (Security & Privacy): 0.3302 [TRACED]
+  NFR1 (Availability): 0.0530 
+  NFR2 (Usability): 0.0209 
+
+FR60:
+  NFR3 (Security & Privacy): 0.3785 [TRACED]
+  NFR2 (Usability): 0.0338 
+  NFR1 (Availability): 0.0194 
+
+### STEP 5: APPLYING THRESHOLD (>= 0.2) ###
+
+Total trace links found: 15
+Average traces per FR: 0.25
+FRs with 0 traces: 45
+FRs with 1+ traces: 15
+Max traces for single FR: 1
+
+--- FRs with Trace Links ---
+FR1: NFR2 (Usability) (similarity: 0.2511)
+FR7: NFR3 (Security & Privacy) (similarity: 0.2448)
+FR18: NFR2 (Usability) (similarity: 0.2654)
+FR28: NFR1 (Availability) (similarity: 0.2393)
+FR38: NFR1 (Availability) (similarity: 0.3857)
+FR39: NFR1 (Availability) (similarity: 0.3173)
+FR40: NFR1 (Availability) (similarity: 0.3937)
+FR42: NFR1 (Availability) (similarity: 0.2256)
+FR45: NFR1 (Availability) (similarity: 0.3285)
+FR47: NFR3 (Security & Privacy) (similarity: 0.2181)
+FR48: NFR3 (Security & Privacy) (similarity: 0.2042)
+FR49: NFR2 (Usability) (similarity: 0.2393)
+FR50: NFR3 (Security & Privacy) (similarity: 0.2138)
+FR59: NFR3 (Security & Privacy) (similarity: 0.3302)
+FR60: NFR3 (Security & Privacy) (similarity: 0.3785)
+Loaded 3 NFRs and 60 FRs
+
+Trace matrix saved to: trace_matrix_3.txt
+
+================================================================================
+
+
+################################################################################
+ALL VARIANTS COMPLETED
+################################################################################

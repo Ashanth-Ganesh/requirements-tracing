@@ -25,7 +25,7 @@ class PreProcessor():
     def load_requirements(self):
         nfrs = []
         frs = []
-        PATH = 'Functional_Requirements_Fun.txt'
+        PATH = 'requirements-3nfr-60fr.txt'
 
         with open(PATH, "r", encoding="utf-8") as f:
             for line in f:
@@ -158,14 +158,17 @@ class RequirementsTracer():
         nfrs, frs = self.pre_processor.load_requirements()
         nfr_texts, fr_texts = self.pre_processor.pre_process(pre_processing_config)
         
-        print(f"\nShowing:")
+        # Show ALL NFRs (there are only 3)
+        print(f"\n--- ALL {len(nfrs)} NFRs (Original vs Processed) ---")
         for i in range(len(nfrs)):
-            print(f"\nOriginal NFR: {nfrs[i]}")
-            print(f"Processed NFR: {nfr_texts[i]}")
+            print(f"\n[{i+1}] Original NFR: {nfrs[i]}")
+            print(f"    Processed NFR: {nfr_texts[i]}")
         
+        # Show ALL 60 FRs
+        print(f"\n--- ALL {len(frs)} FRs (Original vs Processed) ---")
         for i in range(len(frs)):
-            print(f"\nOriginal FR: {frs[i]}")
-            print(f"Processed FR: {fr_texts[i]}")
+            print(f"\n[{i+1}] Original FR: {frs[i]}")
+            print(f"    Processed FR: {fr_texts[i]}")
         
         # Step 3: TF-IDF Vectorization
         print("\n### STEP 2: TF-IDF VECTORIZATION ###")
@@ -175,14 +178,17 @@ class RequirementsTracer():
         print(f"NFR vectors shape: {nfr_vectors.shape}")
         print(f"FR vectors shape: {fr_vectors.shape}")
         
-        # Show top TF-IDF terms for first FR
+        # Show top TF-IDF terms for ALL FRs
         feature_names = vectorizer.get_feature_names_out()
-        first_fr_vector = fr_vectors[0].toarray()[0]
-        top_indices = first_fr_vector.argsort()[-10:][::-1]
-        print(f"\nTop 10 TF-IDF terms for {frs[0].split(':')[0]}:")
-        for idx in top_indices:
-            if first_fr_vector[idx] > 0:
-                print(f"  {feature_names[idx]}: {first_fr_vector[idx]:.4f}")
+        print(f"\n--- Top 10 TF-IDF terms for ALL {len(frs)} FRs ---")
+        for i in range(len(frs)):
+            fr_vector = fr_vectors[i].toarray()[0]
+            top_indices = fr_vector.argsort()[-10:][::-1]
+            fr_id = frs[i].split(':')[0]
+            print(f"\n{fr_id}:")
+            for idx in top_indices:
+                if fr_vector[idx] > 0:
+                    print(f"  {feature_names[idx]}: {fr_vector[idx]:.4f}")
         
         # Step 4: Cosine Similarity
         print("\n### STEP 3: COSINE SIMILARITY CALCULATION ###")
@@ -191,19 +197,18 @@ class RequirementsTracer():
         print(f"\nSimilarity matrix shape: {similarity_matrix.shape}")
         print(f"(rows=FRs: {len(frs)}, columns=NFRs: {len(nfrs)})")
         
-        # Step 5: Show top similarities for each FR
-        print("\n### STEP 4: TOP SIMILARITIES (SORTED) ###")
-        print(f"\nTop 5 NFR matches for first 3 FRs:")
+        # Step 5: Show top similarities for ALL FRs
+        print("\n### STEP 4: TOP SIMILARITIES (SORTED) FOR ALL FRs ###")
         
-        for i in range(min(3, len(frs))):
+        for i in range(len(frs)):
             fr_id = frs[i].split(":")[0]
             similarities = similarity_matrix[i]
             
-            # Get top 5 indices
-            top_5_indices = similarities.argsort()[-5:][::-1]
+            # Get all NFR indices sorted by similarity
+            sorted_indices = similarities.argsort()[::-1]
             
             print(f"\n{fr_id}:")
-            for idx in top_5_indices:
+            for idx in sorted_indices:
                 nfr_id = nfrs[idx].split(":")[0]
                 score = similarities[idx]
                 print(f"  {nfr_id}: {score:.4f} {'[TRACED]' if score >= self.THRESHOLD else ''}")
@@ -221,6 +226,14 @@ class RequirementsTracer():
         print(f"FRs with 0 traces: {np.sum(traces_per_fr == 0)}")
         print(f"FRs with 1+ traces: {np.sum(traces_per_fr > 0)}")
         print(f"Max traces for single FR: {np.max(traces_per_fr)}")
+        
+        # Show which FRs have traces
+        print(f"\n--- FRs with Trace Links ---")
+        for i in range(len(frs)):
+            if traces_per_fr[i] > 0:
+                fr_id = frs[i].split(":")[0]
+                traced_nfrs = [nfrs[j].split(":")[0] for j in range(len(nfrs)) if trace_matrix[i][j] == 1]
+                print(f"{fr_id}: {', '.join(traced_nfrs)} (similarity: {', '.join([f'{similarity_matrix[i][j]:.4f}' for j in range(len(nfrs)) if trace_matrix[i][j] == 1])})")
         
         # Step 7: Save results
         self.print_trace(trace_matrix, variation)
