@@ -12,7 +12,7 @@ class TraceMatrixEvaluator:
         """
         self.ground_truth = self.load_trace_matrix(ground_truth_file)
         self.num_frs, self.num_nfrs = self.ground_truth.shape
-        
+        #hello
     def load_trace_matrix(self, filepath: str) -> np.ndarray:
         """Load trace matrix from CSV file"""
         data = []
